@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "767334994495",
+    "project_id": "banmxmovil",
+    "storage_bucket": "banmxmovil.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:767334994495:android:5e832260105d1535a29e8a",
+        "android_client_info": {
+          "package_name": "mx.itesm.banmxmovil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "767334994495-t6fna1sf8aajcoteaqoesfvtg9movise.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDUuAX7HZzoYjhk2xoTDYkScciTi2laFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "767334994495-t6fna1sf8aajcoteaqoesfvtg9movise.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
