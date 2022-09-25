@@ -6,6 +6,11 @@ plugins {
 android {
     compileSdk 32
 
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+
     defaultConfig {
         applicationId "mx.itesm.banmxmovil"
         minSdk 26
