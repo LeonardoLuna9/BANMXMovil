@@ -11,7 +11,7 @@
         tools:context=".DonarActivity">
 
         <ImageView
-            android:id="@+id/imageView34"
+            android:id="@+id/apadrinar2"
             android:layout_width="55dp"
             android:layout_height="58dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -24,7 +24,7 @@
             app:tint="#0E0E0E" />
 
         <ImageView
-            android:id="@+id/imageView35"
+            android:id="@+id/carerito2"
             android:layout_width="57dp"
             android:layout_height="57dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -36,7 +36,7 @@
             app:srcCompat="@drawable/carrito3" />
 
         <ImageView
-            android:id="@+id/imageView36"
+            android:id="@+id/casa2"
             android:layout_width="61dp"
             android:layout_height="57dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -48,7 +48,7 @@
             app:srcCompat="@drawable/casa" />
 
         <ImageView
-            android:id="@+id/imageView37"
+            android:id="@+id/perfil2"
             android:layout_width="127dp"
             android:layout_height="77dp"
             app:layout_constraintBottom_toBottomOf="parent"

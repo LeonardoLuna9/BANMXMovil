@@ -11,7 +11,7 @@
         tools:context=".TarjetaActivity">
 
         <ImageButton
-            android:id="@+id/imageButton10"
+            android:id="@+id/flecha7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"

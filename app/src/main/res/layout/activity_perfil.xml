@@ -10,8 +10,19 @@
         android:layout_height="match_parent"
         tools:context=".PerfilActivity">
 
+        <ImageButton
+            android:id="@+id/flecha8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
+
         <ImageView
-            android:id="@+id/imageView15"
+            android:id="@+id/apadrinar3"
             android:layout_width="55dp"
             android:layout_height="58dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -24,7 +35,7 @@
             app:tint="#0E0E0E" />
 
         <ImageView
-            android:id="@+id/imageView16"
+            android:id="@+id/carrito3"
             android:layout_width="57dp"
             android:layout_height="57dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -36,7 +47,7 @@
             app:srcCompat="@drawable/carrito3" />
 
         <ImageView
-            android:id="@+id/imageView17"
+            android:id="@+id/casa3"
             android:layout_width="61dp"
             android:layout_height="57dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -46,10 +57,10 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.977"
             app:srcCompat="@drawable/casa"
-            app:tint="#7E1C1C" />
+            app:tint="#151414" />
 
         <ImageView
-            android:id="@+id/imageView18"
+            android:id="@+id/perfil3"
             android:layout_width="127dp"
             android:layout_height="77dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -148,4 +159,15 @@
             app:strokeColor="#171111" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/flecha8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
 </layout>
