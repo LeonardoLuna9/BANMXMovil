@@ -16,6 +16,9 @@
         android:theme="@style/Theme.BANMXMovil"
         tools:targetApi="31">
         <activity
+            android:name=".PerfilActivity"
+            android:exported="false" />
+        <activity
             android:name=".OrdenesActivity"
             android:exported="false" />
         <activity
