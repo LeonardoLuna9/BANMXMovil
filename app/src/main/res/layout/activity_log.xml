@@ -28,7 +28,7 @@
             app:layout_constraintTop_toBottomOf="@+id/passwordInputLog" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/iniciaSesionViewLog"
             android:layout_width="104dp"
             android:layout_height="34dp"
             android:text="Inicia Sesión"
@@ -42,7 +42,7 @@
             app:layout_constraintVertical_bias="0.065" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/bienvenidoViewLog"
             android:layout_width="221dp"
             android:layout_height="39dp"
             android:layout_marginTop="68dp"
@@ -51,7 +51,7 @@
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/iniciaSesionViewLog" />
 
         <EditText
             android:id="@+id/correoInputLog"
@@ -65,7 +65,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintTop_toBottomOf="@+id/bienvenidoViewLog" />
 
         <EditText
             android:id="@+id/passwordInputLog"
@@ -82,7 +82,7 @@
             app:layout_constraintTop_toBottomOf="@+id/correoInputLog" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/noTieneCuentaViewLog"
             android:layout_width="192dp"
             android:layout_height="26dp"
             android:layout_marginTop="57dp"
@@ -114,7 +114,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/extraOIniciarConViewLog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Iniciar sesión con:"
@@ -127,15 +127,15 @@
             app:layout_constraintVertical_bias="0.758" />
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/extraOViewLog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
             android:text="ó"
             android:textIsSelectable="false"
-            app:layout_constraintBottom_toTopOf="@+id/textView6"
-            app:layout_constraintEnd_toEndOf="@+id/textView6"
-            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintBottom_toTopOf="@+id/extraOIniciarConViewLog"
+            app:layout_constraintEnd_toEndOf="@+id/extraOIniciarConViewLog"
+            app:layout_constraintStart_toStartOf="@+id/extraOIniciarConViewLog"
             app:layout_constraintTop_toBottomOf="@+id/llevarARegistro" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

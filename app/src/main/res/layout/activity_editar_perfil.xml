@@ -10,18 +10,19 @@
         tools:context=".EditarPerfilActivity">
 
         <ImageButton
-            android:id="@+id/flecha3"
+            android:id="@+id/regresarBotonEditarPerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:backgroundTint="#FFFFFF"
+            android:minHeight="48dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="?attr/actionModeCloseDrawable" />
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/imagenPerfilEditarPerfil"
             android:layout_width="189dp"
             android:layout_height="151dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -40,12 +41,12 @@
             android:hint="Name"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="@+id/imageButton3"
-            app:layout_constraintStart_toStartOf="@+id/imageButton3"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+            app:layout_constraintEnd_toEndOf="@+id/imagenPerfilEditarPerfil"
+            app:layout_constraintStart_toStartOf="@+id/imagenPerfilEditarPerfil"
+            app:layout_constraintTop_toBottomOf="@+id/imagenPerfilEditarPerfil" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/correoInputEditarPerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -59,7 +60,7 @@
             app:layout_constraintTop_toBottomOf="@+id/nameInputEditarPerfil" />
 
         <EditText
-            android:id="@+id/editTextPhone"
+            android:id="@+id/telefonoInputEditarPerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -67,13 +68,13 @@
             android:hint="Telefono"
             android:inputType="phone"
             android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
+            app:layout_constraintEnd_toEndOf="@+id/correoInputEditarPerfil"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+            app:layout_constraintStart_toStartOf="@+id/correoInputEditarPerfil"
+            app:layout_constraintTop_toBottomOf="@+id/correoInputEditarPerfil" />
 
         <EditText
-            android:id="@+id/passwordInputLog"
+            android:id="@+id/nuevaContraInputEditarPerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -81,22 +82,22 @@
             android:hint="Nueva contraseña"
             android:inputType="textPassword"
             android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="@+id/editTextPhone"
+            app:layout_constraintEnd_toEndOf="@+id/telefonoInputEditarPerfil"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/editTextPhone"
-            app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+            app:layout_constraintStart_toStartOf="@+id/telefonoInputEditarPerfil"
+            app:layout_constraintTop_toBottomOf="@+id/telefonoInputEditarPerfil" />
 
         <Button
-            android:id="@+id/button11"
+            android:id="@+id/guardarBotonEditarPerfil"
             android:layout_width="196dp"
             android:layout_height="56dp"
             android:layout_marginTop="44dp"
             android:backgroundTint="#D51E1E"
             android:text="Guardar"
-            app:layout_constraintEnd_toEndOf="@+id/passwordInputLog"
+            app:layout_constraintEnd_toEndOf="@+id/nuevaContraInputEditarPerfil"
             app:layout_constraintHorizontal_bias="0.495"
-            app:layout_constraintStart_toStartOf="@+id/passwordInputLog"
-            app:layout_constraintTop_toBottomOf="@+id/passwordInputLog" />
+            app:layout_constraintStart_toStartOf="@+id/nuevaContraInputEditarPerfil"
+            app:layout_constraintTop_toBottomOf="@+id/nuevaContraInputEditarPerfil" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

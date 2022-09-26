@@ -12,7 +12,7 @@
         tools:context=".MainActivity">
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/bancoAlimentosViewMain"
             android:layout_width="237dp"
             android:layout_height="47dp"
             android:layout_marginTop="120dp"
@@ -25,10 +25,10 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/imageBanmxMain" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/iniciarSesionBotonMain"
             android:layout_width="292dp"
             android:layout_height="57dp"
             android:layout_marginTop="228dp"
@@ -38,10 +38,10 @@
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/imageBanmxMain" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/registrarBotonMain"
             android:layout_width="292dp"
             android:layout_height="57dp"
             android:layout_marginTop="20dp"
@@ -54,11 +54,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button6"
+            app:layout_constraintTop_toBottomOf="@+id/iniciarSesionBotonMain"
             app:layout_constraintVertical_bias="0.115" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imageBanmxMain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -69,7 +69,7 @@
             app:srcCompat="@drawable/bamxlogo" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/bienvenidoViewMain"
             android:layout_width="237dp"
             android:layout_height="47dp"
             android:layout_marginTop="40dp"
@@ -81,7 +81,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/imageBanmxMain" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

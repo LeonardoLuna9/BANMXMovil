@@ -3,7 +3,6 @@ package mx.itesm.banmxmovil
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
-import mx.itesm.banmxmovil.databinding.ActivityMainBinding
 import mx.itesm.banmxmovil.databinding.ActivityPerfilBinding
 
 class PerfilActivity : AppCompatActivity() {

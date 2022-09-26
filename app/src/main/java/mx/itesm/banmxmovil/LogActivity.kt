@@ -11,6 +11,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import mx.itesm.banmxmovil.databinding.ActivityLogBinding
 
+
 class LogActivity : AppCompatActivity() {
 
     lateinit var binding : ActivityLogBinding

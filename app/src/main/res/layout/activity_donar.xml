@@ -11,7 +11,7 @@
         tools:context=".DonarActivity">
 
         <ImageView
-            android:id="@+id/apadrinar2"
+            android:id="@+id/apadrinarDonar"
             android:layout_width="55dp"
             android:layout_height="58dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -24,7 +24,7 @@
             app:tint="#0E0E0E" />
 
         <ImageView
-            android:id="@+id/carerito2"
+            android:id="@+id/cartDonar"
             android:layout_width="57dp"
             android:layout_height="57dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -36,7 +36,7 @@
             app:srcCompat="@drawable/carrito3" />
 
         <ImageView
-            android:id="@+id/casa2"
+            android:id="@+id/homeDonar"
             android:layout_width="61dp"
             android:layout_height="57dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -48,7 +48,7 @@
             app:srcCompat="@drawable/casa" />
 
         <ImageView
-            android:id="@+id/perfil2"
+            android:id="@+id/configDonar"
             android:layout_width="127dp"
             android:layout_height="77dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -61,7 +61,7 @@
             tools:srcCompat="@drawable/herramienta2" />
 
         <ImageButton
-            android:id="@+id/flecha2"
+            android:id="@+id/regresarBotonDonar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -72,7 +72,7 @@
             app:srcCompat="?attr/actionModeCloseDrawable" />
 
         <Button
-            android:id="@+id/button12"
+            android:id="@+id/botonDonarDonar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="116dp"
@@ -84,7 +84,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/button10"
+            android:id="@+id/botonSegundoCantidadDonar"
             android:layout_width="82dp"
             android:layout_height="82dp"
             android:backgroundTint="#D85757"
@@ -97,7 +97,7 @@
             app:layout_constraintVertical_bias="0.594" />
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/elijeCantidadBViewDonar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Elige una cantidad"
@@ -111,7 +111,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/cantidadInputDonar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="164dp"
@@ -125,7 +125,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/llevarARegistro"
+            android:id="@+id/otraCantidadViewDonar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="212dp"
@@ -139,7 +139,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/botonPrimeroCantidadDonar"
             android:layout_width="82dp"
             android:layout_height="82dp"
             android:backgroundTint="#D85757"
@@ -152,7 +152,7 @@
             app:layout_constraintVertical_bias="0.594" />
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/botonTerceroCantidadDonar"
             android:layout_width="82dp"
             android:layout_height="82dp"
             android:layout_marginEnd="56dp"
@@ -166,7 +166,7 @@
             app:layout_constraintVertical_bias="0.594" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/donacionTituloDonar"
             android:layout_width="176dp"
             android:layout_height="33dp"
             android:layout_marginTop="40dp"
@@ -181,7 +181,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView11"
+            android:id="@+id/imageBanmxDonar"
             android:layout_width="261dp"
             android:layout_height="255dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -192,7 +192,7 @@
             app:srcCompat="@drawable/donar" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/bancoTituloDonar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
@@ -200,7 +200,7 @@
             android:backgroundTint="#D51E1E"
             android:text="Dona al Banco de Alimentos"
             android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/imageView11"
+            app:layout_constraintStart_toStartOf="@+id/imageBanmxDonar"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

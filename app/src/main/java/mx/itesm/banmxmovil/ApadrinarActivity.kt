@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import mx.itesm.banmxmovil.databinding.ActivityApadrinarBinding
-import mx.itesm.banmxmovil.databinding.ActivityDonarBinding
 
 class ApadrinarActivity : AppCompatActivity() {
 

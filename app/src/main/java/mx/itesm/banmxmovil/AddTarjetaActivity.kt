@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import mx.itesm.banmxmovil.databinding.ActivityAddTarjetaBinding
-import mx.itesm.banmxmovil.databinding.ActivityPagoBinding
 
 class AddTarjetaActivity : AppCompatActivity() {
 

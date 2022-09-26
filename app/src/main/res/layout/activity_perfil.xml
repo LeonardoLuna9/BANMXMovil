@@ -11,18 +11,19 @@
         tools:context=".PerfilActivity">
 
         <ImageButton
-            android:id="@+id/flecha8"
+            android:id="@+id/regresarBotonPerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:backgroundTint="#FFFFFF"
+            android:minHeight="48dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="?attr/actionModeCloseDrawable" />
 
         <ImageView
-            android:id="@+id/apadrinar3"
+            android:id="@+id/apadrinarPerfil"
             android:layout_width="55dp"
             android:layout_height="58dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -35,7 +36,7 @@
             app:tint="#0E0E0E" />
 
         <ImageView
-            android:id="@+id/carrito3"
+            android:id="@+id/cartPerfil"
             android:layout_width="57dp"
             android:layout_height="57dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -47,7 +48,7 @@
             app:srcCompat="@drawable/carrito3" />
 
         <ImageView
-            android:id="@+id/casa3"
+            android:id="@+id/homePerfil"
             android:layout_width="61dp"
             android:layout_height="57dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -60,7 +61,7 @@
             app:tint="#151414" />
 
         <ImageView
-            android:id="@+id/perfil3"
+            android:id="@+id/configPerfil"
             android:layout_width="127dp"
             android:layout_height="77dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -74,24 +75,24 @@
             app:tint="#BF2121" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/misSuscripcionesBotonPerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="96dp"
             android:backgroundTint="#D51E1E"
             android:text="Mis suscripciones"
-            app:layout_constraintEnd_toEndOf="@+id/button5"
-            app:layout_constraintStart_toStartOf="@+id/button5"
-            app:layout_constraintTop_toBottomOf="@+id/button4"
+            app:layout_constraintEnd_toEndOf="@+id/misTarjetasBotonPerfil"
+            app:layout_constraintStart_toStartOf="@+id/misTarjetasBotonPerfil"
+            app:layout_constraintTop_toBottomOf="@+id/misDonacionesBotonPerfil"
             app:strokeColor="#171111" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/imagenPerfilPerfil"
             android:layout_width="124dp"
             android:layout_height="0dp"
             android:layout_marginTop="69dp"
             android:layout_marginBottom="49dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView3"
+            app:layout_constraintBottom_toTopOf="@+id/correoViewPerfil"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
@@ -100,7 +101,7 @@
             app:srcCompat="@drawable/img_24787" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/nombreViewPerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -108,54 +109,54 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/imagenPerfilPerfil"
             app:layout_constraintVertical_bias="0.006" />
 
         <Button
-            android:id="@+id/botonIniciarSesion"
+            android:id="@+id/editarPerfilBotonPerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="72dp"
             android:backgroundTint="#D51E1E"
             android:text="Editar perfil"
             app:iconTint="#D51E1E"
-            app:layout_constraintEnd_toEndOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="@+id/correoViewPerfil"
             app:layout_constraintHorizontal_bias="0.49"
-            app:layout_constraintStart_toStartOf="@+id/textView3"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintStart_toStartOf="@+id/correoViewPerfil"
+            app:layout_constraintTop_toBottomOf="@+id/nombreViewPerfil" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/correoViewPerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginBottom="466dp"
             android:text="Email"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+            app:layout_constraintStart_toStartOf="@+id/nombreViewPerfil"
+            app:layout_constraintTop_toBottomOf="@+id/imagenPerfilPerfil" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/misDonacionesBotonPerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
             android:backgroundTint="#D51E1E"
             android:text="Mis donaciones"
-            app:layout_constraintEnd_toEndOf="@+id/botonIniciarSesion"
-            app:layout_constraintStart_toStartOf="@+id/botonIniciarSesion"
-            app:layout_constraintTop_toBottomOf="@+id/botonIniciarSesion" />
+            app:layout_constraintEnd_toEndOf="@+id/editarPerfilBotonPerfil"
+            app:layout_constraintStart_toStartOf="@+id/editarPerfilBotonPerfil"
+            app:layout_constraintTop_toBottomOf="@+id/editarPerfilBotonPerfil" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/misTarjetasBotonPerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:backgroundTint="#D51E1E"
             android:text="Mis tarjetas"
-            app:layout_constraintEnd_toEndOf="@+id/button4"
-            app:layout_constraintStart_toStartOf="@+id/button4"
-            app:layout_constraintTop_toBottomOf="@+id/button4"
+            app:layout_constraintEnd_toEndOf="@+id/misDonacionesBotonPerfil"
+            app:layout_constraintStart_toStartOf="@+id/misDonacionesBotonPerfil"
+            app:layout_constraintTop_toBottomOf="@+id/misDonacionesBotonPerfil"
             app:strokeColor="#171111" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

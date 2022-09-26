@@ -11,18 +11,19 @@
         tools:context=".AddTarjetaActivity">
 
         <ImageButton
-            android:id="@+id/imageButton5"
+            android:id="@+id/regresarBotonAddTarjeta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:backgroundTint="#FFFFFF"
+            android:minHeight="48dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="?attr/actionModeCloseDrawable" />
 
         <ImageView
-            android:id="@+id/imageView10"
+            android:id="@+id/imageBankCardBackAddTarjeta"
             android:layout_width="212dp"
             android:layout_height="278dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -34,7 +35,7 @@
             app:srcCompat="@drawable/addtarjeta" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/seleccionarTarjetaViewAddTarjeta"
             android:layout_width="176dp"
             android:layout_height="33dp"
             android:layout_marginTop="40dp"
@@ -49,7 +50,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/pagarAddTarjeta"
             android:layout_width="124dp"
             android:layout_height="48dp"
             android:backgroundTint="#D51E1E"
@@ -58,11 +59,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button6"
+            app:layout_constraintTop_toBottomOf="@+id/anadirTarjetaAddTarjeta"
             app:layout_constraintVertical_bias="0.544" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/anadirTarjetaAddTarjeta"
             android:layout_width="185dp"
             android:layout_height="48dp"
             android:backgroundTint="#F6F4F4"
@@ -72,12 +73,12 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView10"
+            app:layout_constraintTop_toBottomOf="@+id/imageBankCardBackAddTarjeta"
             app:layout_constraintVertical_bias="0.0"
             app:strokeColor="#F30101" />
 
         <ImageView
-            android:id="@+id/imageView9"
+            android:id="@+id/imageBankCardFrontAddTarjeta"
             android:layout_width="212dp"
             android:layout_height="278dp"
             app:layout_constraintBottom_toBottomOf="parent"
