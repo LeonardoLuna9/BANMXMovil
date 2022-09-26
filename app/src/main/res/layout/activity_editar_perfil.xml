@@ -32,7 +32,7 @@
             app:srcCompat="@drawable/download" />
 
         <EditText
-            android:id="@+id/passwordInputLog"
+            android:id="@+id/nameInputEditarPerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
@@ -53,10 +53,10 @@
             android:hint="Email"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
-            app:layout_constraintEnd_toEndOf="@+id/passwordInputLog"
+            app:layout_constraintEnd_toEndOf="@+id/nameInputEditarPerfil"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/passwordInputLog"
-            app:layout_constraintTop_toBottomOf="@+id/passwordInputLog" />
+            app:layout_constraintStart_toStartOf="@+id/nameInputEditarPerfil"
+            app:layout_constraintTop_toBottomOf="@+id/nameInputEditarPerfil" />
 
         <EditText
             android:id="@+id/editTextPhone"
@@ -73,7 +73,7 @@
             app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/passwordInputLog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -93,10 +93,10 @@
             android:layout_marginTop="44dp"
             android:backgroundTint="#D51E1E"
             android:text="Guardar"
-            app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+            app:layout_constraintEnd_toEndOf="@+id/passwordInputLog"
             app:layout_constraintHorizontal_bias="0.495"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+            app:layout_constraintStart_toStartOf="@+id/passwordInputLog"
+            app:layout_constraintTop_toBottomOf="@+id/passwordInputLog" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
