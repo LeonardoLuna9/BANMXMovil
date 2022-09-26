@@ -10,6 +10,58 @@
         android:layout_height="match_parent"
         tools:context=".PerfilActivity">
 
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="55dp"
+            android:layout_height="58dp"
+            android:tint="#0E0E0E"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.646"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.979"
+            app:srcCompat="@drawable/familiaicono" />
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="57dp"
+            android:layout_height="57dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.364"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.977"
+            app:srcCompat="@drawable/carrito3" />
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="61dp"
+            android:layout_height="57dp"
+            android:tint="#7E1C1C"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.094"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.977"
+            app:srcCompat="@drawable/casa" />
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="127dp"
+            android:layout_height="77dp"
+            android:tint="#BF2121"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.99"
+            app:srcCompat="@drawable/settingsgrey"
+            tools:srcCompat="@drawable/herramienta2" />
+
         <Button
             android:id="@+id/button6"
             android:layout_width="wrap_content"
@@ -94,19 +146,6 @@
             app:layout_constraintStart_toStartOf="@+id/button4"
             app:layout_constraintTop_toBottomOf="@+id/button4"
             app:strokeColor="#171111" />
-
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:backgroundTint="#FFFFFF"
-            android:minHeight="48dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="?attr/actionModeCloseDrawable"
-            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

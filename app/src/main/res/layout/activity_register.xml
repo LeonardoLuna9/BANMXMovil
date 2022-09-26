@@ -12,6 +12,17 @@
         android:layout_height="match_parent"
         tools:context=".RegisterActivity">
 
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
+
         <EditText
             android:id="@+id/nombreInRegistro"
             android:layout_width="wrap_content"
