@@ -44,6 +44,9 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "REVALIDA!", Toast.LENGTH_SHORT).show()
         } else {
             // Lo llevamos a inicio
+            val intent = Intent(this,TarjetaActivity::class.java)
+            startActivity(intent)
+
             Toast.makeText(
                 this,
                 "USUARIO: ${Firebase.auth.currentUser?.email}",
