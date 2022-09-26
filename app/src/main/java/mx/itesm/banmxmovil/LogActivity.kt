@@ -23,8 +23,8 @@ class LogActivity : AppCompatActivity() {
 
     fun login(view : View?){
 
-        var emailStr = binding.editTextTextEmailLogin.text.toString()
-        var pwdStr = binding.editTextTextPassword.text.toString()
+        var emailStr = binding.correoInputLog.text.toString()
+        var pwdStr = binding.passwordInputLog.text.toString()
         var authTask = Firebase.auth.signInWithEmailAndPassword(emailStr, pwdStr)
 
         authTask.addOnCompleteListener(this) { resultado ->
@@ -44,4 +44,6 @@ class LogActivity : AppCompatActivity() {
         val intent = Intent(this, RegisterActivity::class.java)
         startActivity(intent)
     }
+
+
 }
