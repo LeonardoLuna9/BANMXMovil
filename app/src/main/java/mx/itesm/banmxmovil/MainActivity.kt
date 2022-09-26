@@ -4,7 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import mx.itesm.banmxmovil.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -14,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         //setContentView(R.layout.activity_main)
         // Prueba
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+
     }
 
     // Función para irnos a actividad de Registro
@@ -26,6 +30,34 @@ class MainActivity : AppCompatActivity() {
     fun clickToLogIn(view: View?) {
         val intent = Intent(this, LogActivity::class.java)
         startActivity(intent)
+    }
+
+    // Si usuario esta iniciado vamos a llevarlo a inicio
+    fun verificarUsuario() {
+
+        // OJO - para su aplicación va a ser necesario que verifiquen la validez del
+        // usuario actual
+        if(Firebase.auth.currentUser == null){
+
+            // SIGNIFICA QUE HAY NECESIDAD DE RE-VALIDAR EL USUARIO
+            // podrías redireccionar / terminar esta actividad
+            Toast.makeText(this, "REVALIDA!", Toast.LENGTH_SHORT).show()
+        } else {
+            // Lo llevamos a inicio
+            Toast.makeText(
+                this,
+                "USUARIO: ${Firebase.auth.currentUser?.email}",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+    }
+
+    // FUNCIONALIDAD COMÚN!
+    // VERIFICAR VALIDEZ DE USUARIO EN EL CICLO DE VIDA
+    override fun onStart() {
+        super.onStart()
+
+        verificarUsuario()
     }
 
 }

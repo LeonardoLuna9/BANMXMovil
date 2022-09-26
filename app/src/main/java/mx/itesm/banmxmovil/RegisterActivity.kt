@@ -8,6 +8,8 @@ import android.view.View
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import mx.itesm.banmxmovil.databinding.ActivityRegisterBinding
 
@@ -43,6 +45,7 @@ class RegisterActivity : AppCompatActivity() {
                     Log.wtf("FIREBASE-DEV", "error: ${resultado.exception}")
                 }
             }
+            registrarFirestore()
         }
         else {
             // Las contraseñas no coinciden
@@ -53,5 +56,46 @@ class RegisterActivity : AppCompatActivity() {
     fun clickTextViewLogIn(view: View?) {
         val intent = Intent(this, LogActivity::class.java)
         startActivity(intent)
+    }
+
+    fun registrarFirestore() {
+
+        // vamos a guardar perritos (obviamente)
+        // la info se guarda por medio de hashmaps
+
+        val perrito = hashMapOf(
+            "correo" to binding.emailInRegister.text.toString(),
+            "nombre" to binding.nombreInRegistro.text.toString()
+        )
+
+        // 1er paso - obtener referencia a la colección
+        val coleccion : CollectionReference =
+            Firebase.firestore.collection("usuarios")
+
+        // 2do paso - solicitar guardar dato
+        val taskAdd = coleccion.add(perrito)
+
+        taskAdd.addOnSuccessListener { doc ->
+
+            Toast.makeText(
+                this,
+                "id: ${doc.id}",
+                Toast.LENGTH_SHORT
+            ).show()
+
+            // Terminamos actividad
+            finish()
+
+        }.addOnFailureListener{ error ->
+
+            Toast.makeText(
+                this,
+                "ERROR AL GUARDAR REGISTRO",
+                Toast.LENGTH_SHORT
+            ).show()
+
+            Log.e("FIRESTORE", "error: $error")
+        }
+
     }
 }

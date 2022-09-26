@@ -21,7 +21,7 @@ class LogActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_log)
     }
 
-    fun login(view : View?){
+    fun login(view : View?) {
 
         var emailStr = binding.correoInputLog.text.toString()
         var pwdStr = binding.passwordInputLog.text.toString()
@@ -38,6 +38,8 @@ class LogActivity : AppCompatActivity() {
                 Log.e("FIREBASE-DEV", "error: ${resultado.exception?.message}")
             }
         }
+        // Terminamos actividad
+        finish()
     }
 
     fun clickTextViewRegister(view: View?) {
