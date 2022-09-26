@@ -20,6 +20,8 @@ class LogActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_log)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_log)
+        val intent = Intent(this, PerfilActivity::class.java)
+        startActivity(intent)
     }
 
     fun login(view : View?) {
