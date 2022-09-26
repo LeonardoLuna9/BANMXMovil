@@ -3,23 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/BANMXMovil/app/src/main/res/layout/activity_add_tarjeta.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/BANMXMovil/app/src/main/res/layout/activity_apadrinar.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/BANMXMovil/app/src/main/res/layout/activity_carrito.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/BANMXMovil/app/src/main/res/layout/activity_donar.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/BANMXMovil/app/src/main/res/layout/activity_editar_perfil.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/BANMXMovil/app/src/main/res/layout/activity_log.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/BANMXMovil/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/BANMXMovil/app/src/main/res/layout/activity_ordenes.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/BANMXMovil/app/src/main/res/layout/activity_pago.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/BANMXMovil/app/src/main/res/layout/activity_perfil.xml" value="0.1" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/BANMXMovil/app/src/main/res/layout/activity_register.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Owner/AndroidStudioProjects/BANMXMovil/app/src/main/res/layout/activity_tarjeta.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/activity_carrito.xml" value="0.15260416666666668" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/activity_log.xml" value="0.10975609756097561" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/activity_main.xml" value="0.11676798378926039" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/activity_register.xml" value="0.15260416666666668" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/activity_tarjeta.xml" value="0.15260416666666668" />
-        <entry key="app/src/main/res/layout/activity_add_tarjeta.xml" value="0.2766037064603517" />
-        <entry key="app/src/main/res/layout/activity_apadrinar.xml" value="0.17478791056191423" />
-        <entry key="app/src/main/res/layout/activity_carrito.xml" value="0.24691619873046877" />
-        <entry key="app/src/main/res/layout/activity_donar.xml" value="0.25789337158203124" />
-        <entry key="app/src/main/res/layout/activity_editar_perfil.xml" value="0.2652237015775393" />
-        <entry key="app/src/main/res/layout/activity_log.xml" value="0.1814727783203125" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_ordenes.xml" value="0.25819549560546873" />
-        <entry key="app/src/main/res/layout/activity_pago.xml" value="0.19369201660156252" />
-        <entry key="app/src/main/res/layout/activity_perfil.xml" value="0.16112976074218752" />
-        <entry key="app/src/main/res/layout/activity_register.xml" value="0.27223969278847676" />
-        <entry key="app/src/main/res/layout/activity_tarjeta.xml" value="0.274627685546875" />
       </map>
     </option>
   </component>
