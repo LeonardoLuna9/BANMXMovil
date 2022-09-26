@@ -32,7 +32,7 @@
             android:layout_width="292dp"
             android:layout_height="57dp"
             android:layout_marginTop="228dp"
-            android:backgroundTint="#AC0202"
+            android:backgroundTint="#D51E1E"
             android:onClick="clickToLogIn"
             android:text="Iniciar Sesión"
             android:textAllCaps="false"

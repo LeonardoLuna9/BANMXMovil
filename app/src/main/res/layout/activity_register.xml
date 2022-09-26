@@ -88,6 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
+            android:backgroundTint="#D51E1E"
             android:onClick="registrar"
             android:text="Registrar"
             app:layout_constraintBottom_toBottomOf="parent"

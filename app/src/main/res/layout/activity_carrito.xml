@@ -13,33 +13,33 @@
         tools:context=".CarritoActivity">
 
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/apadrinar1"
             android:layout_width="55dp"
             android:layout_height="58dp"
-            android:tint="#0E0E0E"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.646"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.979"
-            app:srcCompat="@drawable/familiaicono" />
+            app:srcCompat="@drawable/familiaicono"
+            app:tint="#0E0E0E" />
 
         <ImageView
-            android:id="@+id/imageView12"
+            android:id="@+id/carrito1"
             android:layout_width="57dp"
             android:layout_height="57dp"
-            android:tint="#BF2121"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.364"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.977"
-            app:srcCompat="@drawable/carrito3" />
+            app:srcCompat="@drawable/carrito3"
+            app:tint="#BF2121" />
 
         <ImageView
-            android:id="@+id/imageView13"
+            android:id="@+id/casa1"
             android:layout_width="61dp"
             android:layout_height="57dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -51,7 +51,7 @@
             app:srcCompat="@drawable/casa" />
 
         <ImageView
-            android:id="@+id/imageView14"
+            android:id="@+id/perfil1"
             android:layout_width="127dp"
             android:layout_height="77dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -64,7 +64,7 @@
             tools:srcCompat="@drawable/herramienta2" />
 
         <ImageButton
-            android:id="@+id/imageButton9"
+            android:id="@+id/flecha1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"

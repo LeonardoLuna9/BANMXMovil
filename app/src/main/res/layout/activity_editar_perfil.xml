@@ -91,7 +91,7 @@
             android:layout_width="196dp"
             android:layout_height="56dp"
             android:layout_marginTop="44dp"
-            android:backgroundTint="#FF0303"
+            android:backgroundTint="#D51E1E"
             android:text="Guardar"
             app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
             app:layout_constraintHorizontal_bias="0.495"

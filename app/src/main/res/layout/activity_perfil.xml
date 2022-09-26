@@ -14,14 +14,14 @@
             android:id="@+id/imageView15"
             android:layout_width="55dp"
             android:layout_height="58dp"
-            android:tint="#0E0E0E"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.646"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.979"
-            app:srcCompat="@drawable/familiaicono" />
+            app:srcCompat="@drawable/familiaicono"
+            app:tint="#0E0E0E" />
 
         <ImageView
             android:id="@+id/imageView16"
@@ -39,20 +39,19 @@
             android:id="@+id/imageView17"
             android:layout_width="61dp"
             android:layout_height="57dp"
-            android:tint="#7E1C1C"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.094"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.977"
-            app:srcCompat="@drawable/casa" />
+            app:srcCompat="@drawable/casa"
+            app:tint="#7E1C1C" />
 
         <ImageView
             android:id="@+id/imageView18"
             android:layout_width="127dp"
             android:layout_height="77dp"
-            android:tint="#BF2121"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -60,14 +59,15 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.99"
             app:srcCompat="@drawable/settingsgrey"
-            tools:srcCompat="@drawable/herramienta2" />
+            tools:srcCompat="@drawable/herramienta2"
+            app:tint="#BF2121" />
 
         <Button
             android:id="@+id/button6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="96dp"
-            android:backgroundTint="#FF0000"
+            android:backgroundTint="#D51E1E"
             android:text="Mis suscripciones"
             app:layout_constraintEnd_toEndOf="@+id/button5"
             app:layout_constraintStart_toStartOf="@+id/button5"
@@ -105,9 +105,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="72dp"
-            android:backgroundTint="#FF0000"
+            android:backgroundTint="#D51E1E"
             android:text="Editar perfil"
-            app:iconTint="#F30202"
+            app:iconTint="#D51E1E"
             app:layout_constraintEnd_toEndOf="@+id/textView3"
             app:layout_constraintHorizontal_bias="0.49"
             app:layout_constraintStart_toStartOf="@+id/textView3"
@@ -129,7 +129,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
-            android:backgroundTint="#FA0000"
+            android:backgroundTint="#D51E1E"
             android:text="Mis donaciones"
             app:layout_constraintEnd_toEndOf="@+id/botonIniciarSesion"
             app:layout_constraintStart_toStartOf="@+id/botonIniciarSesion"
@@ -140,7 +140,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:backgroundTint="#FF0000"
+            android:backgroundTint="#D51E1E"
             android:text="Mis tarjetas"
             app:layout_constraintEnd_toEndOf="@+id/button4"
             app:layout_constraintStart_toStartOf="@+id/button4"
