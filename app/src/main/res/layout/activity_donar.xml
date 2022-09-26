@@ -14,14 +14,14 @@
             android:id="@+id/imageView34"
             android:layout_width="55dp"
             android:layout_height="58dp"
-            android:tint="#0E0E0E"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.646"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.979"
-            app:srcCompat="@drawable/familiaicono" />
+            app:srcCompat="@drawable/familiaicono"
+            app:tint="#0E0E0E" />
 
         <ImageView
             android:id="@+id/imageView35"
@@ -61,7 +61,7 @@
             tools:srcCompat="@drawable/herramienta2" />
 
         <ImageButton
-            android:id="@+id/imageButton6"
+            android:id="@+id/flecha2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
