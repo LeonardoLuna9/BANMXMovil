@@ -62,5 +62,12 @@ class PerfilActivity : AppCompatActivity() {
     fun irAInicio(view: View?){
         val intent = Intent(this, InicioActivity::class.java)
         startActivity(intent)
+        finish()
+    }
+
+    fun iraApadrinar(view: View?){
+        val intent = Intent(this, ApadrinarActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }
