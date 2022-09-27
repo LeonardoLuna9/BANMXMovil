@@ -18,6 +18,7 @@
             android:layout_marginTop="24dp"
             android:backgroundTint="#FFFFFF"
             android:minHeight="48dp"
+            android:onClick="regresarAPerfil"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="?attr/actionModeCloseDrawable" />
@@ -67,6 +68,7 @@
             android:layout_width="185dp"
             android:layout_height="48dp"
             android:backgroundTint="#F6F4F4"
+            android:onClick="iraTarjetaActivty"
             android:text="+ Añadir Tarjeta"
             android:textColor="#D51E1E"
             app:iconTint="#FF0000"
