@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentProductosInicio">
+
+    <Button
+        android:id="@+id/buttonAbarrotes"
+        android:layout_width="106dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Abarrotes"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#AC0202"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonEmbutidos"
+        android:layout_width="153dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Embutidos/lácteos"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#AC0202"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAbarrotes" />
+
+    <Button
+        android:id="@+id/buttonNocomestible"
+        android:layout_width="128dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="No comestible"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#AC0202"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFrutas" />
+
+    <Button
+        android:id="@+id/buttonFrutas"
+        android:layout_width="136dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="124dp"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="listaFrutas"
+        android:text="Frutas/verduras"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#AC0202"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
