@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D51E1E"
+        android:backgroundTint="#D51E1E"
+        tools:context=".AgradecimientoActivity">
+
+
+        <TextView
+            android:id="@+id/TextoDonacion"
+            android:layout_width="352dp"
+            android:layout_height="131dp"
+            android:text="Con tu ayuda, contribuimos a reducir la inseguridad alimentaria en familias en situación vulnerable en el Estado de Jalisco. "
+            android:textAlignment="center"
+            android:textColor="#FDFCFC"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TituloDonacion"
+            app:layout_constraintVertical_bias="0.27" />
+
+        <TextView
+            android:id="@+id/TituloDonacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¡Gracias por tu donación !"
+            android:textColor="#FDFCFC"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.669" />
+
+        <TextView
+            android:id="@+id/PagoExistoso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tu pago fue exitoso"
+            android:textColor="#FDFCFC"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.118" />
+
+        <ImageView
+            android:id="@+id/ImagenDonaciones"
+            android:layout_width="280dp"
+            android:layout_height="410dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.28"
+            app:srcCompat="@drawable/img_1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

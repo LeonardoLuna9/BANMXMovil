@@ -7,6 +7,58 @@
     android:rotation="0"
     tools:context=".InicioActivity">
 
+    <ImageView
+        android:id="@+id/apadrinarApadrinar2"
+        android:layout_width="55dp"
+        android:layout_height="58dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.646"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        app:srcCompat="@drawable/familiaicono"
+        app:tint="#090909" />
+
+    <ImageView
+        android:id="@+id/cartApadrinar2"
+        android:layout_width="57dp"
+        android:layout_height="57dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.364"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.974"
+        app:srcCompat="@drawable/carrito3" />
+
+    <ImageView
+        android:id="@+id/homeApadrinar2"
+        android:layout_width="61dp"
+        android:layout_height="57dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.974"
+        app:srcCompat="@drawable/casa"
+        app:tint="#D31919" />
+
+    <ImageView
+        android:id="@+id/configApadrinar2"
+        android:layout_width="127dp"
+        android:layout_height="77dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.987"
+        app:srcCompat="@drawable/settingsgrey"
+        tools:srcCompat="@drawable/herramienta2"
+        app:tint="#0E0E0E" />
+
     <SearchView
         android:id="@+id/searchView"
         android:layout_width="243dp"
@@ -37,7 +89,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="48dp"
-        android:backgroundTint="#AC0202"
+        android:backgroundTint="#D31919"
         android:onClick="productosInicio"
         android:text="Productos"
         android:textAlignment="textStart"
@@ -69,7 +121,7 @@
         android:text="Canastas"
         android:textAlignment="textStart"
         android:textAllCaps="false"
-        android:textColor="#AC0202"
+        android:textColor="#D31919"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchView" />
 
@@ -85,47 +137,11 @@
         app:layout_constraintTop_toTopOf="@+id/button10"
         app:srcCompat="@drawable/canasta" />
 
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="47dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="16dp"
-        android:translationZ="2dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/cart" />
-
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="47dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="16dp"
-        android:translationZ="2dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/homered" />
-
-    <ImageView
-        android:id="@+id/imageView16"
-        android:layout_width="47dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="16dp"
-        android:translationZ="2dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView15"
-        app:srcCompat="@drawable/settingsgrey" />
-
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
         android:name="mx.itesm.banmxmovil.FragmentProductosInicio"
         android:layout_width="370dp"
         android:layout_height="423dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3" />

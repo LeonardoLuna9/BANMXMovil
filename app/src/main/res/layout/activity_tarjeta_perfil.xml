@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TarjetaPerfilActivity">
+
+        <ImageButton
+            android:id="@+id/regresarBotonAddTarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#FFFFFF"
+            android:minHeight="48dp"
+            android:onClick="regresarAPerfil"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
+
+        <ImageView
+            android:id="@+id/imageBankCardBackAddTarjeta"
+            android:layout_width="212dp"
+            android:layout_height="278dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.467"
+            app:srcCompat="@drawable/addtarjeta" />
+
+        <TextView
+            android:id="@+id/seleccionarTarjetaViewAddTarjeta"
+            android:layout_width="176dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif"
+            android:text="Seleccionar Tarjeta"
+            android:textAlignment="center"
+            android:textColor="#070707"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/anadirTarjetaAddTarjeta"
+            android:layout_width="185dp"
+            android:layout_height="48dp"
+            android:backgroundTint="#F6F4F4"
+            android:onClick="iraTarjetaActivty"
+            android:text="+ Añadir Tarjeta"
+            android:textColor="#D51E1E"
+            app:iconTint="#FF0000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageBankCardBackAddTarjeta"
+            app:layout_constraintVertical_bias="0.0"
+            app:strokeColor="#F30101" />
+
+        <ImageView
+            android:id="@+id/imageBankCardFrontAddTarjeta"
+            android:layout_width="212dp"
+            android:layout_height="278dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.112"
+            app:srcCompat="@drawable/addtarjeta" />
+
+        <RadioButton
+            android:id="@+id/radioButton6"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:backgroundTint="#D51E1E"
+            android:buttonTint="#F10505"
+            android:checked="true"
+            android:textColor="#EF0303"
+            app:layout_constraintBottom_toTopOf="@+id/radioButton11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.311"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.527" />
+
+        <RadioButton
+            android:id="@+id/radioButton11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D51E1E"
+            android:buttonTint="#D51E1E"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.311"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.411" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
