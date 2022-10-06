@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.databinding.DataBindingUtil
@@ -37,6 +38,14 @@ class perfilFragment : Fragment() {
 
         view.findViewById<Button>(R.id.misTarjetasBotonPerfil).setOnClickListener{
             findNavController().navigate(R.id.action_perfilFragment_to_misTarjetasPerfilFragment2)
+        }
+
+        view.findViewById<ImageButton>(R.id.cartPerfil).setOnClickListener {
+            findNavController().navigate(R.id.action_perfilFragment_to_carritoFragment3)
+        }
+
+        view.findViewById<ImageButton>(R.id.apadrinarPerfil).setOnClickListener{
+            findNavController().navigate(R.id.action_perfilFragment_to_apadrinarFragment3)
         }
 
         view.findViewById<TextView>(R.id.nombreViewPerfil).text = args.nombrePerfil

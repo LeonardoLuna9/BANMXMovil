@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         //setContentView(R.layout.activity_main)
         // Prueba
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        Firebase.auth.signOut()
 
     }
 
@@ -44,7 +45,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "REVALIDA!", Toast.LENGTH_SHORT).show()
         } else {
             // Lo llevamos a inicio
-            val intent = Intent(this,TarjetaActivity::class.java)
+            val intent = Intent(this,InicioActivity::class.java)
             startActivity(intent)
 
             Toast.makeText(
@@ -61,6 +62,12 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
 
         verificarUsuario()
+    }
+
+    fun logout(view : View?){
+
+        Toast.makeText(this, "LOGOUT", Toast.LENGTH_SHORT).show()
+        Firebase.auth.signOut()
     }
 
 }

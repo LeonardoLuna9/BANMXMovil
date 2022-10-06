@@ -34,6 +34,12 @@
         <action
             android:id="@+id/action_perfilFragment_to_misTarjetasPerfilFragment2"
             app:destination="@id/misTarjetasPerfilFragment" />
+        <action
+            android:id="@+id/action_perfilFragment_to_carritoFragment3"
+            app:destination="@id/carritoFragment" />
+        <action
+            android:id="@+id/action_perfilFragment_to_apadrinarFragment3"
+            app:destination="@id/apadrinarFragment" />
     </fragment>
     <fragment
         android:id="@+id/editarPerfilFragment"
@@ -87,5 +93,29 @@
         <action
             android:id="@+id/action_donarFragment_to_pagoFragment"
             app:destination="@id/pagoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/apadrinarFragment"
+        android:name="mx.itesm.banmxmovil.ApadrinarFragment"
+        android:label="fragment_apadrinar"
+        tools:layout="@layout/fragment_apadrinar" >
+        <action
+            android:id="@+id/action_apadrinarFragment_to_carritoFragment2"
+            app:destination="@id/carritoFragment" />
+        <action
+            android:id="@+id/action_apadrinarFragment_to_perfilFragment2"
+            app:destination="@id/perfilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carritoFragment"
+        android:name="mx.itesm.banmxmovil.CarritoFragment"
+        android:label="fragment_carrito"
+        tools:layout="@layout/fragment_carrito" >
+        <action
+            android:id="@+id/action_carritoFragment_to_apadrinarFragment2"
+            app:destination="@id/apadrinarFragment" />
+        <action
+            android:id="@+id/action_carritoFragment_to_perfilFragment2"
+            app:destination="@id/perfilFragment" />
     </fragment>
 </navigation>

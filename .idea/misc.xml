@@ -3,11 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/activity_apadrinar.xml" value="0.22509057971014493" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/activity_carrito.xml" value="0.15260416666666668" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/activity_log.xml" value="0.10975609756097561" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/activity_main.xml" value="0.11676798378926039" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/activity_register.xml" value="0.15260416666666668" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/activity_tarjeta.xml" value="0.15260416666666668" />
+        <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/fragment_apadrinar.xml" value="0.22509057971014493" />
+        <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/fragment_carrito.xml" value="0.22509057971014493" />
+        <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/fragment_perfil.xml" value="0.11302083333333333" />
         <entry key="app/src/main/res/layout/activity_add_tarjeta.xml" value="0.14647674560546875" />
         <entry key="app/src/main/res/layout/activity_agradecimiento.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_apadrinar.xml" value="0.17478791056191423" />

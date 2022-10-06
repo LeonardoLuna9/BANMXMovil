@@ -63,7 +63,7 @@ class RegisterActivity : AppCompatActivity() {
         // vamos a guardar perritos (obviamente)
         // la info se guarda por medio de hashmaps
 
-        val perrito = hashMapOf(
+        val data = hashMapOf(
             "correo" to binding.emailInRegister.text.toString(),
             "nombre" to binding.nombreInRegistro.text.toString()
         )
@@ -73,8 +73,10 @@ class RegisterActivity : AppCompatActivity() {
             Firebase.firestore.collection("usuarios")
 
         // 2do paso - solicitar guardar dato
-        val taskAdd = coleccion.add(perrito)
+        coleccion.document(binding.emailInRegister.text.toString()).set(data)
 
+        //val taskAdd = coleccion.add(perrito)
+        /*
         taskAdd.addOnSuccessListener { doc ->
 
             Toast.makeText(
@@ -96,6 +98,7 @@ class RegisterActivity : AppCompatActivity() {
 
             Log.e("FIRESTORE", "error: $error")
         }
+        */
 
     }
 }

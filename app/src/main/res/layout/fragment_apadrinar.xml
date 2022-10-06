@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout9"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ApadrinarFragment">
+
+    <ImageView
+        android:id="@+id/apadrinarApadrinar"
+        android:layout_width="55dp"
+        android:layout_height="58dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.646"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        app:srcCompat="@drawable/familiaicono"
+        app:tint="#BF2121" />
+
+    <ImageView
+        android:id="@+id/cartApadrinar"
+        android:layout_width="57dp"
+        android:layout_height="57dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.364"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.974"
+        app:srcCompat="@drawable/carrito3" />
+
+    <ImageView
+        android:id="@+id/homeApadrinar"
+        android:layout_width="61dp"
+        android:layout_height="57dp"
+        android:onClick="irAInicio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.974"
+        app:srcCompat="@drawable/casa" />
+
+    <ImageView
+        android:id="@+id/configApadrinar"
+        android:layout_width="127dp"
+        android:layout_height="77dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.987"
+        app:srcCompat="@drawable/settingsgrey"
+        tools:srcCompat="@drawable/herramienta2" />
+
+    <ImageView
+        android:id="@+id/imagenApadrinar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.076"
+        app:srcCompat="@drawable/ninosapadrinar" />
+
+    <Button
+        android:id="@+id/botonApadrinar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#D51E1E"
+        android:text="Postúlate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.806" />
+
+    <TextView
+        android:id="@+id/textoDescripcionViewApadrinar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="235dp"
+        android:text="Sin tu leal apoyo, nosotros no podríamos hacer este vital trabajo que hacemos. Es por eso que te prometemos mantener los más altos estándares éticos."
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/pruebaRectanguloRojoApadrinar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:backgroundTint="#D51E1E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
