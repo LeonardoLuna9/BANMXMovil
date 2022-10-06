@@ -18,8 +18,9 @@ class agregarTarjetaPerfil : Fragment() {
         val view = inflater.inflate(R.layout.fragment_agregar_tarjeta_perfil, container, false)
 
 
-
-
+        view.findViewById<Button>(R.id.guardarBotonTarjeta).setOnClickListener{
+            findNavController().navigate(R.id.action_agregarTarjetaPerfil_to_misTarjetasPerfilFragment)
+        }
 
         return view
     }
