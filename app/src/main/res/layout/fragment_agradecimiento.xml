@@ -21,21 +21,21 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TituloDonacion"
-        app:layout_constraintVertical_bias="0.27" />
+        app:layout_constraintVertical_bias="0.195" />
 
     <TextView
         android:id="@+id/TituloDonacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¡Gracias por tu donación !"
+        android:text="¡Gracias por tu donación!"
         android:textColor="#FDFCFC"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.553"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.669" />
+        app:layout_constraintVertical_bias="0.623" />
 
     <TextView
         android:id="@+id/PagoExistoso"
@@ -48,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.118" />
+        app:layout_constraintVertical_bias="0.067" />
 
     <ImageView
         android:id="@+id/ImagenDonaciones"
@@ -56,10 +56,19 @@
         android:layout_height="410dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.28"
+        app:layout_constraintVertical_bias="0.18"
         app:srcCompat="@drawable/img_1" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#BAB1B1"
+        android:text="Volver al inicio"
+        tools:layout_editor_absoluteX="122dp"
+        tools:layout_editor_absoluteY="611dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
