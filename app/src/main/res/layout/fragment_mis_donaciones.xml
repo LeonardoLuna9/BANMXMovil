@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".misDonacionesFragment">
+
+    <ImageButton
+        android:id="@+id/regresarBotonOrdenes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="regresarAPerfil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <ImageView
+        android:id="@+id/imagenProductoPrueba3Ordenes"
+        android:layout_width="0dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="33dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/precioProductoPrueba3Ordenes"
+        app:layout_constraintHorizontal_bias="0.194"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.907"
+        app:srcCompat="@drawable/huevos" />
+
+    <TextView
+        android:id="@+id/precioProductoPrueba3Ordenes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="180dp"
+        android:text="$15"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imagenProductoPrueba3Ordenes"
+        app:layout_constraintTop_toBottomOf="@+id/descProductoPrueba3Ordenes" />
+
+    <TextView
+        android:id="@+id/descProductoPrueba3Ordenes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="Docena de huevo "
+        app:layout_constraintEnd_toEndOf="@+id/precioProductoPrueba3Ordenes"
+        app:layout_constraintStart_toEndOf="@+id/precioProductoPrueba3Ordenes"
+        app:layout_constraintTop_toBottomOf="@+id/nombreProductoPrueba3Ordenes" />
+
+    <TextView
+        android:id="@+id/nombreProductoPrueba3Ordenes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="148dp"
+        android:text="Huevo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/precioProductoPrueba2Ordenes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$9"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="@+id/imagenProductoPrueba2Ordenes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/descProductoPrueba2Ordenes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="193dp"
+        android:text="1 Litro de agua"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/precioProductoPrueba2Ordenes"
+        app:layout_constraintTop_toBottomOf="@+id/nombreProductoPrueba2Ordenes" />
+
+    <TextView
+        android:id="@+id/nombreProductoPrueba2Ordenes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Agua Natural"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/descProductoPrueba2Ordenes"
+        app:layout_constraintTop_toTopOf="@+id/imagenProductoPrueba2Ordenes" />
+
+    <TextView
+        android:id="@+id/ordenesTituloViewOrdenes"
+        android:layout_width="111dp"
+        android:layout_height="33dp"
+        android:text="Mis órdenes"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#090909"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.063" />
+
+    <Button
+        android:id="@+id/enProcesoBotonOrdenes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#D31515"
+        android:text="En proceso"
+        app:iconTint="#EA1B1B"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ordenesTituloViewOrdenes" />
+
+    <Button
+        android:id="@+id/completadoBotonOrdenes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#800707"
+        android:text="Completado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintStart_toEndOf="@+id/enProcesoBotonOrdenes"
+        app:layout_constraintTop_toBottomOf="@+id/ordenesTituloViewOrdenes" />
+
+    <ImageView
+        android:id="@+id/imagenProductoPrueba1Ordenes"
+        android:layout_width="72dp"
+        android:layout_height="141dp"
+        android:layout_marginStart="77dp"
+        android:layout_marginEnd="34dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nombreProductoPrueba1Ordenes"
+        app:layout_constraintHorizontal_bias="0.221"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.336"
+        app:srcCompat="@drawable/aceite" />
+
+    <TextView
+        android:id="@+id/nombreProductoPrueba1Ordenes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="186dp"
+        android:text="Aceite"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imagenProductoPrueba1Ordenes"
+        app:layout_constraintTop_toTopOf="@+id/imagenProductoPrueba1Ordenes" />
+
+    <TextView
+        android:id="@+id/descProductoPrueba1Ordenes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Aceite de cocina "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.202"
+        app:layout_constraintStart_toEndOf="@+id/imagenProductoPrueba1Ordenes"
+        app:layout_constraintTop_toBottomOf="@+id/nombreProductoPrueba1Ordenes" />
+
+    <TextView
+        android:id="@+id/precioProductoPrueba1Ordenes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="$50"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintStart_toStartOf="@+id/descProductoPrueba1Ordenes"
+        app:layout_constraintTop_toBottomOf="@+id/descProductoPrueba1Ordenes" />
+
+    <ImageView
+        android:id="@+id/imagenProductoPrueba2Ordenes"
+        android:layout_width="140dp"
+        android:layout_height="115dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615"
+        app:srcCompat="@drawable/agua" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
