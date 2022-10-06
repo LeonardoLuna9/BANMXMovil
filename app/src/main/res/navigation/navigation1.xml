@@ -118,6 +118,9 @@
         <action
             android:id="@+id/action_apadrinarFragment_to_perfilFragment2"
             app:destination="@id/perfilFragment" />
+        <action
+            android:id="@+id/action_apadrinarFragment_to_mensajesFragment"
+            app:destination="@id/mensajesFragment" />
     </fragment>
     <fragment
         android:id="@+id/carritoFragment"
@@ -145,10 +148,22 @@
         <action
             android:id="@+id/action_tarjetasFragment_to_agradecimientoFragment"
             app:destination="@id/agradecimientoFragment" />
+        <action
+            android:id="@+id/action_tarjetasFragment_to_pagoFragment"
+            app:destination="@id/pagoFragment" />
     </fragment>
     <fragment
         android:id="@+id/agradecimientoFragment"
         android:name="mx.itesm.banmxmovil.AgradecimientoFragment"
         android:label="fragment_agradecimiento"
         tools:layout="@layout/fragment_agradecimiento" />
+    <fragment
+        android:id="@+id/mensajesFragment"
+        android:name="mx.itesm.banmxmovil.MensajesFragment"
+        android:label="fragment_mensajes"
+        tools:layout="@layout/fragment_mensajes" >
+        <action
+            android:id="@+id/action_mensajesFragment_to_apadrinarFragment"
+            app:destination="@id/apadrinarFragment" />
+    </fragment>
 </navigation>

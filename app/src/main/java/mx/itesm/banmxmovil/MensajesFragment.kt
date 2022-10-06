@@ -5,21 +5,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import android.widget.ImageButton
 import androidx.navigation.fragment.findNavController
 
+class MensajesFragment : Fragment() {
 
-class pagoFragment : Fragment() {
-
-   /* override fun onCreateView(
+    override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view =  inflater.inflate(R.layout.fragment_pago, container, false)
-        view.findViewById<Button>(R.id.regresarBotonAddTarjeta).setOnClickListener {
-            findNavController().navigate(R.id.action_pagoFragment_to_tarjetasFragment)
+        val view = inflater.inflate(R.layout.fragment_mensajes, container, false)
+        view.findViewById<ImageButton>(R.id.regresarBotonApadrinar2).setOnClickListener {
+            findNavController().navigate(R.id.action_mensajesFragment_to_apadrinarFragment)
         }
         return view
-        }*/
+    }
 }

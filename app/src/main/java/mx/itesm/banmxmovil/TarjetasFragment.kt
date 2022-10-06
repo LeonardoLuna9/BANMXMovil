@@ -19,7 +19,7 @@ class TarjetasFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_tarjetas, container, false)
 
         view.findViewById<Button>(R.id.regresarBotonAddTarjeta).setOnClickListener {
-            findNavController().navigate(R.id.action_pagoFragment_to_tarjetasFragment)
+            findNavController().navigate(R.id.action_tarjetasFragment_to_pagoFragment)
         }
         view.findViewById<Button>(R.id.anadirTarjetaAddTarjeta).setOnClickListener {
             findNavController().navigate(R.id.action_tarjetasFragment_to_agregarTarjetaPerfil)
