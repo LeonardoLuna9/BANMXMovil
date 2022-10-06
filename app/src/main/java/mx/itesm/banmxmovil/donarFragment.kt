@@ -18,6 +18,21 @@ class donarFragment : Fragment() {
         view.findViewById<Button>(R.id.botonDonarBienFragment).setOnClickListener{
             findNavController().navigate(R.id.action_donarFragment_to_pagoFragment)
         }
+        view.findViewById<Button>(R.id.configDonar).setOnClickListener{
+            findNavController().navigate(R.id.action_donarFragment_to_perfilFragment)
+        }
+        view.findViewById<Button>(R.id.apadrinarDonar).setOnClickListener{
+            findNavController().navigate(R.id.action_donarFragment_to_apadrinarFragment)
+        }
+        view.findViewById<Button>(R.id.apadrinarDonar).setOnClickListener{
+            findNavController().navigate(R.id.action_donarFragment_to_apadrinarFragment)
+        }
+        view.findViewById<Button>(R.id.cartDonar).setOnClickListener{
+            findNavController().navigate(R.id.action_donarFragment_to_carritoFragment)
+        }
+
+
+
         return view
     }
 
