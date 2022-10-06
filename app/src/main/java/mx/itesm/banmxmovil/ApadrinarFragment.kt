@@ -25,6 +25,10 @@ class ApadrinarFragment : Fragment() {
             findNavController().navigate(R.id.action_apadrinarFragment_to_carritoFragment2)
         }
 
+        view.findViewById<ImageButton>(R.id.botonApadrinar).setOnClickListener{
+            findNavController().navigate(R.id.action_apadrinarFragment_to_mensajesFragment)
+        }
+
         return view
     }
 
