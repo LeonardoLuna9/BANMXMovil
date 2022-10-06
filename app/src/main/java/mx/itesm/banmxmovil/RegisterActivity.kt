@@ -64,7 +64,6 @@ class RegisterActivity : AppCompatActivity() {
         // la info se guarda por medio de hashmaps
 
         val data = hashMapOf(
-            "correo" to binding.emailInRegister.text.toString(),
             "nombre" to binding.nombreInRegistro.text.toString()
         )
 
@@ -74,6 +73,14 @@ class RegisterActivity : AppCompatActivity() {
 
         // 2do paso - solicitar guardar dato
         coleccion.document(binding.emailInRegister.text.toString()).set(data)
+        Toast.makeText(
+            this,
+            "id: ${coleccion.id}",
+            Toast.LENGTH_SHORT
+        ).show()
+
+        // Terminamos actividad
+        finish()
 
         //val taskAdd = coleccion.add(perrito)
         /*
