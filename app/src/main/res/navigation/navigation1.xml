@@ -73,7 +73,6 @@
         <action
             android:id="@+id/action_agregarTarjetaPerfil_to_misTarjetasPerfilFragment"
             app:destination="@id/misTarjetasPerfilFragment" />
-            tools:layout="@layout/fragment_agregar_tarjeta_perfil" />
     <fragment
         android:id="@+id/pagoFragment"
         android:name="mx.itesm.banmxmovil.pagoFragment"
