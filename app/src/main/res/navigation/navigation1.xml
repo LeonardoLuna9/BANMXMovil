@@ -69,9 +69,26 @@
         android:id="@+id/agregarTarjetaPerfil"
         android:name="mx.itesm.banmxmovil.agregarTarjetaPerfil"
         android:label="fragment_agregar_tarjeta_perfil"
+<<<<<<< Updated upstream
         tools:layout="@layout/fragment_agregar_tarjeta_perfil" >
         <action
             android:id="@+id/action_agregarTarjetaPerfil_to_misTarjetasPerfilFragment"
             app:destination="@id/misTarjetasPerfilFragment" />
+=======
+        tools:layout="@layout/fragment_agregar_tarjeta_perfil" />
+    <fragment
+        android:id="@+id/pagoFragment"
+        android:name="mx.itesm.banmxmovil.pagoFragment"
+        android:label="fragment_pago"
+        tools:layout="@layout/fragment_pago" />
+    <fragment
+        android:id="@+id/donarFragment"
+        android:name="mx.itesm.banmxmovil.donarFragment"
+        android:label="fragment_donar"
+        tools:layout="@layout/fragment_donar" >
+        <action
+            android:id="@+id/action_donarFragment_to_pagoFragment"
+            app:destination="@id/pagoFragment" />
+>>>>>>> Stashed changes
     </fragment>
 </navigation>
