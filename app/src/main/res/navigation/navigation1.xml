@@ -97,15 +97,6 @@
         <action
             android:id="@+id/action_donarFragment_to_pagoFragment"
             app:destination="@id/pagoFragment" />
-        <action
-            android:id="@+id/action_donarFragment_to_perfilFragment"
-            app:destination="@id/perfilFragment" />
-        <action
-            android:id="@+id/action_donarFragment_to_apadrinarFragment"
-            app:destination="@id/apadrinarFragment" />
-        <action
-            android:id="@+id/action_donarFragment_to_carritoFragment"
-            app:destination="@id/carritoFragment" />
     </fragment>
     <fragment
         android:id="@+id/apadrinarFragment"
