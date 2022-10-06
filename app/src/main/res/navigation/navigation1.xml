@@ -121,6 +121,9 @@
         <action
             android:id="@+id/action_carritoFragment_to_perfilFragment2"
             app:destination="@id/perfilFragment" />
+        <action
+            android:id="@+id/action_carritoFragment_to_pagoFragment"
+            app:destination="@id/pagoFragment" />
     </fragment>
     <fragment
         android:id="@+id/tarjetasFragment"
