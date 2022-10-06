@@ -39,7 +39,7 @@
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.633" />
+            app:layout_constraintVertical_bias="0.669" />
 
         <TextView
             android:id="@+id/PagoExistoso"
@@ -52,7 +52,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.125" />
+            app:layout_constraintVertical_bias="0.118" />
 
         <ImageView
             android:id="@+id/ImagenDonaciones"
@@ -60,19 +60,10 @@
             android:layout_height="410dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.526"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.252"
+            app:layout_constraintVertical_bias="0.28"
             app:srcCompat="@drawable/img_1" />
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#BAADAD"
-            android:text="Volver al inicio"
-            tools:layout_editor_absoluteX="122dp"
-            tools:layout_editor_absoluteY="631dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
