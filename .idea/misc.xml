@@ -13,9 +13,11 @@
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/activity_register.xml" value="0.15260416666666668" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/activity_tarjeta.xml" value="0.15260416666666668" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/activity_tarjeta_perfil.xml" value="0.16" />
-        <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/fragment_agregar_tarjeta_perfil.xml" value="0.1" />
+        <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/fragment_agregar_tarjeta_perfil.xml" value="0.128" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/fragment_apadrinar.xml" value="0.22509057971014493" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/fragment_carrito.xml" value="0.22509057971014493" />
+        <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/fragment_editar_perfil.xml" value="0.1" />
+        <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/fragment_mis_tarjetas_perfil.xml" value="0.1" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/fragment_perfil.xml" value="0.11302083333333333" />
         <entry key="app/src/main/res/layout/activity_add_tarjeta.xml" value="0.14647674560546875" />
         <entry key="app/src/main/res/layout/activity_agradecimiento.xml" value="0.1" />
