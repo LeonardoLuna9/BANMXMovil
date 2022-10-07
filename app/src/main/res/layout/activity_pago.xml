@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <data />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,55 +35,73 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/botonTarjetaCreditoPago"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:buttonTint="#D51E1E"
-            android:checked="true"
-            android:fontFamily="sans-serif"
-            android:lineSpacingExtra="8sp"
-            android:text="Tarjeta de Crédito"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/metodoPagoTituloViewPago" />
 
-        <RadioButton
-            android:id="@+id/botonTarjetaDebitoPago"
-            android:layout_width="144dp"
-            android:layout_height="52dp"
-            android:text="Tarjeta de Débito"
-            app:layout_constraintBottom_toTopOf="@+id/botonPaypalPago"
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="198dp"
+            android:layout_height="381dp"
+            android:checkedButton="@id/botonPaypalPago"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintHorizontal_bias="0.553"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/botonTarjetaCreditoPago"
-            app:layout_constraintVertical_bias="0.467" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.342">
 
-        <RadioButton
-            android:id="@+id/botonPaypalPago"
-            android:layout_width="145dp"
-            android:layout_height="48dp"
-            android:layout_marginBottom="92dp"
-            android:text="Paypal"
-            app:layout_constraintBottom_toTopOf="@+id/siguienteBotonPago"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
-            app:layout_constraintStart_toStartOf="parent" />
+            <RadioButton
+                android:id="@+id/botonTarjetaCreditoPago"
+                android:layout_width="188dp"
+                android:layout_height="81dp"
+                android:layout_marginTop="48dp"
+                android:buttonTint="#D51E1E"
+                android:checked="false"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="8sp"
+                android:onClick="onRadioButtonClicked"
+                android:text="Tarjeta de Crédito"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/metodoPagoTituloViewPago" />
+
+            <RadioButton
+                android:id="@+id/botonTarjetaDebitoPago"
+                android:layout_width="187dp"
+                android:layout_height="61dp"
+                android:buttonTint="#D51E1E"
+                android:onClick="onRadioButtonClicked"
+                android:text="Tarjeta de Débito"
+                app:layout_constraintBottom_toTopOf="@+id/botonPaypalPago"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/botonTarjetaCreditoPago"
+                app:layout_constraintVertical_bias="0.467" />
+
+            <RadioButton
+                android:id="@+id/botonPaypalPago"
+                android:layout_width="188dp"
+                android:layout_height="69dp"
+                android:layout_marginBottom="92dp"
+                android:buttonTint="#D51E1E"
+                android:onClick="onRadioButtonClicked"
+                android:text="Paypal"
+                app:layout_constraintBottom_toTopOf="@+id/siguienteBotonPago"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintStart_toStartOf="parent" />
+        </RadioGroup>
 
         <Button
             android:id="@+id/siguienteBotonPago"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="284dp"
             android:backgroundTint="#D51E1E"
             android:text="Siguiente"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.489"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/botonTarjetaCreditoPago"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
             app:strokeColor="#FF0000" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
