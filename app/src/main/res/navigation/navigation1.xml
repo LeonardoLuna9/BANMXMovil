@@ -168,7 +168,7 @@
         android:id="@+id/pagosEnProcesoFragment"
         android:name="mx.itesm.banmxmovil.pagosEnProcesoFragment"
         android:label="fragment_pagos_en_proceso"
-        tools:layout="@layout/fragment_pagos_en_proceso" >
+        tools:layout="@layout/fragment_pagos_completados" >
         <action
             android:id="@+id/action_pagosEnProcesoFragment_to_misDonacionesFragment"
             app:destination="@id/misDonacionesFragment" />

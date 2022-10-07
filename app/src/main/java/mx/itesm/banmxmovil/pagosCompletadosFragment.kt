@@ -17,7 +17,7 @@ class pagosEnProcesoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_pagos_en_proceso, container, false)
+        val view = inflater.inflate(R.layout.fragment_pagos_completados, container, false)
 
         view.findViewById<ImageButton>(R.id.regresarBotonOrdenes).setOnClickListener{
             findNavController().navigate(R.id.action_pagosEnProcesoFragment_to_perfilFragment)
