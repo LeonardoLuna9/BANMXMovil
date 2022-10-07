@@ -8,25 +8,24 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import androidx.navigation.fragment.findNavController
 
-class misDonacionesFragment : Fragment() {
+
+class pagosEnProcesoFragment : Fragment() {
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_mis_donaciones, container, false)
+        val view = inflater.inflate(R.layout.fragment_pagos_en_proceso, container, false)
 
         view.findViewById<ImageButton>(R.id.regresarBotonOrdenes).setOnClickListener{
-            findNavController().navigate(R.id.action_misDonacionesFragment_to_perfilFragment)
+            findNavController().navigate(R.id.action_pagosEnProcesoFragment_to_perfilFragment)
         }
-        view.findViewById<ImageButton>(R.id.completadoBotonOrdenes).setOnClickListener{
-            findNavController().navigate(R.id.action_misDonacionesFragment_to_pagosEnProcesoFragment)
+        view.findViewById<ImageButton>(R.id.enProcesoBotonOrdenes).setOnClickListener{
+            findNavController().navigate(R.id.action_pagosEnProcesoFragment_to_misDonacionesFragment)
         }
-
-
         return view
     }
-
 
 }
