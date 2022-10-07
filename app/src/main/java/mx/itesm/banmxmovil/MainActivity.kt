@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "REVALIDA!", Toast.LENGTH_SHORT).show()
         } else {
             // Lo llevamos a inicio
-            val intent = Intent(this,InicioActivity::class.java)
+            val intent = Intent(this,FragmentActivity::class.java)
             startActivity(intent)
 
             Toast.makeText(

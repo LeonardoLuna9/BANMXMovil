@@ -6,9 +6,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
+import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import mx.itesm.banmxmovil.databinding.ActivityEditarPerfilBinding
 
 class EditarPerfilActivity : AppCompatActivity() {
+
+    // Access a Cloud Firestore instance from your Activity
+
+    val db = Firebase.firestore
+
     lateinit var binding : ActivityEditarPerfilBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +44,19 @@ class EditarPerfilActivity : AppCompatActivity() {
     }
 
     fun regresarAPerfil(view: View?){
-        finish()
+        val city = hashMapOf(
+            "name" to "Los Angeles",
+            "state" to "CA",
+            "country" to "USA"
+        )
+
+        db.collection("usuarios/prueba@mail.com/carrito").document("productoID").set(city)
+
+        /*
+            .set(city)
+            .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully written!") }
+            .addOnFailureListener { e -> Log.w(TAG, "Error writing document", e) }
+            */
+        //finish()
     }
 }

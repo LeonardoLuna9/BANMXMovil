@@ -20,8 +20,11 @@ class LogActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_log)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_log)
-        val intent = Intent(this, PerfilActivity::class.java)
+        verificarUsuario()
+    /*
+        val intent = Intent(this, FragmentActivity::class.java)
         startActivity(intent)
+         */
     }
 
     fun login(view : View?) {
@@ -33,8 +36,10 @@ class LogActivity : AppCompatActivity() {
         authTask.addOnCompleteListener(this) { resultado ->
 
             if(resultado.isSuccessful){
-
                 Toast.makeText(this, "LOGIN EXITOSO", Toast.LENGTH_SHORT).show()
+                // Lo llevamos a inicio
+                val intent = Intent(this,FragmentActivity::class.java)
+                startActivity(intent)
             } else {
 
                 Toast.makeText(this, "ERROR EN LOGIN", Toast.LENGTH_SHORT).show()
@@ -42,12 +47,11 @@ class LogActivity : AppCompatActivity() {
             }
         }
         // Terminamos actividad
-        verificarUsuario()
-        finish()
+        //finish()
     }
 
     fun clickTextViewRegister(view: View?) {
-        val intent = Intent(this, RegisterActivity::class.java)
+        val intent = Intent(this, FragmentActivity::class.java)
         startActivity(intent)
     }
 
@@ -63,7 +67,7 @@ class LogActivity : AppCompatActivity() {
             Toast.makeText(this, "REVALIDA!", Toast.LENGTH_SHORT).show()
         } else {
             // Lo llevamos a inicio
-            val intent = Intent(this,InicioActivity::class.java)
+            val intent = Intent(this,FragmentActivity::class.java)
             startActivity(intent)
 
             Toast.makeText(

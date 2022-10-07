@@ -6,11 +6,6 @@
     app:startDestination="@id/perfilFragment">
 
     <fragment
-        android:id="@+id/fragmentPrincipalInicio"
-        android:name="mx.itesm.banmxmovil.FragmentPrincipalInicio"
-        android:label="fragment_principal_inicio"
-        tools:layout="@layout/fragment_principal_inicio" />
-    <fragment
         android:id="@+id/perfilFragment"
         android:name="mx.itesm.banmxmovil.perfilFragment"
         android:label="fragment_perfil"
@@ -58,6 +53,9 @@
         <action
             android:id="@+id/action_misDonacionesFragment_to_perfilFragment"
             app:destination="@id/perfilFragment" />
+        <action
+            android:id="@+id/action_misDonacionesFragment_to_pagosEnProcesoFragment"
+            app:destination="@id/pagosEnProcesoFragment" />
     </fragment>
     <fragment
         android:id="@+id/misTarjetasPerfilFragment"
@@ -165,5 +163,17 @@
         <action
             android:id="@+id/action_mensajesFragment_to_apadrinarFragment"
             app:destination="@id/apadrinarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagosEnProcesoFragment"
+        android:name="mx.itesm.banmxmovil.pagosEnProcesoFragment"
+        android:label="fragment_pagos_en_proceso"
+        tools:layout="@layout/fragment_pagos_completados" >
+        <action
+            android:id="@+id/action_pagosEnProcesoFragment_to_misDonacionesFragment"
+            app:destination="@id/misDonacionesFragment" />
+        <action
+            android:id="@+id/action_pagosEnProcesoFragment_to_perfilFragment"
+            app:destination="@id/perfilFragment" />
     </fragment>
 </navigation>
