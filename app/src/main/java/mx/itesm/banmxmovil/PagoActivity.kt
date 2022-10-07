@@ -14,7 +14,7 @@ var tarjeta2:RadioButton? = null
 var tarjeta3:RadioButton? = null
 var radiogroup:RadioGroup? = null
 
-class PagoActivity : AppCompatActivity() {
+class PagoActivity : AppCompatActivity(), RadioGroup.OnCheckedChangeListener {
 
     lateinit var binding : ActivityPagoBinding
 
