@@ -15,7 +15,6 @@
         android:layout_marginTop="24dp"
         android:backgroundTint="#FFFFFF"
         android:minHeight="48dp"
-        android:onClick="regresaraAddTarjetaActivity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="?attr/actionModeCloseDrawable" />
@@ -41,7 +40,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
         android:backgroundTint="#D51E1E"
-        android:onClick="guardarAddTarjetaActivty"
         android:text="Guardar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
