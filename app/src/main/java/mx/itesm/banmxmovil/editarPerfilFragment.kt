@@ -28,6 +28,7 @@ class editarPerfilFragment : Fragment() {
                 .actionEditarPerfilFragmentToPerfilFragment(
                     args.idUsuario
                 )
+            findNavController().navigate(action)
 
             /*
             view.findViewById<EditText>(R.id.nameInputEditarPerfil).text.toString(),
@@ -37,11 +38,15 @@ class editarPerfilFragment : Fragment() {
              */
 
 
-            Toast.makeText(activity, "Información Guardada", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Información Guardada", Toast.LENGTH_SHORT).show()
         }
 
         view.findViewById<ImageButton>(R.id.regresarBotonEditarPerfil).setOnClickListener{
-            findNavController().navigate(R.id.action_editarPerfilFragment_to_perfilFragment)
+            val action = editarPerfilFragmentDirections
+                .actionEditarPerfilFragmentToPerfilFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
 
         return view
