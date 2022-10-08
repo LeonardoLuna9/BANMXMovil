@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation1"
-    app:startDestination="@id/perfilFragment">
+    app:startDestination="@id/logFragment">
 
     <fragment
         android:id="@+id/perfilFragment"
@@ -13,16 +13,6 @@
         <action
             android:id="@+id/action_perfilFragment_to_editarPerfilFragment"
             app:destination="@id/editarPerfilFragment" />
-        <argument
-            android:name="nombrePerfil"
-            app:argType="string" />
-        <argument
-            android:name="emailPerfil"
-            app:argType="string" />
-        <argument android:name="telefonoPerfil"
-            app:argType="string" />
-        <argument android:name="contraseniaPerfil"
-            app:argType="string" />
         <action
             android:id="@+id/action_perfilFragment_to_misDonacionesFragment"
             app:destination="@id/misDonacionesFragment" />
@@ -35,6 +25,12 @@
         <action
             android:id="@+id/action_perfilFragment_to_apadrinarFragment3"
             app:destination="@id/apadrinarFragment" />
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_perfilFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
     </fragment>
     <fragment
         android:id="@+id/editarPerfilFragment"
@@ -44,6 +40,9 @@
         <action
             android:id="@+id/action_editarPerfilFragment_to_perfilFragment"
             app:destination="@id/perfilFragment" />
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/misDonacionesFragment"
@@ -68,6 +67,9 @@
         <action
             android:id="@+id/action_misTarjetasPerfilFragment_to_perfilFragment"
             app:destination="@id/perfilFragment" />
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/agregarTarjetaPerfil"
@@ -77,6 +79,9 @@
         <action
             android:id="@+id/action_agregarTarjetaPerfil_to_misTarjetasPerfilFragment"
             app:destination="@id/misTarjetasPerfilFragment" />
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/pagoFragment"
@@ -119,6 +124,12 @@
         <action
             android:id="@+id/action_apadrinarFragment_to_mensajesFragment"
             app:destination="@id/mensajesFragment" />
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_apadrinarFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
     </fragment>
     <fragment
         android:id="@+id/carritoFragment"
@@ -134,6 +145,12 @@
         <action
             android:id="@+id/action_carritoFragment_to_pagoFragment"
             app:destination="@id/pagoFragment" />
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_carritoFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
     </fragment>
     <fragment
         android:id="@+id/tarjetasFragment"
@@ -175,5 +192,74 @@
         <action
             android:id="@+id/action_pagosEnProcesoFragment_to_perfilFragment"
             app:destination="@id/perfilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="mx.itesm.banmxmovil.InicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicioFragment_to_productoMuestraFragment"
+            app:destination="@id/productoMuestraFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_to_perfilFragment"
+            app:destination="@id/perfilFragment" />
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_inicioFragment_to_carritoFragment"
+            app:destination="@id/carritoFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_to_apadrinarFragment"
+            app:destination="@id/apadrinarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productoMuestraFragment"
+        android:name="mx.itesm.banmxmovil.ProductoMuestraFragment"
+        android:label="fragment_producto_muestra"
+        tools:layout="@layout/fragment_producto_muestra" >
+        <argument
+            android:name="nombre"
+            app:argType="string" />
+        <argument
+            android:name="precio"
+            app:argType="string" />
+        <argument
+            android:name="imagen"
+            app:argType="string" />
+        <argument
+            android:name="paquete"
+            app:argType="string" />
+        <argument
+            android:name="descripcion"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentProductosInicio"
+        android:name="mx.itesm.banmxmovil.FragmentProductosInicio"
+        android:label="fragment_productos_inicio"
+        tools:layout="@layout/fragment_productos_inicio" >
+        <action
+            android:id="@+id/action_fragmentProductosInicio_to_productoMuestraFragment"
+            app:destination="@id/productoMuestraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCanastasInicio"
+        android:name="mx.itesm.banmxmovil.FragmentCanastasInicio"
+        android:label="fragment_canastas_inicio"
+        tools:layout="@layout/fragment_canastas_inicio" >
+        <action
+            android:id="@+id/action_fragmentCanastasInicio_to_productoMuestraFragment"
+            app:destination="@id/productoMuestraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/logFragment"
+        android:name="mx.itesm.banmxmovil.LogFragment"
+        android:label="fragment_log"
+        tools:layout="@layout/fragment_log" >
+        <action
+            android:id="@+id/action_logFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
     </fragment>
 </navigation>

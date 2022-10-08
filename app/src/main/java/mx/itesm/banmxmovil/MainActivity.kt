@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
     // Función para irnos a actividad de Log In
     fun clickToLogIn(view: View?) {
-        val intent = Intent(this, LogActivity::class.java)
+        val intent = Intent(this, FragmentActivity::class.java)
         startActivity(intent)
     }
 
@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity() {
         } else {
             // Lo llevamos a inicio
             val intent = Intent(this,FragmentActivity::class.java)
+            //intent.putExtra("id_user",);
             startActivity(intent)
 
             Toast.makeText(

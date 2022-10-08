@@ -24,12 +24,7 @@ class TarjetasFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_tarjetas, container, false)
 
-        radiogroup = view.findViewById(R.id.RadioGroup3)
-        tarjeta1 = view.findViewById(R.id.radioButton6)
-        tarjeta2 = view.findViewById(R.id.radioButton11)
-        radiogroup?.setOnCheckedChangeListener(this)
-
-        view.findViewById<Button>(R.id.regresarBotonAddTarjeta).setOnClickListener {
+        view.findViewById<ImageButton>(R.id.regresarBotonAddTarjeta).setOnClickListener {
             findNavController().navigate(R.id.action_tarjetasFragment_to_pagoFragment)
         }
         view.findViewById<Button>(R.id.anadirTarjetaAddTarjeta).setOnClickListener {

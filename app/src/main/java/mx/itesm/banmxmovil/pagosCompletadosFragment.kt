@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageButton
 import androidx.navigation.fragment.findNavController
 
@@ -22,7 +23,7 @@ class pagosEnProcesoFragment : Fragment() {
         view.findViewById<ImageButton>(R.id.regresarBotonOrdenes).setOnClickListener{
             findNavController().navigate(R.id.action_pagosEnProcesoFragment_to_perfilFragment)
         }
-        view.findViewById<ImageButton>(R.id.enProcesoBotonOrdenes).setOnClickListener{
+        view.findViewById<Button>(R.id.enProcesoBotonOrdenes).setOnClickListener{
             findNavController().navigate(R.id.action_pagosEnProcesoFragment_to_misDonacionesFragment)
         }
         return view

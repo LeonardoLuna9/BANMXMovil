@@ -21,10 +21,9 @@ class LogActivity : AppCompatActivity() {
         //setContentView(R.layout.activity_log)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_log)
         verificarUsuario()
-    /*
+
         val intent = Intent(this, FragmentActivity::class.java)
         startActivity(intent)
-         */
     }
 
     fun login(view : View?) {
@@ -39,7 +38,9 @@ class LogActivity : AppCompatActivity() {
                 Toast.makeText(this, "LOGIN EXITOSO", Toast.LENGTH_SHORT).show()
                 // Lo llevamos a inicio
                 val intent = Intent(this,FragmentActivity::class.java)
+                intent.putExtra("id_user",binding.correoInputLog.text.toString());
                 startActivity(intent)
+                finish()
             } else {
 
                 Toast.makeText(this, "ERROR EN LOGIN", Toast.LENGTH_SHORT).show()
@@ -53,6 +54,7 @@ class LogActivity : AppCompatActivity() {
     fun clickTextViewRegister(view: View?) {
         val intent = Intent(this, FragmentActivity::class.java)
         startActivity(intent)
+        finish()
     }
 
     // Si usuario esta iniciado vamos a llevarlo a inicio
@@ -68,7 +70,9 @@ class LogActivity : AppCompatActivity() {
         } else {
             // Lo llevamos a inicio
             val intent = Intent(this,FragmentActivity::class.java)
+            intent.putExtra("id_user",binding.correoInputLog.text.toString());
             startActivity(intent)
+            finish()
 
             Toast.makeText(
                 this,

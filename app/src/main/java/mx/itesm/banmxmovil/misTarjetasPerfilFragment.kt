@@ -8,8 +8,11 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 
 class misTarjetasPerfilFragment : Fragment() {
+
+    val args : misTarjetasPerfilFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -19,7 +22,12 @@ class misTarjetasPerfilFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_mis_tarjetas_perfil, container, false)
 
         view.findViewById<Button>(R.id.anadirTarjetaAddTarjeta).setOnClickListener{
-            findNavController().navigate(R.id.action_misTarjetasPerfilFragment_to_agregarTarjetaPerfil)
+            //findNavController().navigate(R.id.action_misTarjetasPerfilFragment_to_agregarTarjetaPerfil)
+            val action = misTarjetasPerfilFragmentDirections
+                .actionMisTarjetasPerfilFragmentToAgregarTarjetaPerfil(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
 
         view.findViewById<ImageButton>(R.id.regresarBotonAddTarjeta).setOnClickListener{

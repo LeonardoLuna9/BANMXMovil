@@ -8,8 +8,11 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 
 class editarPerfilFragment : Fragment() {
+
+    val args : editarPerfilFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,11 +24,14 @@ class editarPerfilFragment : Fragment() {
         view.findViewById<Button>(R.id.guardarBotonEditarPerfil).setOnClickListener{
             val action = editarPerfilFragmentDirections
                 .actionEditarPerfilFragmentToPerfilFragment(
-                    view.findViewById<EditText>(R.id.nameInputEditarPerfil).text.toString(),
-                    view.findViewById<EditText>(R.id.correoInputEditarPerfil).text.toString(),
-                    view.findViewById<EditText>(R.id.telefonoInputEditarPerfil).text.toString(),
-                    view.findViewById<EditText>(R.id.nuevaContraInputEditarPerfil).text.toString()
+                    args.idUsuario
                 )
+            /*
+            view.findViewById<EditText>(R.id.nameInputEditarPerfil).text.toString(),
+            view.findViewById<EditText>(R.id.correoInputEditarPerfil).text.toString(),
+            view.findViewById<EditText>(R.id.telefonoInputEditarPerfil).text.toString(),
+            view.findViewById<EditText>(R.id.nuevaContraInputEditarPerfil).text.toString()
+             */
             findNavController().navigate(action)
 
         }

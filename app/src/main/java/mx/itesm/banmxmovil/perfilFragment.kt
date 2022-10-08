@@ -1,54 +1,69 @@
 package mx.itesm.banmxmovil
 
-import android.app.Activity
-import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ImageButton
 import android.widget.ImageView
-import android.widget.TextView
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import mx.itesm.banmxmovil.databinding.ActivityPerfilBinding
 
 
 class perfilFragment : Fragment() {
 
-    //val args : perfilFragmentArgs by navArgs()
+    val args : perfilFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        //val strtext = requireArguments().getString("edttext")
         val view = inflater.inflate(R.layout.fragment_perfil, container, false)
-
-        view.findViewById<Button>(R.id.editarPerfilBotonPerfil).setOnClickListener{
-            findNavController().navigate(R.id.action_perfilFragment_to_editarPerfilFragment)
+        //val data = arguments
+        //Log.wtf("ID",data!!.get("string").toString())
+        view.findViewById<Button>(R.id.editarPerfilBotonPerfil).setOnClickListener {
+            //findNavController().navigate(R.id.action_perfilFragment_to_editarPerfilFragment)
+            val action = perfilFragmentDirections
+                .actionPerfilFragmentToEditarPerfilFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
 
-        view.findViewById<Button>(R.id.misDonacionesBotonPerfil).setOnClickListener{
+        view.findViewById<Button>(R.id.misDonacionesBotonPerfil).setOnClickListener {
             findNavController().navigate(R.id.action_perfilFragment_to_misDonacionesFragment)
         }
 
         view.findViewById<Button>(R.id.misTarjetasBotonPerfil).setOnClickListener{
-            findNavController().navigate(R.id.action_perfilFragment_to_misTarjetasPerfilFragment2)
+            //findNavController().navigate(R.id.action_perfilFragment_to_misTarjetasPerfilFragment2)
+            val action = perfilFragmentDirections
+                .actionPerfilFragmentToMisTarjetasPerfilFragment2(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
-        /*
+
         view.findViewById<ImageView>(R.id.cartPerfil).setOnClickListener {
             findNavController().navigate(R.id.action_perfilFragment_to_carritoFragment3)
         }
 
-        view.findViewById<ImageView>(R.id.apadrinarPerfil).setOnClickListener{
+        view.findViewById<ImageView>(R.id.apadrinarPerfil).setOnClickListener {
             findNavController().navigate(R.id.action_perfilFragment_to_apadrinarFragment3)
         }
-        */
+
+        view.findViewById<ImageView>(R.id.homePerfil).setOnClickListener{
+            //findNavController().navigate(R.id.action_perfilFragment_to_misTarjetasPerfilFragment2)
+            val action = perfilFragmentDirections
+                .actionPerfilFragmentToInicioFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
+        }
+
 
         //view.findViewById<TextView>(R.id.nombreViewPerfil).text = args.nombrePerfil
         //view.findViewById<TextView>(R.id.correoViewPerfil).text = args.emailPerfil

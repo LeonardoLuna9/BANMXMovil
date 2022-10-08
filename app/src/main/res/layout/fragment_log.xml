@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout11"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogFragment">
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="292dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#D51E1E"
+        android:onClick="login"
+        android:text="Iniciar Sesión"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordInputLog" />
+
+    <TextView
+        android:id="@+id/iniciaSesionViewLog"
+        android:layout_width="104dp"
+        android:layout_height="34dp"
+        android:text="Inicia Sesión"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.065" />
+
+    <TextView
+        android:id="@+id/bienvenidoViewLog"
+        android:layout_width="221dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="68dp"
+        android:text="BIENVENIDO DE VUELTA"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iniciaSesionViewLog" />
+
+    <EditText
+        android:id="@+id/correoInputLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bienvenidoViewLog" />
+
+    <EditText
+        android:id="@+id/passwordInputLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correoInputLog" />
+
+    <TextView
+        android:id="@+id/noTieneCuentaViewLog"
+        android:layout_width="192dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="57dp"
+        android:text="¿No tienes cuenta?"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.269"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/login"
+        app:layout_constraintVertical_bias="0.033" />
+
+    <TextView
+        android:id="@+id/llevarARegistro"
+        android:layout_width="136dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="66dp"
+        android:clickable="true"
+        android:onClick="clickTextViewRegister"
+        android:text="Registrate"
+        android:textAlignment="viewStart"
+        android:textColor="#8A0202"
+        android:textIsSelectable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/login"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/extraOIniciarConViewLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iniciar sesión con:"
+        android:textIsSelectable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.758" />
+
+    <TextView
+        android:id="@+id/extraOViewLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:text="ó"
+        android:textIsSelectable="false"
+        app:layout_constraintBottom_toTopOf="@+id/extraOIniciarConViewLog"
+        app:layout_constraintEnd_toEndOf="@+id/extraOIniciarConViewLog"
+        app:layout_constraintStart_toStartOf="@+id/extraOIniciarConViewLog"
+        app:layout_constraintTop_toBottomOf="@+id/llevarARegistro" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

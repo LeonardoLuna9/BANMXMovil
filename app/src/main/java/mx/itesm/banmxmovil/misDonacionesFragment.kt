@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageButton
 import androidx.navigation.fragment.findNavController
 
@@ -17,10 +18,10 @@ class misDonacionesFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_mis_donaciones, container, false)
 
-        view.findViewById<ImageButton>(R.id.regresarBotonOrdenes).setOnClickListener{
+        view.findViewById<ImageButton>(R.id.regresarBotonOrdenes).setOnClickListener {
             findNavController().navigate(R.id.action_misDonacionesFragment_to_perfilFragment)
         }
-        view.findViewById<ImageButton>(R.id.completadoBotonOrdenes).setOnClickListener{
+        view.findViewById<Button>(R.id.completadoBotonOrdenes).setOnClickListener {
             findNavController().navigate(R.id.action_misDonacionesFragment_to_pagosEnProcesoFragment)
         }
 

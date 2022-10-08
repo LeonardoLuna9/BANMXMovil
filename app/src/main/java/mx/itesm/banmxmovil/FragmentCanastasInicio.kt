@@ -1,11 +1,13 @@
 package mx.itesm.banmxmovil
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
@@ -33,7 +35,7 @@ class FragmentCanastasInicio : Fragment(), View.OnClickListener {
         vista = inflater.inflate(R.layout.fragment_canastas_inicio, container, false)
         queue = Volley.newRequestQueue(context)
         listaCanastas = ArrayList()
-        var url = "https://raw.githubusercontent.com/EdgarV7/JasonsProyecto/main/frutas.json"
+        var url = "https://raw.githubusercontent.com/EdgarV7/JasonsProyecto/main/canastas.json"
 
         val jsonArrayRequest = JsonArrayRequest(
             Request.Method.GET,
@@ -42,7 +44,7 @@ class FragmentCanastasInicio : Fragment(), View.OnClickListener {
             {response ->
                 for(i in 0 until response.length()){
                     val actual = response.getJSONObject(i)
-                    listaCanastas.add(i, arrayListOf(actual.getString("nombre"),actual.getString("precio"),actual.getString("paquete"),actual.getString("descripcion")))
+                    listaCanastas.add(i, arrayListOf(actual.getString("nombre"),actual.getString("precio"),actual.getString("imagen"),actual.getString("paquete"),actual.getString("descripcion")))
                 }
 
                 val adapter = ProductosAdapter(listaCanastas,this)
@@ -72,7 +74,27 @@ class FragmentCanastasInicio : Fragment(), View.OnClickListener {
         queue.cancelAll(TAG)
     }
 
-    override fun onClick(p0: View?) {
-        TODO("Not yet implemented")
+    override fun onClick(row: View) {
+        val position = recyclerView.getChildLayoutPosition(row)
+        Toast.makeText(context, listaCanastas[position][0], Toast.LENGTH_SHORT).show()
+
+        val action = InicioFragmentDirections.actionInicioFragmentToProductoMuestraFragment(
+            listaCanastas[position][0],
+            listaCanastas[position][1].toString(),
+            listaCanastas[position][2],
+            listaCanastas[position][3],
+            listaCanastas[position][4]
+        )
+
+        findNavController().navigate(action)
+        /*val intent = Intent(context,ProductoMuestraActivity::class.java)
+
+        intent.putExtra("nombre",listaCanastas[position][0])
+        intent.putExtra("precio",listaCanastas[position][1])
+        intent.putExtra("imagen",listaCanastas[position][2])
+        intent.putExtra("paquete",listaCanastas[position][3])
+        intent.putExtra("descripcion",listaCanastas[position][4])
+
+        startActivity(intent)*/
     }
 }

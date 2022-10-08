@@ -1,13 +1,13 @@
 package mx.itesm.banmxmovil
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -22,7 +22,7 @@ class agregarTarjetaPerfil : Fragment() {
     private lateinit var _codigoInputTarjeta : EditText
 
     val db = Firebase.firestore
-    //val args : perfilFragmentArgs by navArgs()
+    val args : agregarTarjetaPerfilArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,14 +41,19 @@ class agregarTarjetaPerfil : Fragment() {
                 "nombre" to _nombreInputTarjeta.text.toString(),
                 "numTarjeta" to _numTarjetaInputTarjeta.text.toString(),
                 "expTarjeta" to _expInputTarjeta.text.toString(),
-                "expTarjeta" to _codigoInputTarjeta.text.toString()
+                "codigoTarjeta" to _codigoInputTarjeta.text.toString()
             )
 
             //view.findViewById<TextView>(R.id.nombreViewPerfil).text = args.nombrePerfil
             //view.findViewById<TextView>(R.id.correoViewPerfil).text = args.emailPerfil
-            db.collection("usuarios/prueba@mail.com/tarjetas").document(_numTarjetaInputTarjeta.text.toString()).set(data)
+            db.collection("usuarios/${args.idUsuario}/tarjetas").document(_numTarjetaInputTarjeta.text.toString()).set(data)
 
-            findNavController().navigate(R.id.action_agregarTarjetaPerfil_to_misTarjetasPerfilFragment)
+            //findNavController().navigate(R.id.action_agregarTarjetaPerfil_to_misTarjetasPerfilFragment)
+            val action = agregarTarjetaPerfilDirections
+                .actionAgregarTarjetaPerfilToMisTarjetasPerfilFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
 
 
