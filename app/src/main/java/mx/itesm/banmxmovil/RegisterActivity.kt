@@ -56,6 +56,11 @@ class RegisterActivity : AppCompatActivity() {
     fun clickTextViewLogIn(view: View?) {
         val intent = Intent(this, LogActivity::class.java)
         startActivity(intent)
+        finish()
+    }
+
+    fun clickTextViewFinish(view: View?) {
+        finish()
     }
 
     fun registrarFirestore() {

@@ -18,7 +18,7 @@ class TarjetasFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_tarjetas, container, false)
 
-        view.findViewById<Button>(R.id.regresarBotonAddTarjeta).setOnClickListener {
+        view.findViewById<ImageButton>(R.id.regresarBotonAddTarjeta).setOnClickListener {
             findNavController().navigate(R.id.action_tarjetasFragment_to_pagoFragment)
         }
         view.findViewById<Button>(R.id.anadirTarjetaAddTarjeta).setOnClickListener {

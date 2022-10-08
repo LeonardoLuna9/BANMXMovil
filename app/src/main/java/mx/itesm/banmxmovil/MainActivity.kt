@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity() {
         } else {
             // Lo llevamos a inicio
             val intent = Intent(this,FragmentActivity::class.java)
+            //intent.putExtra("id_user",);
             startActivity(intent)
 
             Toast.makeText(

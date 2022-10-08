@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import androidx.navigation.fragment.findNavController
 
 class ApadrinarFragment : Fragment() {
@@ -17,15 +19,15 @@ class ApadrinarFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_apadrinar, container, false)
 
-        view.findViewById<ImageButton>(R.id.configApadrinar).setOnClickListener {
+        view.findViewById<ImageView>(R.id.configApadrinar).setOnClickListener {
             findNavController().navigate(R.id.action_apadrinarFragment_to_perfilFragment2)
         }
 
-        view.findViewById<ImageButton>(R.id.cartApadrinar).setOnClickListener{
+        view.findViewById<ImageView>(R.id.cartApadrinar).setOnClickListener{
             findNavController().navigate(R.id.action_apadrinarFragment_to_carritoFragment2)
         }
 
-        view.findViewById<ImageButton>(R.id.botonApadrinar).setOnClickListener{
+        view.findViewById<Button>(R.id.botonApadrinar).setOnClickListener{
             findNavController().navigate(R.id.action_apadrinarFragment_to_mensajesFragment)
         }
 
