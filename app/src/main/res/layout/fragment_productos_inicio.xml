@@ -11,8 +11,8 @@
         android:id="@+id/buttonAbarrotes"
         android:layout_width="106dp"
         android:layout_height="48dp"
-        android:layout_marginTop="124dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="80dp"
         android:backgroundTint="#FFFFFF"
         android:text="Abarrotes"
         android:textAlignment="textStart"
@@ -21,6 +21,21 @@
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonNocomestible"
+        android:layout_width="128dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="No comestible"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#AC0202"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFrutas" />
 
     <Button
         android:id="@+id/buttonEmbutidos"
@@ -38,26 +53,11 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonAbarrotes" />
 
     <Button
-        android:id="@+id/buttonNocomestible"
-        android:layout_width="128dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="No comestible"
-        android:textAlignment="textStart"
-        android:textAllCaps="false"
-        android:textColor="#AC0202"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonFrutas" />
-
-    <Button
         android:id="@+id/buttonFrutas"
         android:layout_width="136dp"
         android:layout_height="48dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#FFFFFF"
         android:onClick="listaFrutas"
         android:text="Frutas/verduras"
@@ -67,5 +67,19 @@
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerProductos"
+        android:layout_width="408dp"
+        android:layout_height="366dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEmbutidos"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

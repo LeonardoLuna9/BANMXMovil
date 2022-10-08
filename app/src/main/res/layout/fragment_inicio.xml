@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frameLayout10"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:rotation="0"
+    tools:context=".InicioFragment" >
+
+    <ImageView
+        android:id="@+id/apadrinarApadrinar2"
+        android:layout_width="55dp"
+        android:layout_height="58dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.646"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        app:srcCompat="@drawable/familiaicono"
+        app:tint="#090909" />
+
+    <ImageView
+        android:id="@+id/cartApadrinar2"
+        android:layout_width="57dp"
+        android:layout_height="57dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.364"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.974"
+        app:srcCompat="@drawable/carrito3" />
+
+    <ImageView
+        android:id="@+id/homeApadrinar2"
+        android:layout_width="61dp"
+        android:layout_height="57dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.974"
+        app:srcCompat="@drawable/casa"
+        app:tint="#D31919" />
+
+    <ImageView
+        android:id="@+id/configApadrinar2"
+        android:layout_width="127dp"
+        android:layout_height="77dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.987"
+        app:srcCompat="@drawable/settingsgrey"
+        tools:srcCompat="@drawable/herramienta2"
+        app:tint="#0E0E0E" />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="243dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#EFEFEF"
+        android:fadingEdge="horizontal|vertical"
+        app:layout_constraintEnd_toStartOf="@+id/imageView7"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="41dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/filtro" />
+
+    <Button
+        android:id="@+id/productos"
+        android:layout_width="155dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#D31919"
+        android:onClick="productosInicio"
+        android:text="Productos"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:translationZ="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="43dp"
+        android:layout_height="48dp"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/productos"
+        app:layout_constraintEnd_toEndOf="@+id/productos"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toStartOf="@+id/productos"
+        app:layout_constraintTop_toTopOf="@+id/productos"
+        app:srcCompat="@drawable/products" />
+
+    <Button
+        android:id="@+id/canastas"
+        android:layout_width="155dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="canastasInicio"
+        android:text="Canastas"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#D31919"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="43dp"
+        android:layout_height="48dp"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/canastas"
+        app:layout_constraintEnd_toEndOf="@+id/canastas"
+        app:layout_constraintHorizontal_bias="0.848"
+        app:layout_constraintStart_toStartOf="@+id/canastas"
+        app:layout_constraintTop_toTopOf="@+id/canastas"
+        app:srcCompat="@drawable/canasta" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="mx.itesm.banmxmovil.FragmentProductosInicio"
+        android:layout_width="406dp"
+        android:layout_height="484dp"
+        app:layout_constraintBottom_toTopOf="@+id/cartApadrinar2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productos" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

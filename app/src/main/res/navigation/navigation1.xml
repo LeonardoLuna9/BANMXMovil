@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation1"
-    app:startDestination="@id/perfilFragment">
+    app:startDestination="@id/inicioFragment">
 
     <fragment
         android:id="@+id/perfilFragment"
@@ -175,5 +175,53 @@
         <action
             android:id="@+id/action_pagosEnProcesoFragment_to_perfilFragment"
             app:destination="@id/perfilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="mx.itesm.banmxmovil.InicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicioFragment_to_productoMuestraFragment"
+            app:destination="@id/productoMuestraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productoMuestraFragment"
+        android:name="mx.itesm.banmxmovil.ProductoMuestraFragment"
+        android:label="fragment_producto_muestra"
+        tools:layout="@layout/fragment_producto_muestra" >
+        <argument
+            android:name="nombre"
+            app:argType="string" />
+        <argument
+            android:name="precio"
+            app:argType="string" />
+        <argument
+            android:name="imagen"
+            app:argType="string" />
+        <argument
+            android:name="paquete"
+            app:argType="string" />
+        <argument
+            android:name="descripcion"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentProductosInicio"
+        android:name="mx.itesm.banmxmovil.FragmentProductosInicio"
+        android:label="fragment_productos_inicio"
+        tools:layout="@layout/fragment_productos_inicio" >
+        <action
+            android:id="@+id/action_fragmentProductosInicio_to_productoMuestraFragment"
+            app:destination="@id/productoMuestraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCanastasInicio"
+        android:name="mx.itesm.banmxmovil.FragmentCanastasInicio"
+        android:label="fragment_canastas_inicio"
+        tools:layout="@layout/fragment_canastas_inicio" >
+        <action
+            android:id="@+id/action_fragmentCanastasInicio_to_productoMuestraFragment"
+            app:destination="@id/productoMuestraFragment" />
     </fragment>
 </navigation>

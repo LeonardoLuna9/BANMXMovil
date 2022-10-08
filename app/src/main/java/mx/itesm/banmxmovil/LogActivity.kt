@@ -21,10 +21,9 @@ class LogActivity : AppCompatActivity() {
         //setContentView(R.layout.activity_log)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_log)
         verificarUsuario()
-    /*
+
         val intent = Intent(this, FragmentActivity::class.java)
         startActivity(intent)
-         */
     }
 
     fun login(view : View?) {
