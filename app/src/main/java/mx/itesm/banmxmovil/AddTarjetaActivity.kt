@@ -4,12 +4,20 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.RadioButton
+import android.widget.RadioGroup
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import mx.itesm.banmxmovil.databinding.ActivityAddTarjetaBinding
 
-class AddTarjetaActivity : AppCompatActivity() {
+
+class AddTarjetaActivity : AppCompatActivity(), RadioGroup.OnCheckedChangeListener {
+
+    var opcion1: RadioButton? = null
+    var opcion2: RadioButton? = null
+    var radiogroup: RadioGroup? = null
 
     lateinit var binding : ActivityAddTarjetaBinding
 
@@ -28,6 +36,11 @@ class AddTarjetaActivity : AppCompatActivity() {
             //val datosTarjeta = intent.getStringArrayListExtra("miLista") as ArrayList<String>? obtener datos del array
 
             // aqui se actualizan los datos que recibe desde agregar tarjeta, se intentara hacerlo directo a firestore
+            // seleccionar entre tarjetas
+            radiogroup = findViewById(R.id.RadioGroup3)
+            tarjeta1 = findViewById(R.id.radioButton6)
+            tarjeta2 = findViewById(R.id.radioButton11)
+            radiogroup?.setOnCheckedChangeListener(this)
         }
     }
 
@@ -49,4 +62,12 @@ class AddTarjetaActivity : AppCompatActivity() {
     fun regresarAPerfil(view: View?){
         finish()
     }
+
+    override fun onCheckedChanged(p0: RadioGroup?, idRadio: Int){
+        when (idRadio) {
+            opcion1?.id -> Toast.makeText(this, "Tarjeta Seleccionada", Toast.LENGTH_LONG).show()
+            opcion2?.id -> Toast.makeText(this, "Tarjeta Seleccionada", Toast.LENGTH_LONG).show()
+        }
+    }
+
 }

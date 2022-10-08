@@ -91,32 +91,32 @@
             app:layout_constraintVertical_bias="0.112"
             app:srcCompat="@drawable/addtarjeta" />
 
-        <RadioButton
-            android:id="@+id/radioButton6"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:backgroundTint="#D51E1E"
-            android:buttonTint="#F10505"
-            android:checked="true"
-            android:textColor="#EF0303"
-            app:layout_constraintBottom_toTopOf="@+id/radioButton11"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.311"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.527" />
-
-        <RadioButton
-            android:id="@+id/radioButton11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#D51E1E"
-            android:buttonTint="#D51E1E"
+        <RadioGroup
+            android:id="@+id/RadioGroup3"
+            android:layout_width="81dp"
+            android:layout_height="381dp"
+            android:layout_marginBottom="228dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.311"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.411" />
+            app:layout_constraintHorizontal_bias="0.342"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <RadioButton
+                android:id="@+id/radioButton6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#D51E1E"
+                android:buttonTint="#F10505"
+                android:checked="false"
+                android:textColor="#EF0303" />
+
+            <RadioButton
+                android:id="@+id/radioButton11"
+                android:layout_width="wrap_content"
+                android:layout_height="277dp"
+                android:backgroundTint="#D51E1E"
+                android:buttonTint="#D51E1E" />
+        </RadioGroup>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
