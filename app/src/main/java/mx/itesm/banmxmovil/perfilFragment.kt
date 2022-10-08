@@ -9,11 +9,12 @@ import android.widget.Button
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 
 
 class perfilFragment : Fragment() {
 
-    //val args : perfilFragmentArgs by navArgs()
+    val args : perfilFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,16 +25,26 @@ class perfilFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_perfil, container, false)
         //val data = arguments
         //Log.wtf("ID",data!!.get("string").toString())
-        view.findViewById<Button>(R.id.editarPerfilBotonPerfil).setOnClickListener{
-            findNavController().navigate(R.id.action_perfilFragment_to_editarPerfilFragment)
+        view.findViewById<Button>(R.id.editarPerfilBotonPerfil).setOnClickListener {
+            //findNavController().navigate(R.id.action_perfilFragment_to_editarPerfilFragment)
+            val action = perfilFragmentDirections
+                .actionPerfilFragmentToEditarPerfilFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
 
-        view.findViewById<Button>(R.id.misDonacionesBotonPerfil).setOnClickListener{
+        view.findViewById<Button>(R.id.misDonacionesBotonPerfil).setOnClickListener {
             findNavController().navigate(R.id.action_perfilFragment_to_misDonacionesFragment)
         }
 
         view.findViewById<Button>(R.id.misTarjetasBotonPerfil).setOnClickListener{
-            findNavController().navigate(R.id.action_perfilFragment_to_misTarjetasPerfilFragment2)
+            //findNavController().navigate(R.id.action_perfilFragment_to_misTarjetasPerfilFragment2)
+            val action = perfilFragmentDirections
+                .actionPerfilFragmentToMisTarjetasPerfilFragment2(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
 
         view.findViewById<ImageView>(R.id.cartPerfil).setOnClickListener {
@@ -42,6 +53,15 @@ class perfilFragment : Fragment() {
 
         view.findViewById<ImageView>(R.id.apadrinarPerfil).setOnClickListener {
             findNavController().navigate(R.id.action_perfilFragment_to_apadrinarFragment3)
+        }
+
+        view.findViewById<ImageView>(R.id.homePerfil).setOnClickListener{
+            //findNavController().navigate(R.id.action_perfilFragment_to_misTarjetasPerfilFragment2)
+            val action = perfilFragmentDirections
+                .actionPerfilFragmentToInicioFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
 
 

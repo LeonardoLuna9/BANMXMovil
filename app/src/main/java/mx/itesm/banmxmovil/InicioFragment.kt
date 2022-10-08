@@ -6,10 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 
 
 class InicioFragment : Fragment() {
+
+    val args : InicioFragmentArgs by navArgs()
 
     lateinit var productosFragment : FragmentProductosInicio
     lateinit var canastasFragment : FragmentCanastasInicio
@@ -60,6 +66,34 @@ class InicioFragment : Fragment() {
                 transaction.commit()
             }
         }
+
+        // Presionamos boton de config
+        view.findViewById<ImageView>(R.id.configApadrinar2).setOnClickListener{
+            val action = InicioFragmentDirections
+                .actionInicioFragmentToPerfilFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
+        }
+
+        // Presionamos boton de carrito
+        view.findViewById<ImageView>(R.id.cartApadrinar2).setOnClickListener{
+            val action = InicioFragmentDirections
+                .actionInicioFragmentToCarritoFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
+        }
+
+        // Presionamos el boton de apadrinar
+        view.findViewById<ImageView>(R.id.apadrinarApadrinar2).setOnClickListener{
+            val action = InicioFragmentDirections
+                .actionInicioFragmentToApadrinarFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
+        }
+
         return view
     }
 

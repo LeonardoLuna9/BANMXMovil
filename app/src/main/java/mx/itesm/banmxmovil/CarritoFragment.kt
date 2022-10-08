@@ -6,11 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 
 class CarritoFragment : Fragment() {
+
+    val args : CarritoFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,6 +31,15 @@ class CarritoFragment : Fragment() {
         }
         view.findViewById<Button>(R.id.procederAComprarBotonCarrito).setOnClickListener{
             findNavController().navigate(R.id.action_carritoFragment_to_pagoFragment)
+        }
+
+        view.findViewById<ImageView>(R.id.homeCarrito).setOnClickListener{
+            //findNavController().navigate(R.id.action_perfilFragment_to_misTarjetasPerfilFragment2)
+            val action = CarritoFragmentDirections
+                .actionCarritoFragmentToInicioFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
 
         return view

@@ -22,46 +22,19 @@ class agregarTarjetaPerfil : Fragment() {
     private lateinit var _codigoInputTarjeta : EditText
 
     val db = Firebase.firestore
-    //val args : perfilFragmentArgs by navArgs()
-
-    companion object {
-        const val ARG_NAME = "name"
-
-
-        fun newInstance(name: String): agregarTarjetaPerfil {
-            val fragment = agregarTarjetaPerfil()
-
-            val bundle = Bundle().apply {
-                putString(ARG_NAME, name)
-            }
-
-            fragment.arguments = bundle
-
-            return fragment
-        }
-    }
+    val args : agregarTarjetaPerfilArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        //val strtext = requireArguments().getString("edttext")
-        val name = arguments?.getString(ARG_NAME)
         val view = inflater.inflate(R.layout.fragment_agregar_tarjeta_perfil, container, false)
 
-        _nombreInputTarjeta = view.findViewById<EditText>(R.id.nombreInputTarjeta)
-        _numTarjetaInputTarjeta = view.findViewById<EditText>(R.id.numTarjetaInputTarjeta)
-        _expInputTarjeta = view.findViewById<EditText>(R.id.expInputTarjeta)
-        _codigoInputTarjeta = view.findViewById<EditText>(R.id.codigoInputTarjeta)
-
-        //view.Log("wtf", name)
-        if (name != null) {
-            Log.wtf("NAME", name);
-        }
-        else {
-            Log.wtf("NAME", "No se puede");
-        }
+        _nombreInputTarjeta = view.findViewById(R.id.nombreInputTarjeta)
+        _numTarjetaInputTarjeta = view.findViewById(R.id.numTarjetaInputTarjeta)
+        _expInputTarjeta = view.findViewById(R.id.expInputTarjeta)
+        _codigoInputTarjeta = view.findViewById(R.id.codigoInputTarjeta)
 
         view.findViewById<Button>(R.id.guardarBotonTarjeta).setOnClickListener{
             val data = hashMapOf(
@@ -73,9 +46,14 @@ class agregarTarjetaPerfil : Fragment() {
 
             //view.findViewById<TextView>(R.id.nombreViewPerfil).text = args.nombrePerfil
             //view.findViewById<TextView>(R.id.correoViewPerfil).text = args.emailPerfil
-            //db.collection("usuarios/${name}/tarjetas").document(_numTarjetaInputTarjeta.text.toString()).set(data)
+            db.collection("usuarios/${args.idUsuario}/tarjetas").document(_numTarjetaInputTarjeta.text.toString()).set(data)
 
-            findNavController().navigate(R.id.action_agregarTarjetaPerfil_to_misTarjetasPerfilFragment)
+            //findNavController().navigate(R.id.action_agregarTarjetaPerfil_to_misTarjetasPerfilFragment)
+            val action = agregarTarjetaPerfilDirections
+                .actionAgregarTarjetaPerfilToMisTarjetasPerfilFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
 
 

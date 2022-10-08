@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
     // Función para irnos a actividad de Log In
     fun clickToLogIn(view: View?) {
-        val intent = Intent(this, LogActivity::class.java)
+        val intent = Intent(this, FragmentActivity::class.java)
         startActivity(intent)
     }
 

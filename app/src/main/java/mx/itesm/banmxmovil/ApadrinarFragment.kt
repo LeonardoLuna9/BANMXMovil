@@ -9,8 +9,11 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 
 class ApadrinarFragment : Fragment() {
+
+    val args : ApadrinarFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,6 +32,15 @@ class ApadrinarFragment : Fragment() {
 
         view.findViewById<Button>(R.id.botonApadrinar).setOnClickListener{
             findNavController().navigate(R.id.action_apadrinarFragment_to_mensajesFragment)
+        }
+
+        // Presionamos el boton de config
+        view.findViewById<ImageView>(R.id.configApadrinar).setOnClickListener{
+            val action = ApadrinarFragmentDirections
+                .actionApadrinarFragmentToInicioFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
 
         return view
