@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 
@@ -26,6 +28,7 @@ class editarPerfilFragment : Fragment() {
                 .actionEditarPerfilFragmentToPerfilFragment(
                     args.idUsuario
                 )
+<<<<<<< Updated upstream
             /*
             view.findViewById<EditText>(R.id.nameInputEditarPerfil).text.toString(),
             view.findViewById<EditText>(R.id.correoInputEditarPerfil).text.toString(),
@@ -33,7 +36,14 @@ class editarPerfilFragment : Fragment() {
             view.findViewById<EditText>(R.id.nuevaContraInputEditarPerfil).text.toString()
              */
             findNavController().navigate(action)
+=======
+>>>>>>> Stashed changes
 
+            Toast.makeText(activity, "Información Guardada", Toast.LENGTH_SHORT).show()
+        }
+
+        view.findViewById<ImageButton>(R.id.regresarBotonEditarPerfil).setOnClickListener{
+            findNavController().navigate(R.id.action_editarPerfilFragment_to_perfilFragment2)
         }
 
         return view
