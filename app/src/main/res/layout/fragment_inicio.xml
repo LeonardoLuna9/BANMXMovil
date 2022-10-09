@@ -64,25 +64,13 @@
         android:id="@+id/searchView"
         android:layout_width="243dp"
         android:layout_height="42dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:background="#FFFFFF"
         android:backgroundTint="#EFEFEF"
         android:fadingEdge="horizontal|vertical"
-        app:layout_constraintEnd_toStartOf="@+id/imageView7"
-        app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="41dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/filtro" />
 
     <Button
         android:id="@+id/productos"
@@ -147,5 +135,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/productos" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="117dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#D31919"
+        android:text="Donar"
+        android:textAlignment="viewStart"
+        app:layout_constraintBottom_toTopOf="@+id/canastas"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="36dp"
+        android:layout_height="32dp"
+        android:src="@drawable/donaricon"
+        android:translationZ="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="@+id/button5"
+        app:layout_constraintHorizontal_bias="0.901"
+        app:layout_constraintStart_toStartOf="@+id/button5"
+        app:layout_constraintTop_toTopOf="@+id/button5"
+        app:layout_constraintVertical_bias="0.529"
+        app:tint="#FFFFFF" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
