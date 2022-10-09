@@ -27,11 +27,11 @@ class TarjetasFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
         view.findViewById<ImageButton>(R.id.regresarBotonAddTarjeta).setOnClickListener {
             findNavController().navigate(R.id.action_tarjetasFragment_to_pagoFragment)
         }
-        view.findViewById<Button>(R.id.anadirTarjetaAddTarjeta).setOnClickListener {
-            findNavController().navigate(R.id.action_tarjetasFragment_to_agregarTarjetaPerfil)
-        }
         view.findViewById<Button>(R.id.pagarAddTarjeta).setOnClickListener {
             findNavController().navigate(R.id.action_tarjetasFragment_to_agradecimientoFragment)
+        }
+        view.findViewById<Button>(R.id.anadirTarjetaAddTarjeta).setOnClickListener {
+            findNavController().navigate(R.id.action_tarjetasFragment_to_agregarTarFragment)
         }
         return view
         }

@@ -76,12 +76,12 @@
         android:name="mx.itesm.banmxmovil.agregarTarjetaPerfil"
         android:label="fragment_agregar_tarjeta_perfil"
         tools:layout="@layout/fragment_agregar_tarjeta_perfil" >
-        <action
-            android:id="@+id/action_agregarTarjetaPerfil_to_misTarjetasPerfilFragment"
-            app:destination="@id/misTarjetasPerfilFragment" />
         <argument
             android:name="idUsuario"
             app:argType="string" />
+        <action
+            android:id="@+id/action_agregarTarjetaPerfil_to_misTarjetasPerfilFragment"
+            app:destination="@id/misTarjetasPerfilFragment" />
     </fragment>
     <fragment
         android:id="@+id/pagoFragment"
@@ -91,6 +91,9 @@
         <action
             android:id="@+id/action_pagoFragment_to_tarjetasFragment"
             app:destination="@id/tarjetasFragment" />
+        <action
+            android:id="@+id/action_pagoFragment_to_carritoFragment2"
+            app:destination="@id/carritoFragment" />
     </fragment>
     <fragment
         android:id="@+id/donarFragment"
@@ -158,14 +161,14 @@
         android:label="fragment_tarjetas"
         tools:layout="@layout/fragment_tarjetas" >
         <action
-            android:id="@+id/action_tarjetasFragment_to_agregarTarjetaPerfil"
-            app:destination="@id/agregarTarjetaPerfil" />
-        <action
             android:id="@+id/action_tarjetasFragment_to_agradecimientoFragment"
             app:destination="@id/agradecimientoFragment" />
         <action
             android:id="@+id/action_tarjetasFragment_to_pagoFragment"
             app:destination="@id/pagoFragment" />
+        <action
+            android:id="@+id/action_tarjetasFragment_to_agregarTarFragment"
+            app:destination="@id/agregarTarFragment" />
     </fragment>
     <fragment
         android:id="@+id/agradecimientoFragment"
@@ -261,5 +264,29 @@
         <action
             android:id="@+id/action_logFragment_to_inicioFragment"
             app:destination="@id/inicioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/agregarTarFragment"
+        android:name="mx.itesm.banmxmovil.AgregarTarFragment"
+        android:label="fragment_agregar_tar"
+        tools:layout="@layout/fragment_agregar_tar" >
+        <action
+            android:id="@+id/action_agregarTarFragment_to_tarjetasFragment"
+            app:destination="@id/tarjetasFragment" />
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/metodoPagoDosFragment"
+        android:name="mx.itesm.banmxmovil.MetodoPagoDosFragment"
+        android:label="fragment_metodo_pago_dos"
+        tools:layout="@layout/fragment_metodo_pago_dos" >
+        <action
+            android:id="@+id/action_metodoPagoDosFragment_to_donarFragment"
+            app:destination="@id/donarFragment" />
+        <action
+            android:id="@+id/action_metodoPagoDosFragment_to_tarjetasFragment"
+            app:destination="@id/tarjetasFragment" />
     </fragment>
 </navigation>

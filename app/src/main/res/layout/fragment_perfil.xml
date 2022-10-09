@@ -7,18 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".perfilFragment">
 
-    <ImageButton
-        android:id="@+id/regresarBotonPerfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="#FFFFFF"
-        android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="?attr/actionModeCloseDrawable" />
-
     <ImageView
         android:id="@+id/apadrinarPerfil"
         android:layout_width="55dp"
@@ -77,7 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="96dp"
         android:backgroundTint="#D51E1E"
-        android:text="Mis suscripciones"
+        android:text="Cerrar sesión"
         app:layout_constraintEnd_toEndOf="@+id/misTarjetasBotonPerfil"
         app:layout_constraintStart_toStartOf="@+id/misTarjetasBotonPerfil"
         app:layout_constraintTop_toBottomOf="@+id/misDonacionesBotonPerfil"

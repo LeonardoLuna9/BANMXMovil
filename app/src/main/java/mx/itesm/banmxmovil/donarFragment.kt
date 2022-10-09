@@ -24,9 +24,6 @@ class donarFragment : Fragment() {
         view.findViewById<Button>(R.id.apadrinarDonar).setOnClickListener{
             findNavController().navigate(R.id.action_donarFragment_to_apadrinarFragment)
         }
-        view.findViewById<Button>(R.id.apadrinarDonar).setOnClickListener{
-            findNavController().navigate(R.id.action_donarFragment_to_apadrinarFragment)
-        }
         view.findViewById<Button>(R.id.cartDonar).setOnClickListener{
             findNavController().navigate(R.id.action_donarFragment_to_carritoFragment)
         }

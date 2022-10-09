@@ -32,6 +32,10 @@ class CarritoFragment : Fragment() {
         view.findViewById<Button>(R.id.procederAComprarBotonCarrito).setOnClickListener{
             findNavController().navigate(R.id.action_carritoFragment_to_pagoFragment)
         }
+        view.findViewById<Button>(R.id.regresarBotonCarrito).setOnClickListener{
+            findNavController().navigate(R.id.action_carritoFragment_to_inicioFragment)
+        }
+
 
         view.findViewById<ImageView>(R.id.homeCarrito).setOnClickListener{
             //findNavController().navigate(R.id.action_perfilFragment_to_misTarjetasPerfilFragment2)
