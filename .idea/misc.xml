@@ -27,6 +27,8 @@
         <entry key="..\:/Users/edgar/OneDrive/Documentos/android/BANMXMovil/app/src/main/res/layout/fragment_inicio.xml" value="0.264" />
         <entry key="..\:/Users/edgar/OneDrive/Documentos/android/BANMXMovil/app/src/main/res/layout/fragment_producto_muestra.xml" value="0.16979166666666667" />
         <entry key="..\:/Users/edgar/OneDrive/Documentos/android/BANMXMovil/app/src/main/res/layout/list_productos.xml" value="0.1" />
+        <entry key="..\:/Users/edgar/OneDrive/Documentos/android/BANMXMovil/app/src/main/res/layout/fragment_inicio.xml" value="0.264" />
+        <entry key="..\:/Users/edgar/OneDrive/Documentos/android/BANMXMovil/app/src/main/res/layout/fragment_producto_muestra.xml" value="0.16979166666666667" />
         <entry key="app/src/main/res/layout/activity_add_tarjeta.xml" value="0.14647674560546875" />
         <entry key="app/src/main/res/layout/activity_agradecimiento.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_apadrinar.xml" value="0.17478791056191423" />
@@ -52,6 +54,7 @@
         <entry key="app/src/main/res/layout/fragment_apadrinar.xml" value="0.2259963768115942" />
         <entry key="app/src/main/res/layout/fragment_canastas_inicio.xml" value="0.2259963768115942" />
         <entry key="app/src/main/res/layout/fragment_carrito.xml" value="0.16666666666666666" />
+        <entry key="app/src/main/res/layout/fragment_donar.xml" value="0.30316162109375" />
         <entry key="app/src/main/res/layout/fragment_editar_perfil.xml" value="0.16666666666666666" />
         <entry key="app/src/main/res/layout/fragment_inicio.xml" value="0.21458333333333332" />
         <entry key="app/src/main/res/layout/fragment_mensajes.xml" value="0.16666666666666666" />

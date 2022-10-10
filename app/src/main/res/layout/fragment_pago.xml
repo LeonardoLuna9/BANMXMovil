@@ -8,7 +8,7 @@
     tools:context=".pagoFragment">
 
     <ImageButton
-        android:id="@+id/regresarBotonPago"
+        android:id="@+id/regresarBotonMetodoPago"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

@@ -129,7 +129,7 @@
         android:layout_width="170dp"
         android:layout_height="54dp"
         android:layout_marginBottom="168dp"
-        android:text="Gracias por tu atención"
+        android:text="Lo sentimos. Gracias por tu atención"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
         app:layout_constraintStart_toStartOf="@+id/imageView4"

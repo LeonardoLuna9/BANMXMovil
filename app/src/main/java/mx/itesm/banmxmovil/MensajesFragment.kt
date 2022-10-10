@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
@@ -19,7 +20,7 @@ class MensajesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_mensajes2, container, false)
+        val view = inflater.inflate(R.layout.fragment_mensajes, container, false)
         if(Firebase.auth.currentUser == null) {
 
             // SIGNIFICA QUE HAY NECESIDAD DE RE-VALIDAR EL USUARIO
@@ -30,6 +31,20 @@ class MensajesFragment : Fragment() {
         view.findViewById<ImageButton>(R.id.regresarBotonApadrinar2).setOnClickListener {
             val action = MensajesFragmentDirections
                 .actionMensajesFragmentToApadrinarFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
+        }
+        view.findViewById<Button>(R.id.BotonSi).setOnClickListener {
+            val action = MensajesFragmentDirections
+                .actionMensajesFragmentToMensajes2Fragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
+        }
+        view.findViewById<Button>(R.id.BotonNo).setOnClickListener {
+            val action = MensajesFragmentDirections
+                .actionMensajesFragmentToMensajesNoFragment(
                     args.idUsuario
                 )
             findNavController().navigate(action)

@@ -84,21 +84,22 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/BotonSi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:backgroundTint="#D51E1E"
         android:text="Si"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/BotonNo"
         app:layout_constraintHorizontal_bias="0.735"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/BotonNo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#971414"
         android:text="No"
         app:layout_constraintEnd_toEndOf="parent"
