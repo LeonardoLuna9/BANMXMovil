@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -36,30 +37,27 @@ class donarFragment : Fragment() {
                 )
             findNavController().navigate(action)
         }
-        view.findViewById<Button>(R.id.configDonar).setOnClickListener{
+        view.findViewById<ImageView>(R.id.configDonar).setOnClickListener{
             val action = donarFragmentDirections
                 .actionDonarFragmentToPerfilFragment(
                     args.idUsuario
                 )
             findNavController().navigate(action)
         }
-        view.findViewById<Button>(R.id.apadrinarDonar).setOnClickListener{
+        view.findViewById<ImageView>(R.id.apadrinarDonar).setOnClickListener{
             val action = donarFragmentDirections
                 .actionDonarFragmentToApadrinarFragment(
                     args.idUsuario
                 )
             findNavController().navigate(action)
         }
-        view.findViewById<Button>(R.id.cartDonar).setOnClickListener{
+        view.findViewById<ImageView>(R.id.cartDonar).setOnClickListener{
             val action = donarFragmentDirections
                 .actionDonarFragmentToCarritoFragment(
                     args.idUsuario
                 )
             findNavController().navigate(action)
         }
-
-
-
         return view
     }
 
