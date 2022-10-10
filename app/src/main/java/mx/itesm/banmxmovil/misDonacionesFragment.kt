@@ -7,22 +7,43 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class misDonacionesFragment : Fragment() {
-
+    val args : misDonacionesFragmentArgs by navArgs()
     override fun onCreateView(
+
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
+
     ): View? {
+
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_mis_donaciones, container, false)
+        if(Firebase.auth.currentUser == null) {
 
+            // SIGNIFICA QUE HAY NECESIDAD DE RE-VALIDAR EL USUARIO
+            // podrías redireccionar / terminar esta actividad
+            Toast.makeText(context, "REVALIDA!", Toast.LENGTH_SHORT).show()
+            requireActivity().finish()
+        }
         view.findViewById<ImageButton>(R.id.regresarBotonOrdenes).setOnClickListener {
-            findNavController().navigate(R.id.action_misDonacionesFragment_to_perfilFragment)
+            val action = misDonacionesFragmentDirections
+                .actionMisDonacionesFragmentToPerfilFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
         view.findViewById<Button>(R.id.completadoBotonOrdenes).setOnClickListener {
-            findNavController().navigate(R.id.action_misDonacionesFragment_to_pagosEnProcesoFragment)
+            val action = misDonacionesFragmentDirections
+                .actionMisDonacionesFragmentToPagosEnProcesoFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
 
 

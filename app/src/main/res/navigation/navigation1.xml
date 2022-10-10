@@ -55,6 +55,9 @@
         <action
             android:id="@+id/action_misDonacionesFragment_to_pagosEnProcesoFragment"
             app:destination="@id/pagosEnProcesoFragment" />
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/misTarjetasPerfilFragment"
@@ -94,6 +97,9 @@
         <action
             android:id="@+id/action_pagoFragment_to_carritoFragment2"
             app:destination="@id/carritoFragment" />
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/donarFragment"
@@ -112,6 +118,9 @@
         <action
             android:id="@+id/action_donarFragment_to_carritoFragment"
             app:destination="@id/carritoFragment" />
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/apadrinarFragment"
@@ -169,12 +178,19 @@
         <action
             android:id="@+id/action_tarjetasFragment_to_agregarTarFragment"
             app:destination="@id/agregarTarFragment" />
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/agradecimientoFragment"
         android:name="mx.itesm.banmxmovil.AgradecimientoFragment"
         android:label="fragment_agradecimiento"
-        tools:layout="@layout/fragment_agradecimiento" />
+        tools:layout="@layout/fragment_agradecimiento" >
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/mensajesFragment"
         android:name="mx.itesm.banmxmovil.MensajesFragment"
@@ -183,6 +199,9 @@
         <action
             android:id="@+id/action_mensajesFragment_to_apadrinarFragment"
             app:destination="@id/apadrinarFragment" />
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/pagosEnProcesoFragment"
@@ -195,6 +214,9 @@
         <action
             android:id="@+id/action_pagosEnProcesoFragment_to_perfilFragment"
             app:destination="@id/perfilFragment" />
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/inicioFragment"
@@ -216,6 +238,9 @@
         <action
             android:id="@+id/action_inicioFragment_to_apadrinarFragment"
             app:destination="@id/apadrinarFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_to_donarFragment"
+            app:destination="@id/donarFragment" />
     </fragment>
     <fragment
         android:id="@+id/productoMuestraFragment"
@@ -288,5 +313,8 @@
         <action
             android:id="@+id/action_metodoPagoDosFragment_to_tarjetasFragment"
             app:destination="@id/tarjetasFragment" />
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
     </fragment>
 </navigation>

@@ -11,6 +11,8 @@ import android.widget.ImageButton
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class editarPerfilFragment : Fragment() {
 
@@ -23,21 +25,21 @@ class editarPerfilFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_editar_perfil, container, false)
 
+        // verificamos usuario
+        if(Firebase.auth.currentUser == null) {
+
+            // SIGNIFICA QUE HAY NECESIDAD DE RE-VALIDAR EL USUARIO
+            // podrías redireccionar / terminar esta actividad
+            Toast.makeText(context, "REVALIDA!", Toast.LENGTH_SHORT).show()
+            requireActivity().finish()
+        }
+
         view.findViewById<Button>(R.id.guardarBotonEditarPerfil).setOnClickListener{
             val action = editarPerfilFragmentDirections
                 .actionEditarPerfilFragmentToPerfilFragment(
                     args.idUsuario
                 )
             findNavController().navigate(action)
-
-            /*
-            view.findViewById<EditText>(R.id.nameInputEditarPerfil).text.toString(),
-            view.findViewById<EditText>(R.id.correoInputEditarPerfil).text.toString(),
-            view.findViewById<EditText>(R.id.telefonoInputEditarPerfil).text.toString(),
-            view.findViewById<EditText>(R.id.nuevaContraInputEditarPerfil).text.toString()
-             */
-
-
             Toast.makeText(context, "Información Guardada", Toast.LENGTH_SHORT).show()
         }
 
@@ -54,3 +56,10 @@ class editarPerfilFragment : Fragment() {
 
 
 }
+
+/*
+            view.findViewById<EditText>(R.id.nameInputEditarPerfil).text.toString(),
+            view.findViewById<EditText>(R.id.correoInputEditarPerfil).text.toString(),
+            view.findViewById<EditText>(R.id.telefonoInputEditarPerfil).text.toString(),
+            view.findViewById<EditText>(R.id.nuevaContraInputEditarPerfil).text.toString()
+             */

@@ -7,9 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 
 class perfilFragment : Fragment() {
@@ -23,8 +26,18 @@ class perfilFragment : Fragment() {
         // Inflate the layout for this fragment
         //val strtext = requireArguments().getString("edttext")
         val view = inflater.inflate(R.layout.fragment_perfil, container, false)
-        //val data = arguments
-        //Log.wtf("ID",data!!.get("string").toString())
+
+        // verificamos usuario
+        if(Firebase.auth.currentUser == null) {
+
+            // SIGNIFICA QUE HAY NECESIDAD DE RE-VALIDAR EL USUARIO
+            // podrías redireccionar / terminar esta actividad
+            Toast.makeText(context, "REVALIDA!", Toast.LENGTH_SHORT).show()
+            requireActivity().finish()
+        }
+
+        // ------
+
         view.findViewById<Button>(R.id.editarPerfilBotonPerfil).setOnClickListener {
             //findNavController().navigate(R.id.action_perfilFragment_to_editarPerfilFragment)
             val action = perfilFragmentDirections
@@ -35,7 +48,12 @@ class perfilFragment : Fragment() {
         }
 
         view.findViewById<Button>(R.id.misDonacionesBotonPerfil).setOnClickListener {
-            findNavController().navigate(R.id.action_perfilFragment_to_misDonacionesFragment)
+            //findNavController().navigate(R.id.action_perfilFragment_to_misDonacionesFragment)
+            val action = perfilFragmentDirections
+                .actionPerfilFragmentToMisDonacionesFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
 
         view.findViewById<Button>(R.id.misTarjetasBotonPerfil).setOnClickListener{
@@ -48,20 +66,36 @@ class perfilFragment : Fragment() {
         }
 
         view.findViewById<ImageView>(R.id.cartPerfil).setOnClickListener {
-            findNavController().navigate(R.id.action_perfilFragment_to_carritoFragment3)
+            //findNavController().navigate(R.id.action_perfilFragment_to_carritoFragment3)
+            val action = perfilFragmentDirections
+                .actionPerfilFragmentToCarritoFragment3(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
 
         view.findViewById<ImageView>(R.id.apadrinarPerfil).setOnClickListener {
-            findNavController().navigate(R.id.action_perfilFragment_to_apadrinarFragment3)
+            //findNavController().navigate(R.id.action_perfilFragment_to_apadrinarFragment3)
+            val action = perfilFragmentDirections
+                .actionPerfilFragmentToApadrinarFragment3(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
 
-        view.findViewById<ImageView>(R.id.homePerfil).setOnClickListener{
+        view.findViewById<ImageView>(R.id.homePerfil).setOnClickListener {
             //findNavController().navigate(R.id.action_perfilFragment_to_misTarjetasPerfilFragment2)
             val action = perfilFragmentDirections
                 .actionPerfilFragmentToInicioFragment(
                     args.idUsuario
                 )
             findNavController().navigate(action)
+        }
+
+        // Logout
+        view.findViewById<Button>(R.id.misSuscripcionesBotonPerfil).setOnClickListener{
+            Firebase.auth.signOut()
+            requireActivity().finish()
         }
 
 
