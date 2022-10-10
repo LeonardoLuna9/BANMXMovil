@@ -1,6 +1,7 @@
 package mx.itesm.banmxmovil
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,12 +11,17 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 class CarritoFragment : Fragment() {
 
     val args : CarritoFragmentArgs by navArgs()
+    val db = Firebase.firestore
+    lateinit var carritoList : ArrayList<ArrayList<String>>
+    lateinit var recyclerViewCarrito : RecyclerView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,6 +29,19 @@ class CarritoFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_carrito, container, false)
+
+        db.collection("usuarios/${args.idUsuario}/carrito")
+            .get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+                    Log.d("PRUEBA FIREBASE", "${document.id} => ${document.data}")
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.w("PRUEBA ERROR FIREBASE", "Error getting documents.", exception)
+            }
+
+
 
         // verificamos usuario
         if(Firebase.auth.currentUser == null) {
