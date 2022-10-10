@@ -202,6 +202,12 @@
         <argument
             android:name="idUsuario"
             app:argType="string" />
+        <action
+            android:id="@+id/action_mensajesFragment_to_mensajes2Fragment"
+            app:destination="@id/mensajes2Fragment" />
+        <action
+            android:id="@+id/action_mensajesFragment_to_mensajesNoFragment"
+            app:destination="@id/mensajesNoFragment" />
     </fragment>
     <fragment
         android:id="@+id/pagosEnProcesoFragment"
@@ -316,6 +322,30 @@
         <action
             android:id="@+id/action_metodoPagoDosFragment_to_tarjetasFragment"
             app:destination="@id/tarjetasFragment" />
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/mensajes2Fragment"
+        android:name="mx.itesm.banmxmovil.Mensajes2Fragment"
+        android:label="fragment_mensajes2"
+        tools:layout="@layout/fragment_mensajes2" >
+        <action
+            android:id="@+id/action_mensajes2Fragment_to_apadrinarFragment"
+            app:destination="@id/apadrinarFragment" />
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/mensajesNoFragment"
+        android:name="mx.itesm.banmxmovil.MensajesNoFragment"
+        android:label="fragment_mensajes_no"
+        tools:layout="@layout/fragment_mensajes_no" >
+        <action
+            android:id="@+id/action_mensajesNoFragment_to_apadrinarFragment"
+            app:destination="@id/apadrinarFragment" />
         <argument
             android:name="idUsuario"
             app:argType="string" />

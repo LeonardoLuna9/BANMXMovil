@@ -12,14 +12,14 @@ import androidx.navigation.fragment.navArgs
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-class MensajesFragment : Fragment() {
+class Mensajes2Fragment : Fragment() {
     val args : MensajesFragmentArgs by navArgs()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_mensajes2, container, false)
+        val view = inflater.inflate(R.layout.fragment_mensajes, container, false)
         if(Firebase.auth.currentUser == null) {
 
             // SIGNIFICA QUE HAY NECESIDAD DE RE-VALIDAR EL USUARIO
