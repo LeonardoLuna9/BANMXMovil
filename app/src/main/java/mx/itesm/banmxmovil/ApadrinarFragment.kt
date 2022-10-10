@@ -8,8 +8,11 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class ApadrinarFragment : Fragment() {
 
@@ -22,16 +25,37 @@ class ApadrinarFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_apadrinar, container, false)
 
+        // verificamos usuario
+        if(Firebase.auth.currentUser == null) {
+
+            // SIGNIFICA QUE HAY NECESIDAD DE RE-VALIDAR EL USUARIO
+            // podrías redireccionar / terminar esta actividad
+            Toast.makeText(context, "REVALIDA!", Toast.LENGTH_SHORT).show()
+            requireActivity().finish()
+        }
+
         view.findViewById<ImageView>(R.id.configApadrinar).setOnClickListener {
-            findNavController().navigate(R.id.action_apadrinarFragment_to_perfilFragment2)
+            val action = ApadrinarFragmentDirections
+                .actionApadrinarFragmentToPerfilFragment2(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
 
         view.findViewById<ImageView>(R.id.cartApadrinar).setOnClickListener{
-            findNavController().navigate(R.id.action_apadrinarFragment_to_carritoFragment2)
+            val action = ApadrinarFragmentDirections
+                .actionApadrinarFragmentToCarritoFragment2(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
 
         view.findViewById<Button>(R.id.botonApadrinar).setOnClickListener{
-            findNavController().navigate(R.id.action_apadrinarFragment_to_mensajesFragment)
+            val action = ApadrinarFragmentDirections
+                .actionApadrinarFragmentToMensajesFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
 
         // Presionamos el boton de config

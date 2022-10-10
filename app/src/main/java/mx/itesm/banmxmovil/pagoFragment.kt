@@ -13,7 +13,11 @@ import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.navArgs
 import mx.itesm.banmxmovil.databinding.ActivityPagoBinding
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 
 /*class pagoFragment : Fragment() {
@@ -38,8 +42,7 @@ class pagoFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
     var tarjeta3:RadioButton? = null
     var radiogroup:RadioGroup? = null
 
-    lateinit var binding : ActivityPagoBinding
-
+    val args: pagoFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -54,8 +57,29 @@ class pagoFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
         tarjeta3 = view.findViewById(R.id.botonPaypalPago)
         radiogroup?.setOnCheckedChangeListener(this)
 
+        // verificamos usuario
+        if(Firebase.auth.currentUser == null) {
+
+            // SIGNIFICA QUE HAY NECESIDAD DE RE-VALIDAR EL USUARIO
+            // podrías redireccionar / terminar esta actividad
+            Toast.makeText(context, "REVALIDA!", Toast.LENGTH_SHORT).show()
+            requireActivity().finish()
+        }
+
         view.findViewById<Button>(R.id.regresarBotonAddTarjeta).setOnClickListener {
-            findNavController().navigate(R.id.action_pagoFragment_to_tarjetasFragment)
+            val action = pagoFragmentDirections
+                .actionPagoFragmentToCarritoFragment2(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
+        }
+
+        view.findViewById<Button>(R.id.siguienteBotonPago).setOnClickListener {
+            val action = pagoFragmentDirections
+                .actionPagoFragmentToTarjetasFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
         return view
     }
