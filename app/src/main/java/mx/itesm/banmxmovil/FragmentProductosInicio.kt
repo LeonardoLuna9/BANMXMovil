@@ -26,9 +26,14 @@ class FragmentProductosInicio : Fragment(), View.OnClickListener {
     lateinit var abarrotes : Button
     lateinit var noComestible : Button
     lateinit var embutidos : Button
+    private var value1: String = "No"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val bundle = this.arguments
+        if (bundle != null) {
+            value1 = bundle.getString("VALUE1", "No").toString()
+        }
     }
 
 
@@ -185,7 +190,8 @@ class FragmentProductosInicio : Fragment(), View.OnClickListener {
             listaProductos[position][1].toString(),
             listaProductos[position][2],
             listaProductos[position][3],
-            listaProductos[position][4]
+            listaProductos[position][4],
+            value1
         )
 
         findNavController().navigate(action)

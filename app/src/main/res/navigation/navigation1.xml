@@ -262,6 +262,9 @@
         <argument
             android:name="descripcion"
             app:argType="string" />
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/fragmentProductosInicio"

@@ -1,12 +1,11 @@
 package mx.itesm.banmxmovil
 
-import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -22,10 +21,14 @@ class FragmentCanastasInicio : Fragment(), View.OnClickListener {
     lateinit var recyclerView : RecyclerView
     private val TAG = "request"
     private lateinit var queue: RequestQueue
-
+    private var value1: String = "No"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val bundle = this.arguments
+        if (bundle != null) {
+            value1 = bundle.getString("VALUE1", "No").toString()
+        }
     }
 
     override fun onCreateView(
@@ -83,7 +86,8 @@ class FragmentCanastasInicio : Fragment(), View.OnClickListener {
             listaCanastas[position][1].toString(),
             listaCanastas[position][2],
             listaCanastas[position][3],
-            listaCanastas[position][4]
+            listaCanastas[position][4],
+            value1
         )
 
         findNavController().navigate(action)

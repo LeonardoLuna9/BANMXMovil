@@ -5,10 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import com.squareup.picasso.Picasso
 import androidx.navigation.fragment.navArgs
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 
 class ProductoMuestraFragment : Fragment() {
@@ -19,6 +22,8 @@ class ProductoMuestraFragment : Fragment() {
     lateinit var descripcionView : TextView
 
     val args : ProductoMuestraFragmentArgs by navArgs()
+
+    val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +46,17 @@ class ProductoMuestraFragment : Fragment() {
         precioView.text = args.precio
         paqueteView.text = args.paquete
         descripcionView.text = args.descripcion
+
+        val data = hashMapOf(
+            "nombre" to args.nombre,
+            "cantidad" to 1
+        )
+
+        view.findViewById<Button>(R.id.agregarACarritoBoton).setOnClickListener {
+            db.collection("usuarios/${args.idUsuario}/carrito")
+                .document(args.nombre).set(data)
+        }
+        //agregarACarritoBoton
 
         return view
     }
