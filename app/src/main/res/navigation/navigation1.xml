@@ -94,6 +94,9 @@
         <action
             android:id="@+id/action_pagoFragment_to_carritoFragment2"
             app:destination="@id/carritoFragment" />
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/donarFragment"
