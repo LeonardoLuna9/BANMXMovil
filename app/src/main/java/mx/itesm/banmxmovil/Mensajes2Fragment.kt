@@ -13,13 +13,13 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class Mensajes2Fragment : Fragment() {
-    val args : MensajesFragmentArgs by navArgs()
+    val args : Mensajes2FragmentArgs by navArgs()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_mensajes, container, false)
+        val view = inflater.inflate(R.layout.fragment_mensajes2, container, false)
         if(Firebase.auth.currentUser == null) {
 
             // SIGNIFICA QUE HAY NECESIDAD DE RE-VALIDAR EL USUARIO
@@ -28,8 +28,8 @@ class Mensajes2Fragment : Fragment() {
             requireActivity().finish()
         }
         view.findViewById<ImageButton>(R.id.regresarBotonApadrinar2).setOnClickListener {
-            val action = MensajesFragmentDirections
-                .actionMensajesFragmentToApadrinarFragment(
+            val action = Mensajes2FragmentDirections
+                .actionMensajes2FragmentToApadrinarFragment(
                     args.idUsuario
                 )
             findNavController().navigate(action)
