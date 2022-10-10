@@ -48,7 +48,12 @@ class perfilFragment : Fragment() {
         }
 
         view.findViewById<Button>(R.id.misDonacionesBotonPerfil).setOnClickListener {
-            findNavController().navigate(R.id.action_perfilFragment_to_misDonacionesFragment)
+            //findNavController().navigate(R.id.action_perfilFragment_to_misDonacionesFragment)
+            val action = perfilFragmentDirections
+                .actionPerfilFragmentToMisDonacionesFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
 
         view.findViewById<Button>(R.id.misTarjetasBotonPerfil).setOnClickListener{
@@ -61,11 +66,21 @@ class perfilFragment : Fragment() {
         }
 
         view.findViewById<ImageView>(R.id.cartPerfil).setOnClickListener {
-            findNavController().navigate(R.id.action_perfilFragment_to_carritoFragment3)
+            //findNavController().navigate(R.id.action_perfilFragment_to_carritoFragment3)
+            val action = perfilFragmentDirections
+                .actionPerfilFragmentToCarritoFragment3(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
 
         view.findViewById<ImageView>(R.id.apadrinarPerfil).setOnClickListener {
-            findNavController().navigate(R.id.action_perfilFragment_to_apadrinarFragment3)
+            //findNavController().navigate(R.id.action_perfilFragment_to_apadrinarFragment3)
+            val action = perfilFragmentDirections
+                .actionPerfilFragmentToApadrinarFragment3(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
 
         view.findViewById<ImageView>(R.id.homePerfil).setOnClickListener {
