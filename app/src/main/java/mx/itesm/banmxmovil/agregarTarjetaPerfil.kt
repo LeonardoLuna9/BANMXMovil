@@ -15,6 +15,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.google.firebase.auth.ktx.auth
 
 class agregarTarjetaPerfil : Fragment() {
 
@@ -29,6 +30,7 @@ class agregarTarjetaPerfil : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
+
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_agregar_tarjeta_perfil, container, false)
@@ -37,6 +39,15 @@ class agregarTarjetaPerfil : Fragment() {
         _numTarjetaInputTarjeta = view.findViewById(R.id.numTarjetaInputTarjeta)
         _expInputTarjeta = view.findViewById(R.id.expInputTarjeta)
         _codigoInputTarjeta = view.findViewById(R.id.codigoInputTarjeta)
+
+        // verificamos usuario
+        if(Firebase.auth.currentUser == null) {
+
+            // SIGNIFICA QUE HAY NECESIDAD DE RE-VALIDAR EL USUARIO
+            // podrías redireccionar / terminar esta actividad
+            Toast.makeText(context, "REVALIDA!", Toast.LENGTH_SHORT).show()
+            requireActivity().finish()
+        }
 
         view.findViewById<Button>(R.id.guardarBotonTarjeta).setOnClickListener {
             val data = hashMapOf(

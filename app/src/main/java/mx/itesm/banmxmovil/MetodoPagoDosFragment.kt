@@ -10,6 +10,9 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import mx.itesm.banmxmovil.databinding.ActivityPagoBinding
 
 class MetodoPagoDosFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
@@ -19,7 +22,7 @@ class MetodoPagoDosFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
     var radiogroup:RadioGroup? = null
 
     //lateinit var binding : ActivityMetodoPagoDosBinding
-
+    val args: MetodoPagoDosFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,11 +37,29 @@ class MetodoPagoDosFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
         tarjeta3 = view.findViewById(R.id.botonPaypalPago2)
         radiogroup?.setOnCheckedChangeListener(this)
 
-        view.findViewById<Button>(R.id.regresarBotonPago2).setOnClickListener {
-            findNavController().navigate(R.id.action_metodoPagoDosFragment_to_donarFragment)
+        // verificamos usuario
+        if(Firebase.auth.currentUser == null) {
+
+            // SIGNIFICA QUE HAY NECESIDAD DE RE-VALIDAR EL USUARIO
+            // podrías redireccionar / terminar esta actividad
+            Toast.makeText(context, "REVALIDA!", Toast.LENGTH_SHORT).show()
+            requireActivity().finish()
         }
+
+        view.findViewById<Button>(R.id.regresarBotonPago2).setOnClickListener {
+            val action = MetodoPagoDosFragmentDirections
+                .actionMetodoPagoDosFragmentToDonarFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
+        }
+
         view.findViewById<Button>(R.id.siguienteBotonPago2).setOnClickListener {
-            findNavController().navigate(R.id.action_metodoPagoDosFragment_to_tarjetasFragment)
+            val action = MetodoPagoDosFragmentDirections
+                .actionMetodoPagoDosFragmentToTarjetasFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
         return view
     }
@@ -54,7 +75,6 @@ class MetodoPagoDosFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
         tarjeta3 = view.findViewById(R.id.botonPaypalPago)
         radiogroup?.setOnCheckedChangeListener(this)
     }*/
-
     override fun onCheckedChanged(p0: RadioGroup?, idRadio: Int){
         when (idRadio) {
             tarjeta1?.id -> Toast.makeText(getActivity(), "Tarjeta Seleccionada", Toast.LENGTH_LONG).show()
