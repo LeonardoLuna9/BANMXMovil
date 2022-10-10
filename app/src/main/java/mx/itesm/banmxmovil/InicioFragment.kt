@@ -94,6 +94,14 @@ class InicioFragment : Fragment() {
             findNavController().navigate(action)
         }
 
+        view.findViewById<Button>(R.id.donarButton).setOnClickListener{
+            val action = InicioFragmentDirections
+                .actionInicioFragmentToDonarFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
+        }
+
         return view
     }
 

@@ -112,6 +112,9 @@
         <action
             android:id="@+id/action_donarFragment_to_carritoFragment"
             app:destination="@id/carritoFragment" />
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/apadrinarFragment"
@@ -216,6 +219,9 @@
         <action
             android:id="@+id/action_inicioFragment_to_apadrinarFragment"
             app:destination="@id/apadrinarFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_to_donarFragment"
+            app:destination="@id/donarFragment" />
     </fragment>
     <fragment
         android:id="@+id/productoMuestraFragment"
