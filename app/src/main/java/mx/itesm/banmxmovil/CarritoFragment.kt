@@ -11,6 +11,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
@@ -29,13 +30,27 @@ class CarritoFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_carrito, container, false)
-
+        carritoList = ArrayList()
         db.collection("usuarios/${args.idUsuario}/carrito")
             .get()
             .addOnSuccessListener { result ->
+                var contador = 0
                 for (document in result) {
-                    Log.d("PRUEBA FIREBASE", "${document.id} => ${document.data}")
+                    //Log.d("PRUEBA FIREBASE", "${document.id} => ${document.data}")
+                    carritoList.add(contador, arrayListOf(document.data["nombre"].toString(), document.data["cantidad"].toString()))
                 }
+                //Log.d("PRUEBA FIREBASE", carritoList[0][0])
+                val adapter = carritoAdapter(carritoList)
+
+                recyclerViewCarrito = view.findViewById(R.id.carritoListR)
+
+                val llm = LinearLayoutManager(context)
+
+                llm.orientation = LinearLayoutManager.VERTICAL
+
+                recyclerViewCarrito.layoutManager = llm
+
+                recyclerViewCarrito.adapter = adapter
             }
             .addOnFailureListener { exception ->
                 Log.w("PRUEBA ERROR FIREBASE", "Error getting documents.", exception)
