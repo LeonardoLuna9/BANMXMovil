@@ -21,69 +21,29 @@
 
     <ImageButton
         android:id="@+id/imagenPerfilEditarPerfil"
-        android:layout_width="189dp"
-        android:layout_height="151dp"
+        android:layout_width="258dp"
+        android:layout_height="207dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.076"
+        app:layout_constraintVertical_bias="0.12"
         app:srcCompat="@drawable/download" />
 
     <EditText
         android:id="@+id/nameInputEditarPerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="52dp"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="@+id/imagenPerfilEditarPerfil"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="@+id/imagenPerfilEditarPerfil"
         app:layout_constraintTop_toBottomOf="@+id/imagenPerfilEditarPerfil" />
-
-    <EditText
-        android:id="@+id/correoInputEditarPerfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/nameInputEditarPerfil"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/nameInputEditarPerfil"
-        app:layout_constraintTop_toBottomOf="@+id/nameInputEditarPerfil" />
-
-    <EditText
-        android:id="@+id/telefonoInputEditarPerfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Telefono"
-        android:inputType="phone"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/correoInputEditarPerfil"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/correoInputEditarPerfil"
-        app:layout_constraintTop_toBottomOf="@+id/correoInputEditarPerfil" />
-
-    <EditText
-        android:id="@+id/nuevaContraInputEditarPerfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Nueva contraseña"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/telefonoInputEditarPerfil"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/telefonoInputEditarPerfil"
-        app:layout_constraintTop_toBottomOf="@+id/telefonoInputEditarPerfil" />
 
     <Button
         android:id="@+id/guardarBotonEditarPerfil"
@@ -92,9 +52,30 @@
         android:layout_marginTop="44dp"
         android:backgroundTint="#D51E1E"
         android:text="Guardar"
-        app:layout_constraintEnd_toEndOf="@+id/nuevaContraInputEditarPerfil"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/nuevaContraInputEditarPerfil"
-        app:layout_constraintTop_toBottomOf="@+id/nuevaContraInputEditarPerfil" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameInputEditarPerfil" />
+
+    <Button
+        android:id="@+id/botonCambiarContraEditarPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="CAMBIAR CONTRASEÑA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guardarBotonEditarPerfil" />
+
+    <Button
+        android:id="@+id/borrarCuentaBotonEditarPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BORRAR CUENTA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonCambiarContraEditarPerfil"
+        app:layout_constraintVertical_bias="0.768" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
