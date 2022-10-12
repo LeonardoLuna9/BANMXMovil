@@ -34,9 +34,9 @@ class ApadrinarFragment : Fragment() {
             requireActivity().finish()
         }
 
-        view.findViewById<ImageView>(R.id.configApadrinar).setOnClickListener {
+        view.findViewById<ImageView>(R.id.homeApadrinar).setOnClickListener {
             val action = ApadrinarFragmentDirections
-                .actionApadrinarFragmentToPerfilFragment2(
+                .actionApadrinarFragmentToInicioFragment(
                     args.idUsuario
                 )
             findNavController().navigate(action)
@@ -61,7 +61,7 @@ class ApadrinarFragment : Fragment() {
         // Presionamos el boton de config
         view.findViewById<ImageView>(R.id.configApadrinar).setOnClickListener{
             val action = ApadrinarFragmentDirections
-                .actionApadrinarFragmentToInicioFragment(
+                .actionApadrinarFragmentToPerfilFragment2(
                     args.idUsuario
                 )
             findNavController().navigate(action)
