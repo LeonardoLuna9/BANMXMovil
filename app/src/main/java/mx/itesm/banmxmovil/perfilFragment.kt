@@ -7,17 +7,21 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 
 class perfilFragment : Fragment() {
 
     val args : perfilFragmentArgs by navArgs()
+    val db = Firebase.firestore
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,6 +41,16 @@ class perfilFragment : Fragment() {
         }
 
         // ------
+
+        db.collection("usuarios").document("${args.idUsuario}")
+            .get()
+            .addOnSuccessListener { result ->
+                view.findViewById<TextView>(R.id.nombreViewPerfil).text = result["nombre"].toString()
+                view.findViewById<TextView>(R.id.correoViewPerfil).text = "${args.idUsuario}"
+            }
+            .addOnFailureListener { exception ->
+                Log.w("PRUEBA ERROR FIREBASE", "Error getting documents.", exception)
+            }
 
         view.findViewById<Button>(R.id.editarPerfilBotonPerfil).setOnClickListener {
             //findNavController().navigate(R.id.action_perfilFragment_to_editarPerfilFragment)
