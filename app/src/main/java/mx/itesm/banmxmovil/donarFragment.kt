@@ -58,6 +58,20 @@ class donarFragment : Fragment() {
                 )
             findNavController().navigate(action)
         }
+
+        view.findViewById<Button>(R.id.botonPrimeroCantidadDonar).setOnClickListener{
+            val action = donarFragmentDirections.actionDonarFragmentToPagoFragment(args.idUsuario)
+
+        }
+        view.findViewById<Button>(R.id.botonSegundoCantidadDonar).setOnClickListener{
+            val action = donarFragmentDirections.actionDonarFragmentToPagoFragment(args.idUsuario)
+
+        }
+        view.findViewById<Button>(R.id.botonTerceroCantidadDonar).setOnClickListener{
+            val action = donarFragmentDirections.actionDonarFragmentToPagoFragment(args.idUsuario)
+
+        }
+
         return view
     }
 
