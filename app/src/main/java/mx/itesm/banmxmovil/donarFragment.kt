@@ -65,11 +65,11 @@ class donarFragment : Fragment() {
 
         }
         view.findViewById<Button>(R.id.botonSegundoCantidadDonar).setOnClickListener{
-            val action = donarFragmentDirections.actionDonarFragmentToPagoFragment(args.idUsuario)
+            val editado=view.findViewById<EditText>(R.id.cantidadInputDonar).setText("100")
 
         }
         view.findViewById<Button>(R.id.botonTerceroCantidadDonar).setOnClickListener{
-            val action = donarFragmentDirections.actionDonarFragmentToPagoFragment(args.idUsuario)
+            val editado=view.findViewById<EditText>(R.id.cantidadInputDonar).setText("150")
 
         }
 
