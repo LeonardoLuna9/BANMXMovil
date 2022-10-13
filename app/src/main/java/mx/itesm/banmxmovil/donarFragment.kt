@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
@@ -60,7 +61,7 @@ class donarFragment : Fragment() {
         }
 
         view.findViewById<Button>(R.id.botonPrimeroCantidadDonar).setOnClickListener{
-            val action = donarFragmentDirections.actionDonarFragmentToPagoFragment(args.idUsuario)
+            val editado=view.findViewById<EditText>(R.id.cantidadInputDonar).setText("50")
 
         }
         view.findViewById<Button>(R.id.botonSegundoCantidadDonar).setOnClickListener{
