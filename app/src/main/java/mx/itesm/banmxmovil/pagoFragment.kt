@@ -1,19 +1,14 @@
 package mx.itesm.banmxmovil
 
-import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.navArgs
-import mx.itesm.banmxmovil.databinding.ActivityPagoBinding
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 
@@ -32,12 +27,12 @@ import com.google.firebase.ktx.Firebase
         }
 }*/
 
-class pagoFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
+class pagoFragment : Fragment(){
 
-    var tarjeta1:RadioButton? = null
+    /*var tarjeta1:RadioButton? = null
     var tarjeta2:RadioButton? = null
     var tarjeta3:RadioButton? = null
-    var radiogroup:RadioGroup? = null
+    var radiogroup:RadioGroup? = null*/
 
     val args: pagoFragmentArgs by navArgs()
 
@@ -48,11 +43,11 @@ class pagoFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_pago, container, false)
 
-        radiogroup = view.findViewById(R.id.radioGroup2)
+        /*radiogroup = view.findViewById(R.id.radioGroup2)
         tarjeta1 = view.findViewById(R.id.botonTarjetaCreditoPago)
         tarjeta2 = view.findViewById(R.id.botonTarjetaDebitoPago)
         tarjeta3 = view.findViewById(R.id.botonPaypalPago)
-        radiogroup?.setOnCheckedChangeListener(this)
+        radiogroup?.setOnCheckedChangeListener(this)*/
 
         // verificamos usuario
         if(Firebase.auth.currentUser == null) {
@@ -61,6 +56,15 @@ class pagoFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
             // podrías redireccionar / terminar esta actividad
             Toast.makeText(context, "REVALIDA!", Toast.LENGTH_SHORT).show()
             requireActivity().finish()
+        }
+
+        val radioGroup = view.findViewById(R.id.radioGroup2) as RadioGroup
+        radioGroup.setOnCheckedChangeListener { group, checkedId -> // checkedId is the RadioButton selected
+            when (checkedId) {
+                R.id.botonTarjetaCreditoPago -> {}
+                R.id.botonTarjetaDebitoPago -> {}
+                R.id.botonPaypalPago -> {}
+            }
         }
 
         view.findViewById<ImageButton>(R.id.regresarBotonMetodoPago).setOnClickListener {
@@ -93,11 +97,50 @@ class pagoFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
         radiogroup?.setOnCheckedChangeListener(this)
     }*/
 
-    override fun onCheckedChanged(p0: RadioGroup?, idRadio: Int){
+    /*override fun onCheckedChanged(p0: RadioGroup?, idRadio: Int){
         when (idRadio) {
             tarjeta1?.id -> Toast.makeText(context, "Tarjeta Seleccionada", Toast.LENGTH_LONG).show()
             tarjeta2?.id -> Toast.makeText(context, "Tarjeta Seleccionada", Toast.LENGTH_LONG).show()
             tarjeta3?.id -> Toast.makeText(context, "Tarjeta Seleccionada", Toast.LENGTH_LONG).show()
         }
+    }*/
+
+    /*
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        myView = inflater.inflate(R.layout.settings_layout, container, false)
+        val radioGroup = myView.findViewById(R.id.radioGroup) as RadioGroup
+        radioGroup.setOnCheckedChangeListener { group, checkedId -> // checkedId is the RadioButton selected
+            when (checkedId) {
+                R.id.radioButton7 -> {}
+                R.id.radioButton6 -> {}
+            }
+        }
+        return myView
     }
-}
+
+    fun Condition(view: View) {
+        val checked = (view as RadioButton).isChecked
+        when (view.getId()) {
+            R.id.botonTarjetaCreditoPago -> {
+                if (checked)
+                    Toast.makeText(context, "Opción Seleccionada", Toast.LENGTH_LONG).show()
+                     }
+            R.id.botonTarjetaDebitoPago -> {
+                if (checked) {
+                    Toast.makeText(context, "Opción Seleccionada", Toast.LENGTH_LONG).show()
+                    }
+            }
+            R.id.botonPaypalPago -> {
+                if (checked) {
+                    Toast.makeText(context, "Opción Seleccionada", Toast.LENGTH_LONG).show()
+                    }
+                }
+            }
+        }
+
+     */
+    }
