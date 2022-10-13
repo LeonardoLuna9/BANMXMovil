@@ -1,17 +1,18 @@
 package mx.itesm.banmxmovil
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import mx.itesm.banmxmovil.databinding.ActivityRegisterBinding
+
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -54,10 +55,11 @@ class RegisterActivity : AppCompatActivity() {
         }
         else {
             // Contraseña ingresada no valida
-            Toast.makeText(this, "CONTRASEÑA DEBE TENER: La contraseña debe tener al menos 8 caracteres.\n" +
+            Toast.makeText(this, " La contraseña debe tener al menos 8 caracteres.\n" +
                     "Debe tener al menos 1 minúscula y al menos 1 letra mayúscula.\n" +
                     "Debe tener un carácter especial como ! o + o – o similar.\n" +
-                    "Debe tener al menos 1 dígito.", Toast.LENGTH_SHORT).show()
+                    "Debe tener al menos 1 dígito." +
+                    "Las contraseñas deben coincidir.", Toast.LENGTH_SHORT).show()
         }
     }
 
