@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -17,11 +18,17 @@ import mx.itesm.banmxmovil.databinding.ActivityRegisterBinding
 class RegisterActivity : AppCompatActivity() {
 
     lateinit var binding : ActivityRegisterBinding
+    lateinit var emailEditText: EditText
+    lateinit var pwdEditText: EditText
+    lateinit var pwdVerEditText: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_register)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_register)
+        emailEditText =  binding.emailInRegister
+        pwdEditText = binding.contraInRegister
+        pwdVerEditText = binding.contraVerInRegister
     }
 
     fun registrar(view : View?){
@@ -50,16 +57,24 @@ class RegisterActivity : AppCompatActivity() {
             }
             else {
                 // Las contraseñas no coinciden
-                Toast.makeText(this, "CONTRASEÑA NO COINCIDE", Toast.LENGTH_SHORT).show()
+                pwdVerEditText.setError("CONTRASEÑA NO COINCIDE")
+                //Toast.makeText(this, "CONTRASEÑA NO COINCIDE", Toast.LENGTH_SHORT).show()
             }
         }
         else {
             // Contraseña ingresada no valida
+            pwdEditText.setError(" La contraseña debe tener al menos 8 caracteres.\\n\" +\n" +
+                    "                    \"Debe tener al menos 1 minúscula y al menos 1 letra mayúscula.\\n\" +\n" +
+                    "                    \"Debe tener un carácter especial como ! o + o – o similar.\\n\" +\n" +
+                    "                    \"Debe tener al menos 1 dígito.\" +\n" +
+                    "                    \"Las contraseñas deben coincidir.")
+            /*
             Toast.makeText(this, " La contraseña debe tener al menos 8 caracteres.\n" +
                     "Debe tener al menos 1 minúscula y al menos 1 letra mayúscula.\n" +
                     "Debe tener un carácter especial como ! o + o – o similar.\n" +
                     "Debe tener al menos 1 dígito." +
                     "Las contraseñas deben coincidir.", Toast.LENGTH_SHORT).show()
+             */
         }
     }
 
@@ -88,11 +103,13 @@ class RegisterActivity : AppCompatActivity() {
 
         // 2do paso - solicitar guardar dato
         coleccion.document(binding.emailInRegister.text.toString()).set(data)
+        /*
         Toast.makeText(
             this,
             "id: ${coleccion.id}",
             Toast.LENGTH_SHORT
         ).show()
+         */
 
         // Terminamos actividad
         finish()
