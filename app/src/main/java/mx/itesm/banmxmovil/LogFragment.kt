@@ -28,7 +28,7 @@ class LogFragment : Fragment() {
 
             // SIGNIFICA QUE HAY NECESIDAD DE RE-VALIDAR EL USUARIO
             // podrías redireccionar / terminar esta actividad
-            Toast.makeText(context, "REVALIDA!", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(context, "REVALIDA!", Toast.LENGTH_SHORT).show()
         } else {
             // Lo llevamos a inicio
             //findNavController().navigate(R.id.action_logFragment_to_inicioFragment)
@@ -62,7 +62,7 @@ class LogFragment : Fragment() {
                     //findNavController().navigate(R.id.action_logFragment_to_inicioFragment)
                 } else {
 
-                    Toast.makeText(context, "ERROR EN LOGIN", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "ERROR EN LOGIN: ${resultado.exception?.message}", Toast.LENGTH_SHORT).show()
                     Log.e("FIREBASE-DEV", "error: ${resultado.exception?.message}")
                 }
             }

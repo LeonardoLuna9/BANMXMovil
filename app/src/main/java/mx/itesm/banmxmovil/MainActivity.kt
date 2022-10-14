@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
             // SIGNIFICA QUE HAY NECESIDAD DE RE-VALIDAR EL USUARIO
             // podrías redireccionar / terminar esta actividad
-            Toast.makeText(this, "REVALIDA!", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this, "REVALIDA!", Toast.LENGTH_SHORT).show()
         } else {
             // Lo llevamos a inicio
             val intent = Intent(this,FragmentActivity::class.java)
@@ -63,12 +63,6 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
 
         verificarUsuario()
-    }
-
-    fun logout(view : View?){
-
-        Toast.makeText(this, "LOGOUT", Toast.LENGTH_SHORT).show()
-        Firebase.auth.signOut()
     }
 
 }
