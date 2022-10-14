@@ -85,6 +85,7 @@ class editarPerfilFragment : Fragment() {
                             "CUENTA BORRADA EXITOSAMENTE",
                             Toast.LENGTH_SHORT
                         ).show()
+                        requireActivity().finish()
                         Log.d("FIREBASE AUTH DELETE", "User account deleted.")
                     }
                 }
