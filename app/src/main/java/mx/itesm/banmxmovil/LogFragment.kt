@@ -37,11 +37,13 @@ class LogFragment : Fragment() {
                     "${Firebase.auth.currentUser?.email}"
                 )
             findNavController().navigate(action)
+            /*
             Toast.makeText(
                 context,
                 "USUARIO: ${Firebase.auth.currentUser?.email}",
                 Toast.LENGTH_SHORT
             ).show()
+            */
         }
 
         view.findViewById<Button>(R.id.login).setOnClickListener {
@@ -71,8 +73,9 @@ class LogFragment : Fragment() {
         }
 
         view.findViewById<TextView>(R.id.llevarARegistro).setOnClickListener {
-            val intent = Intent(context, FragmentActivity::class.java)
+            val intent = Intent(requireActivity(), RegisterActivity::class.java)
             startActivity(intent)
+            requireActivity().finish()
         }
 
         return view
