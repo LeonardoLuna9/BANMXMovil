@@ -61,13 +61,13 @@ class pagoFragment : Fragment(){
         val radioGroup = view.findViewById(R.id.radioGroup2) as RadioGroup
         radioGroup.setOnCheckedChangeListener { group, checkedId -> // checkedId is the RadioButton selected
             when (checkedId) {
-                R.id.botonTarjetaCreditoPago -> {}
-                R.id.botonTarjetaDebitoPago -> {}
-                R.id.botonPaypalPago -> {}
+                R.id.botonTarjetaCreditoPago -> {Toast.makeText(getActivity(), "Opción Seleccionada", Toast.LENGTH_LONG).show()}
+                R.id.botonTarjetaDebitoPago -> {Toast.makeText(getActivity(), "Opción Seleccionada", Toast.LENGTH_LONG).show()}
+                R.id.botonPaypalPago -> {Toast.makeText(getActivity(), "Tarjeta Opción", Toast.LENGTH_LONG).show()}
             }
         }
 
-        view.findViewById<ImageButton>(R.id.regresarBotonMetodoPago).setOnClickListener {
+        view.findViewById<ImageButton>(R.id.regresarBotonMetodoPago3).setOnClickListener {
             val action = pagoFragmentDirections
                 .actionPagoFragmentToCarritoFragment2(
                     args.idUsuario

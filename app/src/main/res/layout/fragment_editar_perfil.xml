@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:ems="10"
-        android:hint="Name"
+        android:hint="Nombre"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="@+id/imagenPerfilEditarPerfil"
@@ -47,8 +47,8 @@
 
     <Button
         android:id="@+id/guardarBotonEditarPerfil"
-        android:layout_width="196dp"
-        android:layout_height="56dp"
+        android:layout_width="177dp"
+        android:layout_height="59dp"
         android:layout_marginTop="44dp"
         android:backgroundTint="#D51E1E"
         android:text="Guardar"
@@ -57,25 +57,14 @@
         app:layout_constraintTop_toBottomOf="@+id/nameInputEditarPerfil" />
 
     <Button
-        android:id="@+id/botonCambiarContraEditarPerfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="CAMBIAR CONTRASEÑA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guardarBotonEditarPerfil" />
-
-    <Button
         android:id="@+id/borrarCuentaBotonEditarPerfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="175dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="172dp"
+        android:backgroundTint="#D51E1E"
         android:text="BORRAR CUENTA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonCambiarContraEditarPerfil"
-        app:layout_constraintVertical_bias="0.768" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

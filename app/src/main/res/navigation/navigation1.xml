@@ -3,6 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     app:startDestination="@id/logFragment">
 
     <fragment
@@ -121,6 +123,9 @@
         <action
             android:id="@+id/action_donarFragment_to_metodoPagoDosFragment"
             app:destination="@id/metodoPagoDosFragment" />
+        <action
+            android:id="@+id/action_donarFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
     </fragment>
     <fragment
         android:id="@+id/apadrinarFragment"
@@ -322,12 +327,12 @@
         <action
             android:id="@+id/action_metodoPagoDosFragment_to_donarFragment"
             app:destination="@id/donarFragment" />
-        <action
-            android:id="@+id/action_metodoPagoDosFragment_to_tarjetasFragment"
-            app:destination="@id/tarjetasFragment" />
         <argument
             android:name="idUsuario"
             app:argType="string" />
+        <action
+            android:id="@+id/action_metodoPagoDosFragment_to_pagoDonacionFragment"
+            app:destination="@id/pagoDonacionFragment" />
     </fragment>
     <fragment
         android:id="@+id/mensajes2Fragment"
@@ -352,5 +357,38 @@
         <argument
             android:name="idUsuario"
             app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagoDonacionFragment"
+        android:name="mx.itesm.banmxmovil.PagoDonacionFragment"
+        android:label="fragment_pago_donacion"
+        tools:layout="@layout/fragment_pago_donacion" >
+        <action
+            android:id="@+id/action_pagoDonacionFragment_to_agradecimientoFragment"
+            app:destination="@id/agradecimientoFragment" />
+        <action
+            android:id="@+id/action_pagoDonacionFragment_to_metodoPagoDosFragment"
+            app:destination="@id/metodoPagoDosFragment" />
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_pagoDonacionFragment_to_addTarjetaDonacionFragment"
+            app:destination="@id/addTarjetaDonacionFragment" />
+    </fragment>
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
+    <fragment
+        android:id="@+id/addTarjetaDonacionFragment"
+        android:name="mx.itesm.banmxmovil.AddTarjetaDonacionFragment"
+        android:label="fragment_add_tarjeta_donacion"
+        tools:layout="@layout/fragment_add_tarjeta_donacion" >
+        <argument
+            android:name="idUsuario"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_addTarjetaDonacionFragment_to_pagoDonacionFragment"
+            app:destination="@id/pagoDonacionFragment" />
     </fragment>
 </navigation>

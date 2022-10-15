@@ -53,7 +53,7 @@ class MetodoPagoDosFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
 
         view.findViewById<Button>(R.id.siguienteBotonPago2).setOnClickListener {
             val action = MetodoPagoDosFragmentDirections
-                .actionMetodoPagoDosFragmentToTarjetasFragment(
+                .actionMetodoPagoDosFragmentToPagoDonacionFragment(
                     args.idUsuario
                 )
             findNavController().navigate(action)
