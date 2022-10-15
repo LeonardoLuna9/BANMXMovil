@@ -31,7 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.907"
-        app:srcCompat="@drawable/pan" />
+        app:srcCompat="@drawable/bimbo" />
 
     <TextView
         android:id="@+id/precioProductoPrueba3Ordenes"
@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
-        android:text="Pan integral mediano"
+        android:text="Pan blanco mediano"
         app:layout_constraintEnd_toEndOf="@+id/precioProductoPrueba3Ordenes"
         app:layout_constraintStart_toEndOf="@+id/precioProductoPrueba3Ordenes"
         app:layout_constraintTop_toBottomOf="@+id/nombreProductoPrueba3Ordenes" />
@@ -60,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="148dp"
-        android:text="Pan integral"
+        android:text="Pan blanco"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
