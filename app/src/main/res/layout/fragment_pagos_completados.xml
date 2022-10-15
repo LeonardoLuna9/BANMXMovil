@@ -31,7 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.907"
-        app:srcCompat="@drawable/huevos" />
+        app:srcCompat="@drawable/pan" />
 
     <TextView
         android:id="@+id/precioProductoPrueba3Ordenes"
@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
-        android:text="Docena de huevo "
+        android:text="Pan integral mediano"
         app:layout_constraintEnd_toEndOf="@+id/precioProductoPrueba3Ordenes"
         app:layout_constraintStart_toEndOf="@+id/precioProductoPrueba3Ordenes"
         app:layout_constraintTop_toBottomOf="@+id/nombreProductoPrueba3Ordenes" />
@@ -60,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="148dp"
-        android:text="Huevo"
+        android:text="Pan integral"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,10 +82,11 @@
         android:id="@+id/descProductoPrueba2Ordenes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="193dp"
-        android:text="1 Litro de agua"
+        android:text="Atún en agua (1 lata)"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.338"
         app:layout_constraintStart_toEndOf="@+id/precioProductoPrueba2Ordenes"
         app:layout_constraintTop_toBottomOf="@+id/nombreProductoPrueba2Ordenes" />
 
@@ -93,8 +94,9 @@
         android:id="@+id/nombreProductoPrueba2Ordenes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
-        android:text="Agua Natural"
+        android:text="Atún"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="@+id/descProductoPrueba2Ordenes"
         app:layout_constraintTop_toTopOf="@+id/imagenProductoPrueba2Ordenes" />
@@ -151,7 +153,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.336"
-        app:srcCompat="@drawable/aceite" />
+        app:srcCompat="@drawable/manzana" />
 
     <TextView
         android:id="@+id/nombreProductoPrueba1Ordenes"
@@ -159,7 +161,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="186dp"
-        android:text="Aceite"
+        android:text="Manzana"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imagenProductoPrueba1Ordenes"
@@ -170,7 +172,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Aceite de cocina "
+        android:text="Manzanas frescas (1kg)"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.202"
         app:layout_constraintStart_toEndOf="@+id/imagenProductoPrueba1Ordenes"
@@ -181,7 +183,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
-        android:text="$50"
+        android:text="$10000"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintStart_toStartOf="@+id/descProductoPrueba1Ordenes"
         app:layout_constraintTop_toBottomOf="@+id/descProductoPrueba1Ordenes" />
@@ -196,5 +198,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.615"
-        app:srcCompat="@drawable/agua" />
+        app:srcCompat="@drawable/atun" />
 </androidx.constraintlayout.widget.ConstraintLayout>
