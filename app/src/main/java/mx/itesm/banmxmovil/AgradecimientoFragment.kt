@@ -5,11 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-
 
 class AgradecimientoFragment : Fragment() {
 
@@ -34,6 +35,14 @@ class AgradecimientoFragment : Fragment() {
             // podrías redireccionar / terminar esta actividad
             Toast.makeText(context, "REVALIDA!", Toast.LENGTH_SHORT).show()
             requireActivity().finish()
+        }
+
+        view.findViewById<Button>(R.id.button4).setOnClickListener{
+            val action = AgradecimientoFragmentDirections
+                .actionAgradecimientoFragmentToInicioFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
         }
 
         return view

@@ -5,10 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.RadioButton
-import android.widget.RadioGroup
-import android.widget.Toast
+import android.widget.*
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.firebase.auth.ktx.auth
@@ -46,7 +43,7 @@ class MetodoPagoDosFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
             requireActivity().finish()
         }
 
-        view.findViewById<Button>(R.id.regresarBotonPago2).setOnClickListener {
+        view.findViewById<ImageButton>(R.id.regresarBotonPago2).setOnClickListener {
             val action = MetodoPagoDosFragmentDirections
                 .actionMetodoPagoDosFragmentToDonarFragment(
                     args.idUsuario
@@ -77,9 +74,9 @@ class MetodoPagoDosFragment : Fragment(), RadioGroup.OnCheckedChangeListener {
     }*/
     override fun onCheckedChanged(p0: RadioGroup?, idRadio: Int){
         when (idRadio) {
-            tarjeta1?.id -> Toast.makeText(getActivity(), "Tarjeta Seleccionada", Toast.LENGTH_LONG).show()
-            tarjeta2?.id -> Toast.makeText(getActivity(), "Tarjeta Seleccionada", Toast.LENGTH_LONG).show()
-            tarjeta3?.id -> Toast.makeText(getActivity(), "Tarjeta Seleccionada", Toast.LENGTH_LONG).show()
+            tarjeta1?.id -> Toast.makeText(getActivity(), "Opción Seleccionada", Toast.LENGTH_LONG).show()
+            tarjeta2?.id -> Toast.makeText(getActivity(), "Opción Seleccionada", Toast.LENGTH_LONG).show()
+            tarjeta3?.id -> Toast.makeText(getActivity(), "Opción Seleccionada", Toast.LENGTH_LONG).show()
         }
     }
 }

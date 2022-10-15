@@ -33,7 +33,7 @@ class donarFragment : Fragment() {
 
         view.findViewById<Button>(R.id.botonDonarBienFragment).setOnClickListener{
             val action = donarFragmentDirections
-                .actionDonarFragmentToPagoFragment(
+                .actionDonarFragmentToMetodoPagoDosFragment(
                     args.idUsuario
                 )
             findNavController().navigate(action)
