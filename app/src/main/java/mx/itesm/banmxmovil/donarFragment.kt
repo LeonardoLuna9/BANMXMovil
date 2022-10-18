@@ -5,9 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.Toast
+import android.widget.*
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.firebase.auth.ktx.auth
@@ -32,7 +30,7 @@ class donarFragment : Fragment() {
 
         view.findViewById<Button>(R.id.botonDonarBienFragment).setOnClickListener{
             val action = donarFragmentDirections
-                .actionDonarFragmentToPagoFragment(
+                .actionDonarFragmentToMetodoPagoDosFragment(
                     args.idUsuario
                 )
             findNavController().navigate(action)
@@ -58,6 +56,27 @@ class donarFragment : Fragment() {
                 )
             findNavController().navigate(action)
         }
+        view.findViewById<ImageButton>(R.id.regresarBotonDonar).setOnClickListener{
+            val action = donarFragmentDirections
+                .actionDonarFragmentToInicioFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
+        }
+
+        view.findViewById<Button>(R.id.botonPrimeroCantidadDonar).setOnClickListener{
+            val editado=view.findViewById<EditText>(R.id.cantidadInputDonar).setText("50")
+
+        }
+        view.findViewById<Button>(R.id.botonSegundoCantidadDonar).setOnClickListener{
+            val editado=view.findViewById<EditText>(R.id.cantidadInputDonar).setText("100")
+
+        }
+        view.findViewById<Button>(R.id.botonTerceroCantidadDonar).setOnClickListener{
+            val editado=view.findViewById<EditText>(R.id.cantidadInputDonar).setText("150")
+
+        }
+
         return view
     }
 

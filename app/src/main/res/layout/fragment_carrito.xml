@@ -58,17 +58,6 @@
         app:srcCompat="@drawable/settingsgrey"
         tools:srcCompat="@drawable/herramienta2" />
 
-    <ImageButton
-        android:id="@+id/regresarBotonCarrito"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="#FFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="?attr/actionModeCloseDrawable" />
-
     <TextView
         android:id="@+id/carritoViewTitulo"
         android:layout_width="wrap_content"

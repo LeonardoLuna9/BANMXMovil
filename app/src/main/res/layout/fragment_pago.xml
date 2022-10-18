@@ -8,7 +8,7 @@
     tools:context=".pagoFragment">
 
     <ImageButton
-        android:id="@+id/regresarBotonMetodoPago"
+        android:id="@+id/regresarBotonMetodoPago3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -54,7 +54,6 @@
             android:checked="false"
             android:fontFamily="sans-serif"
             android:lineSpacingExtra="8sp"
-            android:onClick="onRadioButtonClicked"
             android:text="Tarjeta de Crédito"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
@@ -66,7 +65,6 @@
             android:layout_width="187dp"
             android:layout_height="61dp"
             android:buttonTint="#D51E1E"
-            android:onClick="onRadioButtonClicked"
             android:text="Tarjeta de Débito"
             app:layout_constraintBottom_toTopOf="@+id/botonPaypalPago"
             app:layout_constraintEnd_toEndOf="parent"
@@ -81,7 +79,6 @@
             android:layout_height="69dp"
             android:layout_marginBottom="92dp"
             android:buttonTint="#D51E1E"
-            android:onClick="onRadioButtonClicked"
             android:text="Paypal"
             app:layout_constraintBottom_toTopOf="@+id/siguienteBotonPago"
             app:layout_constraintEnd_toEndOf="parent"

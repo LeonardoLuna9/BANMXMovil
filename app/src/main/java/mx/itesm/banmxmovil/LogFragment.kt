@@ -28,7 +28,7 @@ class LogFragment : Fragment() {
 
             // SIGNIFICA QUE HAY NECESIDAD DE RE-VALIDAR EL USUARIO
             // podrías redireccionar / terminar esta actividad
-            Toast.makeText(context, "REVALIDA!", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(context, "REVALIDA!", Toast.LENGTH_SHORT).show()
         } else {
             // Lo llevamos a inicio
             //findNavController().navigate(R.id.action_logFragment_to_inicioFragment)
@@ -37,11 +37,13 @@ class LogFragment : Fragment() {
                     "${Firebase.auth.currentUser?.email}"
                 )
             findNavController().navigate(action)
+            /*
             Toast.makeText(
                 context,
                 "USUARIO: ${Firebase.auth.currentUser?.email}",
                 Toast.LENGTH_SHORT
             ).show()
+            */
         }
 
         view.findViewById<Button>(R.id.login).setOnClickListener {
@@ -63,7 +65,8 @@ class LogFragment : Fragment() {
                 } else {
 
                     Toast.makeText(context, "ERROR EN LOGIN", Toast.LENGTH_SHORT).show()
-                    Log.e("FIREBASE-DEV", "error: ${resultado.exception?.message}")
+                    view.findViewById<EditText>(R.id.passwordInputLog).setError("${resultado.exception?.message}")
+                    //Log.e("FIREBASE-DEV", "error: ${resultado.exception?.message}")
                 }
             }
             // Terminamos actividad
@@ -71,8 +74,9 @@ class LogFragment : Fragment() {
         }
 
         view.findViewById<TextView>(R.id.llevarARegistro).setOnClickListener {
-            val intent = Intent(context, FragmentActivity::class.java)
+            val intent = Intent(requireActivity(), RegisterActivity::class.java)
             startActivity(intent)
+            requireActivity().finish()
         }
 
         return view

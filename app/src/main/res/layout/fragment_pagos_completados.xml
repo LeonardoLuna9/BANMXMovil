@@ -6,22 +6,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".pagosEnProcesoFragment">
+
     <ImageButton
         android:id="@+id/regresarBotonOrdenes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#FFFFFF"
+        android:minHeight="48dp"
         android:onClick="regresarAPerfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="?attr/actionModeCloseDrawable" />
+        app:srcCompat="?attr/actionModeCloseDrawable"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/imagenProductoPrueba3Ordenes"
-        android:layout_width="0dp"
-        android:layout_height="115dp"
+        android:layout_width="90dp"
+        android:layout_height="119dp"
         android:layout_marginStart="65dp"
         android:layout_marginEnd="33dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -30,41 +34,43 @@
         app:layout_constraintHorizontal_bias="0.194"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.907"
-        app:srcCompat="@drawable/huevos" />
+        app:layout_constraintVertical_bias="0.903"
+        app:srcCompat="@drawable/bimbo" />
 
     <TextView
         android:id="@+id/precioProductoPrueba3Ordenes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="180dp"
         android:text="$15"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imagenProductoPrueba3Ordenes"
-        app:layout_constraintTop_toBottomOf="@+id/descProductoPrueba3Ordenes" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.913" />
 
     <TextView
         android:id="@+id/descProductoPrueba3Ordenes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
-        android:text="Docena de huevo "
-        app:layout_constraintEnd_toEndOf="@+id/precioProductoPrueba3Ordenes"
-        app:layout_constraintStart_toEndOf="@+id/precioProductoPrueba3Ordenes"
-        app:layout_constraintTop_toBottomOf="@+id/nombreProductoPrueba3Ordenes" />
+        android:text="Pan blanco mediano"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.841" />
 
     <TextView
         android:id="@+id/nombreProductoPrueba3Ordenes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="148dp"
-        android:text="Huevo"
+        android:layout_marginBottom="144dp"
+        android:text="Pan blanco"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -73,31 +79,37 @@
         android:layout_height="wrap_content"
         android:text="$9"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintBottom_toBottomOf="@+id/imagenProductoPrueba2Ordenes"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.644" />
 
     <TextView
         android:id="@+id/descProductoPrueba2Ordenes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="193dp"
-        android:text="1 Litro de agua"
+        android:text="Atún en agua (1 lata)"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/precioProductoPrueba2Ordenes"
-        app:layout_constraintTop_toBottomOf="@+id/nombreProductoPrueba2Ordenes" />
+        app:layout_constraintHorizontal_bias="0.637"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.587" />
 
     <TextView
         android:id="@+id/nombreProductoPrueba2Ordenes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Agua Natural"
+        android:text="Atún"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintStart_toStartOf="@+id/descProductoPrueba2Ordenes"
-        app:layout_constraintTop_toTopOf="@+id/imagenProductoPrueba2Ordenes" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.544" />
 
     <TextView
         android:id="@+id/ordenesTituloViewOrdenes"
@@ -140,61 +152,63 @@
 
     <ImageView
         android:id="@+id/imagenProductoPrueba1Ordenes"
-        android:layout_width="72dp"
-        android:layout_height="141dp"
-        android:layout_marginStart="77dp"
-        android:layout_marginEnd="34dp"
+        android:layout_width="81dp"
+        android:layout_height="142dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/nombreProductoPrueba1Ordenes"
-        app:layout_constraintHorizontal_bias="0.221"
+        app:layout_constraintHorizontal_bias="0.175"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.336"
-        app:srcCompat="@drawable/aceite" />
+        app:layout_constraintVertical_bias="0.319"
+        app:srcCompat="@drawable/manzana" />
 
     <TextView
         android:id="@+id/nombreProductoPrueba1Ordenes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="186dp"
-        android:text="Aceite"
+        android:text="Manzana"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imagenProductoPrueba1Ordenes"
-        app:layout_constraintTop_toTopOf="@+id/imagenProductoPrueba1Ordenes" />
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.277" />
 
     <TextView
         android:id="@+id/descProductoPrueba1Ordenes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Aceite de cocina "
+        android:text="Manzanas frescas (1kg)"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.202"
-        app:layout_constraintStart_toEndOf="@+id/imagenProductoPrueba1Ordenes"
-        app:layout_constraintTop_toBottomOf="@+id/nombreProductoPrueba1Ordenes" />
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.323" />
 
     <TextView
         android:id="@+id/precioProductoPrueba1Ordenes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
-        android:text="$50"
+        android:text="$5"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintStart_toStartOf="@+id/descProductoPrueba1Ordenes"
-        app:layout_constraintTop_toBottomOf="@+id/descProductoPrueba1Ordenes" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.381" />
 
     <ImageView
         android:id="@+id/imagenProductoPrueba2Ordenes"
-        android:layout_width="140dp"
-        android:layout_height="115dp"
+        android:layout_width="98dp"
+        android:layout_height="95dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintHorizontal_bias="0.159"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.615"
-        app:srcCompat="@drawable/agua" />
+        app:layout_constraintVertical_bias="0.616"
+        app:srcCompat="@drawable/atun" />
 </androidx.constraintlayout.widget.ConstraintLayout>

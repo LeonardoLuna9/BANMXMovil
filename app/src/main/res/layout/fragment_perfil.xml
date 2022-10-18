@@ -56,8 +56,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.99"
         app:srcCompat="@drawable/settingsgrey"
-        tools:srcCompat="@drawable/herramienta2"
-        app:tint="#BF2121" />
+        app:tint="#BF2121"
+        tools:srcCompat="@drawable/herramienta2" />
 
     <Button
         android:id="@+id/misSuscripcionesBotonPerfil"
@@ -74,52 +74,47 @@
     <ImageView
         android:id="@+id/imagenPerfilPerfil"
         android:layout_width="124dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="69dp"
-        android:layout_marginBottom="49dp"
-        app:layout_constraintBottom_toTopOf="@+id/correoViewPerfil"
+        android:layout_height="128dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.114"
+        app:layout_constraintVertical_bias="0.104"
         app:srcCompat="@drawable/img_24787" />
 
     <TextView
         android:id="@+id/nombreViewPerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="Nombre"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagenPerfilPerfil"
-        app:layout_constraintVertical_bias="0.006" />
+        app:layout_constraintVertical_bias="0.071" />
 
     <Button
         android:id="@+id/editarPerfilBotonPerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="44dp"
         android:backgroundTint="#D51E1E"
         android:text="Editar perfil"
         app:iconTint="#D51E1E"
-        app:layout_constraintEnd_toEndOf="@+id/correoViewPerfil"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="@+id/correoViewPerfil"
-        app:layout_constraintTop_toBottomOf="@+id/nombreViewPerfil" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correoViewPerfil" />
 
     <TextView
         android:id="@+id/correoViewPerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="466dp"
+        android:layout_marginTop="16dp"
         android:text="Email"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/nombreViewPerfil"
-        app:layout_constraintTop_toBottomOf="@+id/imagenPerfilPerfil" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreViewPerfil" />
 
     <Button
         android:id="@+id/misDonacionesBotonPerfil"

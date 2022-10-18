@@ -1,11 +1,12 @@
 package mx.itesm.banmxmovil
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.CollectionReference
@@ -13,14 +14,21 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import mx.itesm.banmxmovil.databinding.ActivityRegisterBinding
 
+
 class RegisterActivity : AppCompatActivity() {
 
     lateinit var binding : ActivityRegisterBinding
+    lateinit var emailEditText: EditText
+    lateinit var pwdEditText: EditText
+    lateinit var pwdVerEditText: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_register)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_register)
+        emailEditText =  binding.emailInRegister
+        pwdEditText = binding.contraInRegister
+        pwdVerEditText = binding.contraVerInRegister
     }
 
     fun registrar(view : View?){
@@ -30,26 +38,43 @@ class RegisterActivity : AppCompatActivity() {
         var pwdStrVer = binding.contraVerInRegister.text.toString()
 
         // Verificamos que contraseñas sean iguales
-        if (pwdStr == pwdStrVer) {
+        if (isValidPassword(pwdStr)) {
+            if (pwdStr == pwdStrVer) {
+                var authTask = Firebase.auth.createUserWithEmailAndPassword(emailStr, pwdStr)
 
-            var authTask = Firebase.auth.createUserWithEmailAndPassword(emailStr, pwdStr)
+                authTask.addOnCompleteListener(this) { resultado ->
 
-            authTask.addOnCompleteListener(this) { resultado ->
+                    if (resultado.isSuccessful) {
 
-                if (resultado.isSuccessful) {
+                        Toast.makeText(this, "REGISTRO EXITOSO", Toast.LENGTH_SHORT).show()
+                    } else {
 
-                    Toast.makeText(this, "REGISTRO EXITOSO", Toast.LENGTH_SHORT).show()
-                } else {
-
-                    Toast.makeText(this, "ERROR EN REGISTRO", Toast.LENGTH_SHORT).show()
-                    Log.wtf("FIREBASE-DEV", "error: ${resultado.exception}")
+                        Toast.makeText(this, "ERROR EN REGISTRO", Toast.LENGTH_SHORT).show()
+                        Log.wtf("FIREBASE-DEV", "error: ${resultado.exception}")
+                    }
                 }
+                registrarFirestore()
             }
-            registrarFirestore()
+            else {
+                // Las contraseñas no coinciden
+                pwdVerEditText.setError("CONTRASEÑA NO COINCIDE")
+                //Toast.makeText(this, "CONTRASEÑA NO COINCIDE", Toast.LENGTH_SHORT).show()
+            }
         }
         else {
-            // Las contraseñas no coinciden
-            Toast.makeText(this, "Contraseña no coincide", Toast.LENGTH_SHORT).show()
+            // Contraseña ingresada no valida
+            pwdEditText.setError(" La contraseña debe tener al menos 8 caracteres.\\n\" +\n" +
+                    "                    \"Debe tener al menos 1 minúscula y al menos 1 letra mayúscula.\\n\" +\n" +
+                    "                    \"Debe tener un carácter especial como ! o + o – o similar.\\n\" +\n" +
+                    "                    \"Debe tener al menos 1 dígito.\" +\n" +
+                    "                    \"Las contraseñas deben coincidir.")
+            /*
+            Toast.makeText(this, " La contraseña debe tener al menos 8 caracteres.\n" +
+                    "Debe tener al menos 1 minúscula y al menos 1 letra mayúscula.\n" +
+                    "Debe tener un carácter especial como ! o + o – o similar.\n" +
+                    "Debe tener al menos 1 dígito." +
+                    "Las contraseñas deben coincidir.", Toast.LENGTH_SHORT).show()
+             */
         }
     }
 
@@ -78,39 +103,25 @@ class RegisterActivity : AppCompatActivity() {
 
         // 2do paso - solicitar guardar dato
         coleccion.document(binding.emailInRegister.text.toString()).set(data)
+        /*
         Toast.makeText(
             this,
             "id: ${coleccion.id}",
             Toast.LENGTH_SHORT
         ).show()
+         */
 
         // Terminamos actividad
         finish()
+    }
 
-        //val taskAdd = coleccion.add(perrito)
-        /*
-        taskAdd.addOnSuccessListener { doc ->
+    internal fun isValidPassword(password: String): Boolean {
+        if (password.length < 8) return false
+        if (password.filter { it.isDigit() }.firstOrNull() == null) return false
+        if (password.filter { it.isLetter() }.filter { it.isUpperCase() }.firstOrNull() == null) return false
+        if (password.filter { it.isLetter() }.filter { it.isLowerCase() }.firstOrNull() == null) return false
+        if (password.filter { !it.isLetterOrDigit() }.firstOrNull() == null) return false
 
-            Toast.makeText(
-                this,
-                "id: ${doc.id}",
-                Toast.LENGTH_SHORT
-            ).show()
-
-            // Terminamos actividad
-            finish()
-
-        }.addOnFailureListener{ error ->
-
-            Toast.makeText(
-                this,
-                "ERROR AL GUARDAR REGISTRO",
-                Toast.LENGTH_SHORT
-            ).show()
-
-            Log.e("FIRESTORE", "error: $error")
-        }
-        */
-
+        return true
     }
 }
