@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.fragment.findNavController
 import com.squareup.picasso.Picasso
 import androidx.navigation.fragment.navArgs
 import com.google.firebase.firestore.ktx.firestore
@@ -58,6 +60,13 @@ class ProductoMuestraFragment : Fragment() {
         }
         //agregarACarritoBoton
 
+        view.findViewById<ImageButton>(R.id.regresarBotonAddTarjeta5).setOnClickListener {
+            val action = ProductoMuestraFragmentDirections
+                .actionProductoMuestraFragmentToInicioFragment(
+                    args.idUsuario
+                )
+            findNavController().navigate(action)
+        }
         return view
     }
 
