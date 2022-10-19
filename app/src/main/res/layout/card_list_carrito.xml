@@ -41,11 +41,11 @@
             android:id="@+id/simboloPrecio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/nombreProductoCarrito"
-            android:layout_toEndOf="@+id/carritoProducto"
+            android:layout_marginTop="50dp"
+            android:layout_toEndOf="@+id/buttonAdd"
             android:layout_toRightOf="@+id/carritoProducto"
             android:layout_marginRight="5dp"
-            android:layout_marginLeft="190dp"
+            android:layout_marginLeft="5dp"
             android:text="$"
             android:textColor="#D31919"
             android:textStyle="bold" />
@@ -54,7 +54,7 @@
             android:id="@+id/precioProductoCarrito"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/nombreProductoCarrito"
+            android:layout_marginTop="50dp"
             android:layout_toEndOf="@+id/simboloPrecio"
             android:layout_toRightOf="@+id/simboloPrecio"
             android:layout_marginRight="5dp"
@@ -66,7 +66,7 @@
             android:id="@+id/pesoTipo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/nombreProductoCarrito"
+            android:layout_marginTop="50dp"
             android:layout_toEndOf="@+id/precioProductoCarrito"
             android:layout_toRightOf="@+id/precioProductoCarrito"
             android:text="MX"
@@ -77,29 +77,44 @@
             android:id="@+id/cantidadCarrito"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/nombreProductoCarrito"
+            android:layout_marginTop="50dp"
             android:layout_toEndOf="@+id/carritoProducto"
             android:text="Cantidad"
             android:textColor="#D31919"
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/numeroProducto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/nombreProductoCarrito"
-            android:layout_marginLeft="60dp"
-            android:layout_toEndOf="@+id/cantidadCarrito"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="50dp"
+            android:layout_toEndOf="@+id/buttonLess"
             android:text="NP"
             android:textColor="#D31919"
             android:textStyle="bold" />
 
         <Button
-            android:layout_width="48dp"
-            android:layout_height="32dp"
+            android:id="@+id/buttonLess"
+            android:layout_width="49dp"
+            android:layout_height="48dp"
             android:layout_below="@+id/nombreProductoCarrito"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="2dp"
-            android:layout_toEndOf="@+id/cantidadCarrito" />
+            android:layout_toEndOf="@+id/cantidadCarrito"
+            android:text="-"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/nombreProductoCarrito"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@+id/numeroProducto"
+            android:text="+"
+            android:textAlignment="center" />
 
     </RelativeLayout>
 
