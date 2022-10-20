@@ -51,7 +51,9 @@ class ProductoMuestraFragment : Fragment() {
 
         val data = hashMapOf(
             "nombre" to args.nombre,
-            "cantidad" to 1
+            "cantidad" to 1,
+            "precio" to args.precio,
+            "imagen" to args.imagen
         )
 
         view.findViewById<Button>(R.id.agregarACarritoBoton).setOnClickListener {

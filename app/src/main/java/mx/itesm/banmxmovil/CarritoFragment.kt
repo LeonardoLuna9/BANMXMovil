@@ -37,7 +37,7 @@ class CarritoFragment : Fragment() {
                 var contador = 0
                 for (document in result) {
                     //Log.d("PRUEBA FIREBASE", "${document.id} => ${document.data}")
-                    carritoList.add(contador, arrayListOf(document.data["nombre"].toString(), document.data["cantidad"].toString()))
+                    carritoList.add(contador, arrayListOf(document.data["nombre"].toString(), document.data["cantidad"].toString(), document.data["imagen"].toString(), document.data["precio"].toString()))
                 }
                 //Log.d("PRUEBA FIREBASE", carritoList[0][0])
                 val adapter = carritoAdapter(carritoList)
