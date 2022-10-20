@@ -41,11 +41,11 @@
             android:id="@+id/simboloPrecio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="50dp"
+            android:layout_marginRight="5dp"
             android:layout_toEndOf="@+id/buttonAdd"
             android:layout_toRightOf="@+id/carritoProducto"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
             android:text="$"
             android:textColor="#D31919"
             android:textStyle="bold" />
@@ -55,9 +55,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
+            android:layout_marginRight="5dp"
             android:layout_toEndOf="@+id/simboloPrecio"
             android:layout_toRightOf="@+id/simboloPrecio"
-            android:layout_marginRight="5dp"
             android:text="Precio"
             android:textColor="#D31919"
             android:textStyle="bold" />
@@ -102,6 +102,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginTop="2dp"
             android:layout_toEndOf="@+id/cantidadCarrito"
+            android:backgroundTint="#D51E1E"
             android:text="-"
             android:textAlignment="center" />
 
@@ -113,6 +114,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginTop="2dp"
             android:layout_toEndOf="@+id/numeroProducto"
+            android:backgroundTint="#D51E1E"
             android:text="+"
             android:textAlignment="center" />
 
