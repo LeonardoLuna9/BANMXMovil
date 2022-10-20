@@ -96,27 +96,32 @@
 
         <Button
             android:id="@+id/buttonLess"
-            android:layout_width="49dp"
-            android:layout_height="48dp"
+            android:layout_width="44dp"
+            android:layout_height="38dp"
             android:layout_below="@+id/nombreProductoCarrito"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="2dp"
             android:layout_toEndOf="@+id/cantidadCarrito"
-            android:backgroundTint="#D51E1E"
+            android:backgroundTint="#FFFFFF"
+            android:lineSpacingExtra="24sp"
             android:text="-"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="#121111"
+            card_view:iconTint="#1C1C1C" />
 
         <Button
             android:id="@+id/buttonAdd"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="41dp"
+            android:layout_height="38dp"
             android:layout_below="@+id/nombreProductoCarrito"
+            android:layout_marginStart="9dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="2dp"
             android:layout_toEndOf="@+id/numeroProducto"
-            android:backgroundTint="#D51E1E"
+            android:backgroundTint="#FFFFFF"
             android:text="+"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="#1C1C1C" />
 
     </RelativeLayout>
 
