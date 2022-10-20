@@ -7,6 +7,13 @@ buildscript {
         google()  // Google's Maven repository
 
         mavenCentral()  // Maven Central repository
+        maven {
+            url "https://cardinalcommerce.bintray.com/android"
+            credentials {
+                username 'braintree_team_sdk'
+                password 'AKCp8jQcoDy2hxSWhDAUQKXLDPDx6NYRkqrgFLRc3qDrayg6rrCbJpsKKyMwaykVL8FWusJpp'
+            }
+        }
 
     }
 
