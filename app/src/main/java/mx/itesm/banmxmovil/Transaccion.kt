@@ -48,7 +48,7 @@ class Transaccion : AppCompatActivity() {
         edt_payment = findViewById(R.id.edt_payment)
 
         value1 = intent.getStringExtra("cantidad").toString() // Este es la cantidad recibida para pagar
-
+        Log.wtf("Value1", value1)
         getToken();
         btn_pay.setOnClickListener {
             val dropInRequest = DropInRequest().clientToken(token)
