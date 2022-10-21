@@ -55,7 +55,7 @@ class Transaccion : AppCompatActivity() {
             startActivityForResult(dropInRequest.getIntent(this), REQUEST_CODE)
         }
 
-        edt_payment.setText("$"+ value1)
+        edt_payment.setText(value1)
     }
 
     private fun getToken(){
@@ -89,7 +89,6 @@ class Transaccion : AppCompatActivity() {
 
                 if(!edt_payment.text.toString().isEmpty())
                 {
-                    edt_payment.text.toString().replace("$", "")
                     amount = edt_payment.text.toString()
                     paramsHash = HashMap()
 
