@@ -26,7 +26,7 @@ class Transaccion : AppCompatActivity() {
     private lateinit var btn_pay: Button
     private lateinit var payment_group: LinearLayout
     private lateinit var waiting_group: LinearLayout
-    private lateinit var edt_payment: EditText
+    private lateinit var edt_payment: TextView
 
     companion object{
         val API_GET_TOKEN = "http://10.0.2.2/braintree/main.php"
@@ -54,6 +54,8 @@ class Transaccion : AppCompatActivity() {
             val dropInRequest = DropInRequest().clientToken(token)
             startActivityForResult(dropInRequest.getIntent(this), REQUEST_CODE)
         }
+
+        edt_payment.setText(value1)
     }
 
     private fun getToken(){
