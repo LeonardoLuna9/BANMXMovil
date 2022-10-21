@@ -45,24 +45,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="CHECKOUT"
-            android:textSize="20sp"
+            android:text="Cantidad a Donar"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
-        <EditText
+        <TextView
             android:id="@+id/edt_payment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:hint="Choose the amount to pay(USD)"
-            android:inputType="number" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <Button
             android:id="@+id/btn_pay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="PAY" />
+            android:text="Pagar" />
 
 
     </LinearLayout>
