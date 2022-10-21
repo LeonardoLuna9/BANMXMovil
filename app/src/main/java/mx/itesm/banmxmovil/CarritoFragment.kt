@@ -109,14 +109,16 @@ class CarritoFragment : Fragment() {
                         cantidadTotal = cantidadSumMult + cantidadTotal
                     }
 
+                    val intent = Intent(requireActivity(), Transaccion::class.java)
+                    intent.putExtra("cantidad", cantidadTotal.toString())
+                    startActivity(intent)
+
                 }.addOnFailureListener { exception ->
                     Log.w("PRUEBA ERROR FIREBASE", "Error getting documents.", exception)
                 }
 
 
-            val intent = Intent(requireActivity(), Transaccion::class.java)
-            intent.putExtra("cantidad", cantidadTotal.toString())
-            startActivity(intent)
+
         }
 
         view.findViewById<ImageView>(R.id.homeCarrito).setOnClickListener{
