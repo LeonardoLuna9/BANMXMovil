@@ -105,9 +105,10 @@ class CarritoFragment : Fragment() {
                 .addOnSuccessListener { result ->
                     for (document in result) {
                         var cantidadSumMult = 0
-                        cantidadSumMult = (document.data["precio"].toString().toInt() + cantidadTotal) * (document.data["cantidad"].toString().toInt())
+                        cantidadSumMult = (document.data["precio"].toString().toInt()) * (document.data["cantidad"].toString().toInt())
                         cantidadTotal = cantidadSumMult + cantidadTotal
                     }
+                    Log.d("EDIT ERROR","Volley error: "+ cantidadTotal.toString())
 
                     val intent = Intent(requireActivity(), Transaccion::class.java)
                     intent.putExtra("cantidad", cantidadTotal.toString())
