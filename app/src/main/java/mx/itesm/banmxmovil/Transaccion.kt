@@ -1,31 +1,21 @@
 package mx.itesm.banmxmovil
 
 import android.app.Activity
-import android.app.VoiceInteractor
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Parcel
-import android.os.Parcelable
 import android.util.Log
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.LinearLayout
-import android.widget.Toast
+import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.braintreepayments.api.dropin.DropInActivity
 import com.braintreepayments.api.dropin.DropInRequest
 import com.braintreepayments.api.dropin.DropInResult
-import com.braintreepayments.api.models.PaymentMethodNonce
 import com.loopj.android.http.AsyncHttpClient
 import com.loopj.android.http.TextHttpResponseHandler
 import cz.msebera.android.httpclient.Header
-import java.io.File
-import kotlin.Exception
 
 class Transaccion : AppCompatActivity() {
 
@@ -45,6 +35,9 @@ class Transaccion : AppCompatActivity() {
 
     }
 
+
+    private var value1: String = "No" // Cantidad a pagar
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_transaccion)
@@ -54,6 +47,7 @@ class Transaccion : AppCompatActivity() {
         waiting_group = findViewById(R.id.waiting_group)
         edt_payment = findViewById(R.id.edt_payment)
 
+        value1 = intent.getStringExtra("cantidad").toString() // Este es la cantidad recibida para pagar
 
         getToken();
         btn_pay.setOnClickListener {
@@ -114,8 +108,13 @@ class Transaccion : AppCompatActivity() {
 
         val stringRequest = object:StringRequest(Request.Method.POST, API_CHECKOUT,
             Response.Listener { response ->
-                if (response.toString().contains("Successful"))
+                if (response.toString().contains("Successful")) {
                     Toast.makeText(this@Transaccion, "Transaction Succesfull", Toast.LENGTH_SHORT).show()
+                    // Vamos a irnos a la actividad de agradecimiento - Agradecidos con el de arriba
+                    val intent = Intent(this, AgradecimientoActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
                 else
                     Toast.makeText(this@Transaccion, "Transaction Failed", Toast.LENGTH_SHORT).show()
             },Response.ErrorListener { error ->

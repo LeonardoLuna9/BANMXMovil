@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardviewCarrito"
     android:layout_margin="12dp"
     card_view:cardBackgroundColor="@color/white"
@@ -14,6 +15,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonDelete"
+            android:layout_toEndOf="@+id/nombreProductoCarrito"
+            android:layout_marginLeft="100dp"
+            android:src = "@android:drawable/ic_menu_delete"
+            android:backgroundTint="@color/white"
+            app:tint="#D31919" />
 
         <ImageView
             android:id="@+id/carritoProducto"

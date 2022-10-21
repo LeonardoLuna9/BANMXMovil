@@ -1,5 +1,6 @@
 package mx.itesm.banmxmovil
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -50,11 +51,17 @@ class donarFragment : Fragment() {
             findNavController().navigate(action)
         }
         view.findViewById<ImageView>(R.id.cartDonar).setOnClickListener{
+            /*
             val action = donarFragmentDirections
                 .actionDonarFragmentToCarritoFragment(
                     args.idUsuario
                 )
             findNavController().navigate(action)
+             */
+            val intent = Intent(requireActivity(), Transaccion::class.java)
+            intent.putExtra("cantidad", view.findViewById<ImageView>(R.id.cantidadInputDonar).toString())
+            startActivity(intent)
+            //requireActivity().finish()
         }
         view.findViewById<ImageButton>(R.id.regresarBotonDonar).setOnClickListener{
             val action = donarFragmentDirections

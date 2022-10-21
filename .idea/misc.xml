@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Owner/AndroidStudioProjects/BANMXMovil/app/src/main/res/layout/activity_transaccion.xml" value="0.26875" />
+        <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/activity_agradecimiento.xml" value="0.2" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/activity_carrito.xml" value="0.15260416666666668" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/activity_editar_perfil.xml" value="0.1" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/activity_fragment.xml" value="0.1" />
@@ -13,9 +14,12 @@
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/activity_register.xml" value="0.15260416666666668" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/activity_tarjeta.xml" value="0.15260416666666668" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/activity_tarjeta_perfil.xml" value="0.16" />
+        <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/activity_transaccion.xml" value="0.24139492753623187" />
+        <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/card_list_carrito.xml" value="0.24139492753623187" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/fragment_agregar_tarjeta_perfil.xml" value="0.128" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/fragment_apadrinar.xml" value="0.22509057971014493" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/fragment_carrito.xml" value="0.22509057971014493" />
+        <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/fragment_donar.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/fragment_editar_perfil.xml" value="0.2" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/fragment_inicio.xml" value="0.15989583333333332" />
         <entry key="..\:/Users/drvmz/OneDrive/Documentos/BancoAlimentos/app/src/main/res/layout/fragment_log.xml" value="0.2" />
