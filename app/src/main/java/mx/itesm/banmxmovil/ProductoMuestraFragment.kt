@@ -5,10 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import androidx.navigation.fragment.findNavController
 import com.squareup.picasso.Picasso
 import androidx.navigation.fragment.navArgs
@@ -59,6 +56,11 @@ class ProductoMuestraFragment : Fragment() {
         view.findViewById<Button>(R.id.agregarACarritoBoton).setOnClickListener {
             db.collection("usuarios/${args.idUsuario}/carrito")
                 .document(args.nombre).set(data)
+            Toast.makeText(
+                context,
+                "Producto agregado",
+                Toast.LENGTH_SHORT
+            ).show()
         }
         //agregarACarritoBoton
 

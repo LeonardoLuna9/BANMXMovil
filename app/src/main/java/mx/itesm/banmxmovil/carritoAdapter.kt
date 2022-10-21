@@ -1,5 +1,6 @@
 package mx.itesm.banmxmovil
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -66,9 +67,13 @@ class carritoAdapter(var carritoList : ArrayList<ArrayList<String>>,private val 
             db.collection("usuarios/${email}/carrito")
                 .document(listData[position][0]).set(data)
         }
-        holder.botonDelete.setOnClickListener{
+        holder.botonDelete.setOnClickListener {
             onClickDelete(position)
             // Aqui backend
+            db.collection("usuarios/${email}/carrito").document(listData[position][0])
+                .delete()
+                .addOnSuccessListener { Log.d("Success Cart", "DocumentSnapshot successfully deleted!") }
+                .addOnFailureListener { e -> Log.w("Failure Cart", "Error deleting document", e) }
         }
     }
 

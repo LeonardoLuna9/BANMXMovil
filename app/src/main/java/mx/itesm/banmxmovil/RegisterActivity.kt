@@ -102,7 +102,7 @@ class RegisterActivity : AppCompatActivity() {
             Firebase.firestore.collection("usuarios")
 
         // 2do paso - solicitar guardar dato
-        coleccion.document(binding.emailInRegister.text.toString()).set(data)
+        coleccion.document(binding.emailInRegister.text.toString().lowercase()).set(data)
         /*
         Toast.makeText(
             this,

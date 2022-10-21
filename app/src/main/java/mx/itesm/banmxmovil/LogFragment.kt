@@ -47,7 +47,7 @@ class LogFragment : Fragment() {
         }
 
         view.findViewById<Button>(R.id.login).setOnClickListener {
-            var emailStr = view.findViewById<EditText>(R.id.correoInputLog).text.toString()
+            var emailStr = view.findViewById<EditText>(R.id.correoInputLog).text.toString().lowercase()
             var pwdStr = view.findViewById<EditText>(R.id.passwordInputLog).text.toString()
             var authTask = Firebase.auth.signInWithEmailAndPassword(emailStr, pwdStr)
 
