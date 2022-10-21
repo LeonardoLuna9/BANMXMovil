@@ -53,6 +53,9 @@ class carritoAdapter(var carritoList : ArrayList<ArrayList<String>>,private val 
         // Bajar cantidad
         holder.botonless.setOnClickListener {
             holder.cantidad.text = (holder.cantidad.text.toString().toInt() - 1).toString()
+            if(holder.cantidad.text == "0"){
+                holder.cantidad.text = "1"
+            }
             val data = hashMapOf(
                 "nombre" to listData[position][0],
                 "cantidad" to holder.cantidad.text.toString(),
