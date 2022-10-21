@@ -30,11 +30,18 @@ class donarFragment : Fragment() {
         }
 
         view.findViewById<Button>(R.id.botonDonarBienFragment).setOnClickListener{
+            /*
             val action = donarFragmentDirections
                 .actionDonarFragmentToMetodoPagoDosFragment(
                     args.idUsuario
                 )
             findNavController().navigate(action)
+            */
+
+            val intent = Intent(requireActivity(), Transaccion::class.java)
+            intent.putExtra("cantidad", view.findViewById<EditText>(R.id.cantidadInputDonar).toString())
+            startActivity(intent)
+            //requireActivity().finish()
         }
         view.findViewById<ImageView>(R.id.configDonar).setOnClickListener{
             val action = donarFragmentDirections
@@ -51,17 +58,11 @@ class donarFragment : Fragment() {
             findNavController().navigate(action)
         }
         view.findViewById<ImageView>(R.id.cartDonar).setOnClickListener{
-            /*
             val action = donarFragmentDirections
                 .actionDonarFragmentToCarritoFragment(
                     args.idUsuario
                 )
             findNavController().navigate(action)
-             */
-            val intent = Intent(requireActivity(), Transaccion::class.java)
-            intent.putExtra("cantidad", view.findViewById<ImageView>(R.id.cantidadInputDonar).toString())
-            startActivity(intent)
-            //requireActivity().finish()
         }
         view.findViewById<ImageButton>(R.id.regresarBotonDonar).setOnClickListener{
             val action = donarFragmentDirections
