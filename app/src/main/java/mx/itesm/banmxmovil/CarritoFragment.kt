@@ -91,11 +91,32 @@ class CarritoFragment : Fragment() {
         }
         view.findViewById<Button>(R.id.procederAComprarBotonCarrito).setOnClickListener{
             //findNavController().navigate(R.id.action_carritoFragment_to_pagoFragment)
+            /*
             val action = CarritoFragmentDirections
                 .actionCarritoFragmentToPagoFragment(
                     args.idUsuario
                 )
             findNavController().navigate(action)
+            */
+            var cantidadTotal = 0
+
+            db.collection("usuarios/${args.idUsuario}/carrito")
+                .get()
+                .addOnSuccessListener { result ->
+                    for (document in result) {
+                        var cantidadSumMult = 0
+                        cantidadSumMult = (document.data["precio"].toString().toInt() + cantidadTotal) * (document.data["cantidad"].toString().toInt())
+                        cantidadTotal = cantidadSumMult + cantidadTotal
+                    }
+
+                }.addOnFailureListener { exception ->
+                    Log.w("PRUEBA ERROR FIREBASE", "Error getting documents.", exception)
+                }
+
+
+            val intent = Intent(requireActivity(), Transaccion::class.java)
+            intent.putExtra("cantidad", cantidadTotal.toString())
+            startActivity(intent)
         }
 
         view.findViewById<ImageView>(R.id.homeCarrito).setOnClickListener{
