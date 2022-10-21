@@ -39,7 +39,7 @@ class donarFragment : Fragment() {
             */
 
             val intent = Intent(requireActivity(), Transaccion::class.java)
-            intent.putExtra("cantidad", view.findViewById<EditText>(R.id.cantidadInputDonar).toString())
+            intent.putExtra("cantidad", view.findViewById<EditText>(R.id.cantidadInputDonar).text.toString())
             startActivity(intent)
             //requireActivity().finish()
         }
