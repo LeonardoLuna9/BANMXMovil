@@ -18,7 +18,10 @@ class AgradecimientoActivity : AppCompatActivity() {
 
     //binding.volverAInicioBoton
     fun clickToInicio(view: View?) {
+        /*
         val intent = Intent(this, InicioActivity::class.java)
         startActivity(intent)
+         */
+        finish()
     }
 }
